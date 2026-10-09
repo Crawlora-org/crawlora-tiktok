@@ -6,7 +6,7 @@ from .operations import OPERATION_COUNT, OPERATION_IDS, PLATFORM
 
 Client = TikTokClient
 AsyncClient = AsyncTikTokClient
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 DISPLAY_NAME = 'TikTok'
 PLATFORM = 'tiktok'
 CONTRACT_REVISION = 'sha256:54cbbf627ce0c1a21749439fd3c7fe474e0c855da0977c70674aa93de7e1e8be'

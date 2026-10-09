@@ -7,7 +7,7 @@ from .async_client import AsyncCrawloraClient
 class TikTokClient(CrawloraClient):
     """Synchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     def category(self, **params: Any) -> Any:
@@ -163,7 +163,7 @@ class TikTokClient(CrawloraClient):
 class AsyncTikTokClient(AsyncCrawloraClient):
     """Asynchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.1.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.1.1')
         super().__init__(*args, **kwargs)
 
     async def category(self, **params: Any) -> Any:

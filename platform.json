@@ -19,5 +19,24 @@
   "repository": "https://github.com/Crawlora-org/crawlora-tiktok",
   "ruby_gem_name": "crawlora-tiktok",
   "source_contract_sha256": "6ce716c52b7f17a1ab0960cdaefaeb1b40b71c25ad41be55e80b8b0910624f9d",
-  "version": "0.1.0"
+  "version": "0.1.1",
+  "releases": [
+    {
+      "version": "0.1.1",
+      "date": "2026-10-09",
+      "changes": [
+        "Bump synchronized client package versions to 0.1.1."
+      ]
+    },
+    {
+      "version": "0.1.0",
+      "date": "2026-10-07",
+      "changes": [
+        "Initial TikTok JavaScript and Python clients for Crawlora's hosted API.",
+        "Includes promise-based JavaScript and synchronous/asynchronous Python interfaces, generated from contract revision `sha256:54cbbf627ce0c1a21749439fd3c7fe474e0c855da0977c70674aa93de7e1e8be`."
+      ]
+    }
+  ],
+  "php_changelog": "# Changelog\n\n## 0.1.1\n\n- Bump the Composer package version to 0.1.1.\n\n## 0.1.0\n\n- Initial focused TikTok PHP client for Crawlora's hosted API.",
+  "ruby_changelog": "# Changelog\n\n## 0.1.1\n\n- Bump the Ruby package version to 0.1.1.\n\n## 0.1.0\n\n- Initial focused TikTok Ruby client for Crawlora's hosted API."
 }
