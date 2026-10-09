@@ -13,7 +13,7 @@
   "module_name": "crawlora_tiktok",
   "npm_name": "@crawlora-org/tiktok",
   "php_package_name": "crawlora/tiktok",
-  "php_repository": "https://github.com/Crawlora-org/crawlora-tiktok-php",
+  "php_repository": "https://github.com/Crawlora-org/crawlora-tiktok",
   "platform": "tiktok",
   "python_name": "crawlora-tiktok",
   "repository": "https://github.com/Crawlora-org/crawlora-tiktok",
