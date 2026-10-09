@@ -5,7 +5,7 @@
   "display_name": "TikTok",
   "general_sdk_version": "1.46.0-sdk.1",
   "golang_module_name": "github.com/Crawlora-org/crawlora-tiktok",
-  "golang_version": "0.1.0",
+  "golang_version": "0.1.1",
   "group_name": "tiktok",
   "java_description": "Java client for Crawlora's hosted TikTok API, with video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requires a Crawlora API key.",
   "maven_artifact_id": "crawlora-tiktok",
