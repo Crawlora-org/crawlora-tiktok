@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 — 2026-10-10
+
+- Updated operation contracts: tiktok-top-ads-location-info.
+
 ## 0.1.1 — 2026-10-09
 
 - Bump synchronized client package versions to 0.1.1.

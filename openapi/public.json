@@ -3175,12 +3175,12 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the initial location and industry context used by TikTok Creative Center Top Ads.",
+        "description": "Returns TikTok's inferred initial country and industry targeting context for Top Ads. Use it when you need starting targeting values; use the locations, filters, and list endpoints to choose criteria and retrieve ads.",
         "operationId": "tiktok-top-ads-location-info",
         "parameters": [
           {
             "default": 1,
-            "description": "Creative Center module id",
+            "description": "Optional upstream Creative Center module identifier; omitted or 0 defaults to 1, other nonzero IDs are passed through without local range validation",
             "in": "query",
             "name": "module",
             "type": "integer"

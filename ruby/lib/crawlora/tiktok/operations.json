@@ -1002,7 +1002,7 @@
       "params": [
         {
           "default": 1,
-          "description": "Creative Center module id",
+          "description": "Optional upstream Creative Center module identifier; omitted or 0 defaults to 1, other nonzero IDs are passed through without local range validation",
           "in": "query",
           "name": "module",
           "type": "integer"
