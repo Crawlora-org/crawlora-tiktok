@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3 — 2026-10-12
+
+- List every supported endpoint in the repository and package READMEs.
+- Add platform-specific search keywords to the npm, PyPI, and Composer package metadata.
+
 ## 0.1.2 — 2026-10-10
 
 - Updated operation contracts: tiktok-top-ads-location-info.

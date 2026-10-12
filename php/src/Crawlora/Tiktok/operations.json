@@ -62,6 +62,8 @@
       "path": "/tiktok/category",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"
@@ -88,6 +90,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "TikTok video id from the video URL",
@@ -134,6 +138,8 @@
           ]
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "ISO-2 country code",
@@ -204,6 +210,8 @@
           "type": "boolean"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "ISO-2 country code",
@@ -266,6 +274,8 @@
         "id"
       ],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Category type id returned by the category endpoint",
@@ -291,6 +301,8 @@
         "name"
       ],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Hashtag name (e.g., 'christmas')",
@@ -326,6 +338,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Hashtag id returned by the hashtag detail endpoint",
@@ -356,6 +370,8 @@
       "path": "/tiktok/popular-trend/country-industry-meta",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"
@@ -372,6 +388,8 @@
         "id"
       ],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "TikTok video id",
@@ -417,6 +435,8 @@
           ]
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "TikTok secUid for the profile",
@@ -461,6 +481,8 @@
         "handler"
       ],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "TikTok handle without the leading @",
@@ -501,6 +523,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Search keyword",
@@ -555,6 +579,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Search keyword",
@@ -604,6 +630,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Search keyword",
@@ -663,6 +691,8 @@
           ]
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Top Ads material id",
@@ -719,6 +749,8 @@
           "required": true
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Top Ads material id",
@@ -742,6 +774,8 @@
       "path": "/tiktok/top-ads/filters",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"
@@ -855,6 +889,8 @@
           ]
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "default": 30,
@@ -999,6 +1035,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "default": 1,
@@ -1021,6 +1059,8 @@
       "path": "/tiktok/top-ads/locations",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"
@@ -1052,6 +1092,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "description": "Top Ads material id",
@@ -1091,6 +1133,8 @@
       "path": "/tiktok/top-ads/safety",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"
@@ -1116,6 +1160,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "default": 1,
@@ -1158,6 +1204,8 @@
           "type": "integer"
         }
       ],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [
         {
           "default": 50,
@@ -1187,6 +1235,8 @@
       "path": "/tiktok/trending",
       "pathParams": [],
       "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
       "params": [],
       "produces": [
         "application/json"

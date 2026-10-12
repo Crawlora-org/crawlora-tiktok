@@ -1,6 +1,25 @@
 {
   "name": "crawlora/tiktok",
-  "description": "TikTok client for the Crawlora hosted API",
+  "description": "Crawlora TikTok API client with 25 endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data",
+  "keywords": [
+    "crawlora",
+    "api-client",
+    "sdk",
+    "web-scraping",
+    "scraping-api",
+    "tiktok",
+    "tiktok-api",
+    "tiktok-scraper",
+    "tiktok-data",
+    "tiktok-video",
+    "tiktok-user",
+    "tiktok-hashtag-search",
+    "tiktok-profiles-posts",
+    "tiktok-comments",
+    "tiktok-trends",
+    "tiktok-creative-center",
+    "tiktok-top-ads-data"
+  ],
   "type": "library",
   "license": "MIT",
   "require": {
