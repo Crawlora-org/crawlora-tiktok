@@ -8,7 +8,7 @@ Official Crawlora client packages for the hosted TikTok API. Access 25 API endpo
 - Python: [`crawlora-tiktok`](python/README.md)
 - Go: [`github.com/Crawlora-org/crawlora-tiktok`](go.mod)
 - Ruby: [`crawlora-tiktok`](ruby/README.md)
-- Java: [`net.crawlora:crawlora-tiktok:0.1.3`](java/README.md)
+- Java: [`net.crawlora:crawlora-tiktok:0.2.0`](java/README.md)
 - PHP: [`crawlora/tiktok`](php/README.md)
 
 For installation and runnable examples, use the README for your language. See the [API endpoint and parameter reference](docs/usage.md) for shared operation details.

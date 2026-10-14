@@ -26,7 +26,7 @@ final class Client
     private ?\Closure $transport;
 
     public const PLATFORM = 'tiktok';
-    public const VERSION = '0.1.3';
+    public const VERSION = '0.2.0';
     public const OPERATION_COUNT = 25;
     public const OPERATION_IDS = ["tiktok-category", "tiktok-challenge", "tiktok-challenge-list", "tiktok-creative-center-hashtags", "tiktok-creative-center-videos", "tiktok-explore", "tiktok-popular-trend-country-industry-meta", "tiktok-post", "tiktok-profile", "tiktok-profile-post", "tiktok-search", "tiktok-search-hashtag", "tiktok-search-user", "tiktok-top-ads-analysis", "tiktok-top-ads-detail", "tiktok-top-ads-filters", "tiktok-top-ads-list", "tiktok-top-ads-location-info", "tiktok-top-ads-locations", "tiktok-top-ads-recommend", "tiktok-top-ads-safety", "tiktok-top-ads-spotlight", "tiktok-top-ads-suggestions", "tiktok-trending", "tiktok-video-comments"];
 
@@ -57,7 +57,7 @@ JSON, true, 512, JSON_THROW_ON_ERROR);
         $url = $this->buildUrl($operation, $params);
         $headers = [
             'x-api-key: ' . $this->apiKey,
-            'User-Agent: crawlora-tiktok-php/0.1.3',
+            'User-Agent: crawlora-tiktok-php/0.2.0',
             'Accept: ' . (in_array('text/plain', $operation['produces'], true) ? 'application/json, text/plain' : 'application/json'),
         ];
         if ($payload !== null) {

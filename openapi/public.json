@@ -243,12 +243,14 @@
     "popularTrend.CountryIndustryMeta": {
       "properties": {
         "country": {
+          "description": "Countries TikTok Creative Center offers as filters, each with its code and name.",
           "items": {
             "$ref": "#/definitions/popularTrend.CountryIndustryMetaItem"
           },
           "type": "array"
         },
         "industry": {
+          "description": "Industries TikTok Creative Center offers as filters, each with its id and name.",
           "items": {
             "$ref": "#/definitions/popularTrend.CountryIndustryMetaItem"
           },
@@ -260,9 +262,11 @@
     "popularTrend.CountryIndustryMetaItem": {
       "properties": {
         "id": {
+          "description": "Country code or industry id, for example `AR` or `22000000000`.",
           "type": "string"
         },
         "value": {
+          "description": "Display name of the country or industry.",
           "type": "string"
         }
       },
@@ -271,9 +275,11 @@
     "popularTrend.TopAdsAnalysisPoint": {
       "properties": {
         "second": {
+          "description": "Second of the ad video the point refers to.",
           "type": "integer"
         },
         "value": {
+          "description": "Value of the selected metric at that second.",
           "type": "number"
         }
       },
@@ -285,6 +291,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Time analysis of the ad for the chosen metric, with its percentile, chart points and highlighted seconds.",
           "properties": {
             "analysis": {
               "items": {
@@ -330,6 +337,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -341,12 +349,18 @@
           "type": "integer"
         },
         "data": {
-          "$ref": "#/definitions/popularTrend.TopAdsMaterial"
+          "allOf": [
+            {
+              "$ref": "#/definitions/popularTrend.TopAdsMaterial"
+            }
+          ],
+          "description": "Details of the requested top ad."
         },
         "msg": {
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -355,18 +369,23 @@
     "popularTrend.TopAdsFilterItem": {
       "properties": {
         "has_conversion": {
+          "description": "Whether the objective is one that tracks conversions. Only set on objective options.",
           "type": "boolean"
         },
         "id": {
+          "description": "Filter option id in TikTok's own format, a string or a number depending on the filter.",
           "type": "object"
         },
         "label": {
+          "description": "Label key TikTok uses for the option.",
           "type": "string"
         },
         "parent_id": {
+          "description": "Id of the parent option, for example the top-level industry of a sub-industry.",
           "type": "object"
         },
         "value": {
+          "description": "Display value of the option, always returned as a string.",
           "type": "string"
         }
       },
@@ -378,6 +397,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Filter options available for top ads, grouped by filter name.",
           "properties": {
             "ad_format": {
               "items": {
@@ -452,6 +472,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -463,6 +484,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Page of top ads with its paging information.",
           "properties": {
             "materials": {
               "items": {
@@ -480,6 +502,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -491,6 +514,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Initial country and industry targeting that TikTok Creative Center infers.",
           "properties": {
             "first_industry": {
               "type": "object"
@@ -517,6 +541,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -528,6 +553,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Countries available for top ads targeting.",
           "properties": {
             "country": {
               "items": {
@@ -542,6 +568,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -550,87 +577,115 @@
     "popularTrend.TopAdsMaterial": {
       "properties": {
         "ad_title": {
+          "description": "Title of the ad.",
           "type": "string"
         },
         "brand_name": {
+          "description": "Name of the advertiser brand.",
           "type": "string"
         },
         "comment": {
+          "description": "Number of comments on the ad.",
           "type": "integer"
         },
         "cost": {
+          "description": "Cost figure for the ad as TikTok Creative Center reports it.",
           "type": "integer"
         },
         "country_code": {
+          "description": "Country codes the ad runs in.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "ctr": {
+          "description": "Click-through rate of the ad as TikTok Creative Center reports it.",
           "type": "number"
         },
         "favorite": {
+          "description": "Whether the ad is marked as a favorite.",
           "type": "boolean"
         },
         "has_summary": {
+          "description": "Whether TikTok has an ad summary available for the ad.",
           "type": "boolean"
         },
         "highlight": {
+          "description": "Highlight note TikTok attaches to the ad.",
           "type": "string"
         },
         "highlight_text": {
+          "description": "Text shown for the ad's highlight.",
           "type": "string"
         },
         "id": {
+          "description": "Top Ads material id. Use it with the detail, analysis and recommend endpoints.",
           "type": "string"
         },
         "industry_key": {
+          "description": "Key of the industry the ad is classified under.",
           "type": "string"
         },
         "is_search": {
+          "description": "Search flag TikTok sets on the ad.",
           "type": "boolean"
         },
         "keyword_list": {
+          "description": "Keywords associated with the ad.",
           "items": {
             "type": "string"
           },
           "type": "array"
         },
         "landing_page": {
+          "description": "URL of the ad's landing page.",
           "type": "string"
         },
         "like": {
+          "description": "Number of likes on the ad.",
           "type": "integer"
         },
         "objective_key": {
+          "description": "Key of the campaign objective of the ad.",
           "type": "string"
         },
         "objectives": {
+          "description": "Campaign objectives of the ad, each with its id, value and label.",
           "items": {
             "$ref": "#/definitions/popularTrend.TopAdsFilterItem"
           },
           "type": "array"
         },
         "pattern_label": {
+          "description": "Creative pattern labels assigned to the ad.",
           "items": {
             "$ref": "#/definitions/popularTrend.TopAdsFilterItem"
           },
           "type": "array"
         },
         "share": {
+          "description": "Number of shares of the ad.",
           "type": "integer"
         },
         "source": {
+          "description": "Source label of the ad as TikTok Creative Center shows it.",
           "type": "string"
         },
         "source_key": {
+          "description": "Numeric key of the ad's source.",
           "type": "integer"
         },
         "video_info": {
-          "$ref": "#/definitions/popularTrend.TopAdsVideoInfo"
+          "allOf": [
+            {
+              "$ref": "#/definitions/popularTrend.TopAdsVideoInfo"
+            }
+          ],
+          "description": "Video file details of the ad."
         },
         "voice_over": {
+          "description": "Whether the ad video has a voice-over.",
           "type": "boolean"
         }
       },
@@ -639,18 +694,23 @@
     "popularTrend.TopAdsPagination": {
       "properties": {
         "has_more": {
+          "description": "Whether more pages of ads are available.",
           "type": "boolean"
         },
         "page": {
+          "description": "Page number returned.",
           "type": "integer"
         },
         "size": {
+          "description": "Number of ads per page.",
           "type": "integer"
         },
         "total": {
+          "description": "Total number of matching ads. Set on spotlight responses.",
           "type": "integer"
         },
         "total_count": {
+          "description": "Total number of matching ads. Set on list responses.",
           "type": "integer"
         }
       },
@@ -662,6 +722,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Ads related to the requested ad.",
           "properties": {
             "materials": {
               "items": {
@@ -676,6 +737,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -687,6 +749,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Creative Center safety configuration flags for its search surfaces.",
           "properties": {
             "cc_banner_key": {
               "type": "string"
@@ -713,6 +776,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -724,6 +788,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Page of spotlight top ads with its paging information.",
           "properties": {
             "materials": {
               "items": {
@@ -741,6 +806,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -752,6 +818,7 @@
           "type": "integer"
         },
         "data": {
+          "description": "Suggested search queries for top ads.",
           "properties": {
             "query": {
               "items": {
@@ -766,6 +833,7 @@
           "type": "string"
         },
         "request_id": {
+          "description": "Request id returned by TikTok Creative Center.",
           "type": "string"
         }
       },
@@ -774,24 +842,30 @@
     "popularTrend.TopAdsVideoInfo": {
       "properties": {
         "cover": {
+          "description": "URL of the video cover image.",
           "type": "string"
         },
         "duration": {
+          "description": "Video length in seconds.",
           "type": "number"
         },
         "height": {
+          "description": "Video height as TikTok reports it.",
           "type": "integer"
         },
         "vid": {
+          "description": "TikTok video id.",
           "type": "string"
         },
         "video_url": {
           "additionalProperties": {
             "type": "string"
           },
+          "description": "Video file URLs keyed by resolution label, for example `720p`.",
           "type": "object"
         },
         "width": {
+          "description": "Video width as TikTok reports it.",
           "type": "integer"
         }
       },
@@ -976,9 +1050,11 @@
     "tiktok.Category": {
       "properties": {
         "name": {
+          "description": "Category name as shown on TikTok's Explore page.",
           "type": "string"
         },
         "type": {
+          "description": "Numeric category type code, as a string. Use it as the `id` of the explore endpoint.",
           "type": "string"
         }
       },
@@ -986,8 +1062,11 @@
     },
     "tiktok.ChallengeDetailResp": {
       "properties": {
-        "challengeInfo": {},
+        "challengeInfo": {
+          "description": "Details of the hashtag (challenge), as TikTok returns them."
+        },
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1003,6 +1082,7 @@
           "type": "object"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1011,6 +1091,7 @@
           "type": "object"
         },
         "shareMeta": {
+          "description": "Title and description TikTok uses when the hashtag is shared.",
           "properties": {
             "desc": {
               "type": "string"
@@ -1022,12 +1103,15 @@
           "type": "object"
         },
         "statusCode": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_code": {
+          "description": "Second copy of the TikTok status code, sent as `status_code`. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         }
       },
@@ -1036,9 +1120,11 @@
     "tiktok.ChallengeListResp": {
       "properties": {
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of videos.",
           "type": "string"
         },
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1054,13 +1140,16 @@
           "type": "object"
         },
         "hasMore": {
+          "description": "Whether more videos remain after this page.",
           "type": "boolean"
         },
         "itemList": {
+          "description": "Videos posted under the hashtag, one entry per video, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1069,12 +1158,15 @@
           "type": "object"
         },
         "statusCode": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_code": {
+          "description": "Second copy of the TikTok status code, sent as `status_code`. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         }
       },
@@ -1083,16 +1175,20 @@
     "tiktok.CommentResp": {
       "properties": {
         "alias_comment_deleted": {
+          "description": "Flag TikTok returns for deleted alias comments.",
           "type": "boolean"
         },
         "comments": {
+          "description": "Top-level comments on the video, one entry per comment, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of comments.",
           "type": "integer"
         },
         "extra": {
+          "description": "Response metadata from TikTok, such as server time.",
           "properties": {
             "api_debug_info": {},
             "fatal_item_ids": {},
@@ -1103,12 +1199,15 @@
           "type": "object"
         },
         "has_filtered_comments": {
+          "description": "Flag showing whether TikTok filtered any comments out of the list.",
           "type": "integer"
         },
         "has_more": {
+          "description": "Whether more comments remain after this page, as a number (`1` for yes).",
           "type": "integer"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1117,16 +1216,22 @@
           "type": "object"
         },
         "reply_style": {
+          "description": "Reply display style code that TikTok returns with the comments.",
           "type": "integer"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         },
-        "top_gifts": {},
+        "top_gifts": {
+          "description": "Top gifts attached to the comments, as TikTok returns them."
+        },
         "total": {
+          "description": "Total number of comments on the video.",
           "type": "integer"
         }
       },
@@ -1135,9 +1240,11 @@
     "tiktok.ExploreResp": {
       "properties": {
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of videos.",
           "type": "string"
         },
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1153,13 +1260,16 @@
           "type": "object"
         },
         "hasMore": {
+          "description": "Whether more videos remain after this page.",
           "type": "boolean"
         },
         "itemList": {
+          "description": "Videos in the explore feed for the category, one entry per video, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1168,12 +1278,15 @@
           "type": "object"
         },
         "statusCode": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_code": {
+          "description": "Second copy of the TikTok status code, sent as `status_code`. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         }
       },
@@ -1182,10 +1295,20 @@
     "tiktok.Profile": {
       "properties": {
         "stats": {
-          "$ref": "#/definitions/tiktok.ProfileStats"
+          "allOf": [
+            {
+              "$ref": "#/definitions/tiktok.ProfileStats"
+            }
+          ],
+          "description": "Follower, following, like and video counts for the account."
         },
         "user": {
-          "$ref": "#/definitions/tiktok.User"
+          "allOf": [
+            {
+              "$ref": "#/definitions/tiktok.User"
+            }
+          ],
+          "description": "Account details: identity, bio, verification and region."
         }
       },
       "type": "object"
@@ -1193,30 +1316,37 @@
     "tiktok.ProfileStats": {
       "properties": {
         "diggCount": {
+          "description": "Number of videos the account has liked.",
           "example": 0,
           "type": "integer"
         },
         "followerCount": {
+          "description": "Number of accounts that follow this account.",
           "example": 458800,
           "type": "integer"
         },
         "followingCount": {
+          "description": "Number of accounts this account follows.",
           "example": 1,
           "type": "integer"
         },
         "friendCount": {
+          "description": "Number of friends, meaning accounts that follow each other.",
           "example": 1,
           "type": "integer"
         },
         "heart": {
+          "description": "Total likes the account's videos have received. Very large totals are rounded.",
           "example": 800300,
           "type": "integer"
         },
         "heartCount": {
+          "description": "Total likes the account's videos have received. Can be negative for accounts with more than about 2.1 billion likes; use `heart` then.",
           "example": 800300,
           "type": "integer"
         },
         "videoCount": {
+          "description": "Number of videos the account has posted.",
           "example": 59,
           "type": "integer"
         }
@@ -1226,20 +1356,27 @@
     "tiktok.SearchHashtagResp": {
       "properties": {
         "challenge_list": {
+          "description": "Hashtags (challenges) matching the keyword, one entry per hashtag, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of results.",
           "type": "integer"
         },
-        "extra": {},
+        "extra": {
+          "description": "Response metadata from TikTok, such as the request log id."
+        },
         "has_more": {
+          "description": "Whether more results remain after this page, as a number (`1` for yes).",
           "type": "integer"
         },
         "input_keyword": {
+          "description": "Search keyword that was run.",
           "type": "string"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1247,50 +1384,68 @@
           },
           "type": "object"
         },
-        "music_list": {},
+        "music_list": {
+          "description": "Matching sounds, as TikTok returns them. Usually `null` for a hashtag search."
+        },
         "qc": {
+          "description": "Query token that TikTok returns with the search results.",
           "type": "string"
         },
         "rid": {
+          "description": "Request id that TikTok returns with the search results.",
           "type": "string"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         },
         "type": {
+          "description": "Result type code that TikTok returns with the search results.",
           "type": "integer"
         },
-        "user_list": {}
+        "user_list": {
+          "description": "Matching accounts, as TikTok returns them. Usually `null` for a hashtag search."
+        }
       },
       "type": "object"
     },
     "tiktok.SearchResp": {
       "properties": {
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of results.",
           "type": "integer"
         },
         "data": {
+          "description": "Search results, one entry per matching video, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
-        "extra": {},
+        "extra": {
+          "description": "Response metadata from TikTok, such as the request log id."
+        },
         "feedback_type": {
+          "description": "Feedback type label that TikTok returns with the search results.",
           "type": "string"
         },
         "has_more": {
+          "description": "Whether more results remain after this page, as a number (`1` for yes).",
           "type": "integer"
         },
         "input_keyword": {
+          "description": "Search keyword that was run.",
           "type": "string"
         },
         "itemList": {
+          "description": "Matching videos, as TikTok returns them. Often `null` when results are in `data`.",
           "items": {},
           "type": "array"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1299,18 +1454,23 @@
           "type": "object"
         },
         "qc": {
+          "description": "Query token that TikTok returns with the search results.",
           "type": "string"
         },
         "rid": {
+          "description": "Request id that TikTok returns with the search results.",
           "type": "string"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         },
         "type": {
+          "description": "Result type code that TikTok returns with the search results.",
           "type": "integer"
         }
       },
@@ -1318,22 +1478,33 @@
     },
     "tiktok.SearchUserResp": {
       "properties": {
-        "challenge_list": {},
+        "challenge_list": {
+          "description": "Matching hashtags, as TikTok returns them. Usually `null` for a user search."
+        },
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of results.",
           "type": "integer"
         },
-        "extra": {},
+        "extra": {
+          "description": "Response metadata from TikTok, such as the request log id."
+        },
         "feedback_type": {
+          "description": "Feedback type label that TikTok returns with the search results.",
           "type": "string"
         },
-        "global_doodle_config": {},
+        "global_doodle_config": {
+          "description": "Search page doodle settings that TikTok returns with the results."
+        },
         "has_more": {
+          "description": "Whether more results remain after this page, as a number (`1` for yes).",
           "type": "integer"
         },
         "input_keyword": {
+          "description": "Search keyword that was run.",
           "type": "string"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1341,23 +1512,31 @@
           },
           "type": "object"
         },
-        "music_list": {},
+        "music_list": {
+          "description": "Matching sounds, as TikTok returns them. Usually `null` for a user search."
+        },
         "qc": {
+          "description": "Query token that TikTok returns with the search results.",
           "type": "string"
         },
         "rid": {
+          "description": "Request id that TikTok returns with the search results.",
           "type": "string"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         },
         "type": {
+          "description": "Result type code that TikTok returns with the search results.",
           "type": "integer"
         },
         "user_list": {
+          "description": "Accounts matching the keyword, one entry per account, as TikTok returns them.",
           "items": {},
           "type": "array"
         }
@@ -1367,9 +1546,11 @@
     "tiktok.TrendingResp": {
       "properties": {
         "cursor": {
+          "description": "Cursor TikTok returns for the next page of the trending feed.",
           "type": "string"
         },
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1385,13 +1566,16 @@
           "type": "object"
         },
         "hasMore": {
+          "description": "Whether more videos remain after this page.",
           "type": "boolean"
         },
         "itemList": {
+          "description": "Videos in the trending feed, one entry per video, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1400,18 +1584,23 @@
           "type": "object"
         },
         "statusCode": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "statusMsg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         },
         "status_code": {
+          "description": "Second copy of the TikTok status code, sent as `status_code`. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Second copy of the status message, sent as `status_msg`.",
           "type": "string"
         },
         "trendingTopics": {
+          "description": "Trending topics returned with the feed, as TikTok returns them.",
           "items": {},
           "type": "array"
         }
@@ -1421,10 +1610,12 @@
     "tiktok.User": {
       "properties": {
         "avatarLarger": {
+          "description": "URL of the account's large profile picture.",
           "example": "https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/fb1ed871dc01261013179da3fafcc1cd~c5_1080x1080.jpeg?lk3s=a5d48078&nonce=62362&refresh_token=e3e8e01eff1ea0116ae406af630dc407&x-expires=1734098400&x-signature=MXMzwWT8Tl1nxFZfYNQxOZM%2F%2Byo%3D&shp=a5d48078&shcp=81f88b70",
           "type": "string"
         },
         "bioLink": {
+          "description": "Link shown in the account's bio.",
           "properties": {
             "link": {
               "example": "www.openai.com/chatgpt",
@@ -1434,6 +1625,7 @@
           "type": "object"
         },
         "commerceUserInfo": {
+          "description": "Commerce details for the account: whether it is a commerce account and its category.",
           "properties": {
             "category": {
               "example": "Software & Apps",
@@ -1447,54 +1639,67 @@
           "type": "object"
         },
         "createTime": {
+          "description": "Time the account was created, in Unix seconds.",
           "example": 1689461786,
           "type": "integer"
         },
         "id": {
+          "description": "TikTok numeric user id of the account.",
           "example": "7256182609359995947",
           "type": "string"
         },
         "isOrganization": {
+          "description": "Organisation account flag; `1` marks an organisation account.",
           "example": 1,
           "type": "integer"
         },
         "language": {
+          "description": "Language code set on the account, for example `en`.",
           "example": "en",
           "type": "string"
         },
         "nickname": {
+          "description": "Display name of the account.",
           "example": "chatgpt",
           "type": "string"
         },
         "privateAccount": {
+          "description": "Whether the account is private.",
           "example": false,
           "type": "boolean"
         },
         "region": {
+          "description": "Country or region code of the account, for example `US`.",
           "example": "US",
           "type": "string"
         },
         "secUid": {
+          "description": "TikTok secUid of the account. Use it as the `secUid` of the posts endpoint.",
           "example": "MS4wLjABAAAAT4vq3vsh9X-Vb_WtV6tz4QWTbKjliTKCiK5DqnJNtQEA2RUveHb7UdnL7xgPK2HB",
           "type": "string"
         },
         "secret": {
+          "description": "Secret-account flag as TikTok returns it.",
           "example": false,
           "type": "boolean"
         },
         "signature": {
+          "description": "Bio text shown on the account's profile.",
           "example": "What can I help with?",
           "type": "string"
         },
         "ttSeller": {
+          "description": "Whether the account is a TikTok Shop seller.",
           "example": false,
           "type": "boolean"
         },
         "uniqueId": {
+          "description": "Account handle, the name that follows `@` in the profile URL.",
           "example": "uniqueId",
           "type": "string"
         },
         "verified": {
+          "description": "Whether the account has a verified badge.",
           "example": true,
           "type": "boolean"
         }
@@ -1504,9 +1709,11 @@
     "tiktok.UserPostLinkResp": {
       "properties": {
         "cursor": {
+          "description": "Cursor to pass in the next request to get the next page of posts.",
           "type": "string"
         },
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1522,13 +1729,16 @@
           "type": "object"
         },
         "hasMore": {
+          "description": "Whether more posts remain after this page.",
           "type": "boolean"
         },
         "itemList": {
+          "description": "Videos posted by the account, one entry per video, as TikTok returns them.",
           "items": {},
           "type": "array"
         },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1537,9 +1747,11 @@
           "type": "object"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         }
       },
@@ -1548,6 +1760,7 @@
     "tiktok.VideoDetailResp": {
       "properties": {
         "extra": {
+          "description": "Response metadata from TikTok, such as the request log id and server time.",
           "properties": {
             "fatal_item_ids": {
               "items": {},
@@ -1562,8 +1775,11 @@
           },
           "type": "object"
         },
-        "itemInfo": {},
+        "itemInfo": {
+          "description": "Details of the video, as TikTok returns them."
+        },
         "log_pb": {
+          "description": "Request tracking information from TikTok, holding the `impr_id` impression id.",
           "properties": {
             "impr_id": {
               "type": "string"
@@ -1572,6 +1788,7 @@
           "type": "object"
         },
         "shareMeta": {
+          "description": "Title and description TikTok uses when the video is shared.",
           "properties": {
             "desc": {
               "type": "string"
@@ -1583,9 +1800,11 @@
           "type": "object"
         },
         "status_code": {
+          "description": "TikTok status code for the request. `0` on a successful response.",
           "type": "integer"
         },
         "status_msg": {
+          "description": "Status message that goes with the status code.",
           "type": "string"
         }
       },
@@ -1814,7 +2033,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the category list exposed by the TikTok Explore page.",
+        "description": "Returns the content categories shown on TikTok's Explore page. Each entry has the category name and its numeric type code. Takes no parameters.",
         "operationId": "tiktok-category",
         "produces": [
           "application/json"
@@ -1861,7 +2080,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns top-level TikTok video comments with cursor-based pagination.",
+        "description": "Returns the top-level comments on a TikTok video, by the video id from its URL (`aweme_id`). Results are paged by cursor: pass the `cursor` from one response to get the next page, and read `has_more` to see whether more remain. The response also carries the total comment count.",
         "operationId": "tiktok-video-comments",
         "parameters": [
           {
@@ -2117,7 +2336,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns explore videos for a TikTok category id from the category endpoint.",
+        "description": "Returns the TikTok explore feed for a category, given its category type `id` from the category endpoint. The response has `itemList` with the videos, `hasMore` and a `cursor`. A feed that comes back empty is reported as an upstream error, not as an empty list.",
         "operationId": "tiktok-explore",
         "parameters": [
           {
@@ -2180,7 +2399,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the metadata payload for a TikTok hashtag page.",
+        "description": "Returns the details of a TikTok hashtag page by `name`, for example `christmas`. The response carries `challengeInfo` with the hashtag's metadata, such as cover images, and `shareMeta` with the share title and description. The hashtag id found here feeds `tiktok-challenge-list`.",
         "operationId": "tiktok-challenge",
         "parameters": [
           {
@@ -2243,7 +2462,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the videos listed for a TikTok hashtag id with cursor-based pagination.",
+        "description": "Lists the videos posted under a TikTok hashtag, identified by the hashtag `id` from the hashtag detail endpoint. `cursor` defaults to 0. The response has `itemList`, `hasMore` and a `cursor`; pass that cursor back to fetch the next page.",
         "operationId": "tiktok-challenge-list",
         "parameters": [
           {
@@ -2313,7 +2532,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the country and industry metadata used by the TikTok Creative Center popular-trend endpoints.",
+        "description": "Lists the country and industry filter values used by the TikTok Creative Center popular-trend endpoints. Countries have an `id` such as `AR` and a name; industries have a numeric `id` and a name such as Apparel & Accessories. A maintained fallback list is returned if TikTok's own metadata is unavailable.",
         "operationId": "tiktok-popular-trend-country-industry-meta",
         "produces": [
           "application/json"
@@ -2360,7 +2579,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the TikTok video detail payload for a video id.",
+        "description": "Returns TikTok's detail record for one video by video id. `itemInfo.itemStruct` holds the video's description, the author's profile and the author's statistics (such as followers, following and hearts) along with the rest of TikTok's video object; `shareMeta` holds the share title and description.",
         "operationId": "tiktok-post",
         "parameters": [
           {
@@ -2423,7 +2642,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns posts from a TikTok profile by `secUid`, with optional cursor pagination and sort mode.",
+        "description": "Lists posts from a TikTok profile identified by `secUid`. `sort_type` is `0` latest (default), `1` popular or `2` oldest. `cursor` defaults to 0. The response has `itemList`, `hasMore` and a `cursor` to pass back to fetch the next page.",
         "operationId": "tiktok-profile-post",
         "parameters": [
           {
@@ -2505,7 +2724,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the TikTok profile payload for a public handle.",
+        "description": "Returns a public TikTok profile by `handler`, the username without the leading `@`. The `user` object has the id, `uniqueId`, nickname, signature, verified and private flags, region, language, avatar, bio link and `secUid`; `stats` has follower, following, heart, video and friend counts. A missing, deleted or banned handle returns 404.",
         "operationId": "tiktok-profile",
         "parameters": [
           {
@@ -2574,7 +2793,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Searches TikTok videos by keyword with cursor-based pagination.",
+        "description": "Searches TikTok videos for `keyword`. `cursor` defaults to 0 and `count` defaults to 20, capped at 50. The response has the matching video items, a `cursor` and `has_more` for paging. An empty, blocked or malformed result from TikTok returns an upstream error.",
         "operationId": "tiktok-search",
         "parameters": [
           {
@@ -2651,7 +2870,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Searches TikTok hashtags/challenges by keyword with cursor-based pagination.",
+        "description": "Searches TikTok hashtags (challenges) for `keyword`. `cursor` defaults to 0 and `count` defaults to 20, capped at 50. The response has `challenge_list` with each hashtag's name and id, plus a `cursor` and `has_more` for paging. An empty, blocked or malformed result returns an upstream error.",
         "operationId": "tiktok-search-hashtag",
         "parameters": [
           {
@@ -2728,7 +2947,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Searches TikTok users by keyword with cursor-based pagination.",
+        "description": "Searches TikTok users for `keyword`, with `cursor` (default 0) for paging. The response has `user_list` with the matching accounts, plus a `cursor` and `has_more` to continue. Pass the returned `cursor` back to fetch the next page.",
         "operationId": "tiktok-search-user",
         "parameters": [
           {
@@ -3237,7 +3456,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns available Top Ads location filters from TikTok Creative Center.",
+        "description": "Lists the country filters offered by TikTok Creative Center Top Ads. Each country has an `id` such as `US`, a `value` (the country name), a `label` and a `has_conversion` flag. Takes no parameters.",
         "operationId": "tiktok-top-ads-locations",
         "produces": [
           "application/json"
@@ -3284,7 +3503,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns recommended Top Ads materials related to a material id.",
+        "description": "Lists Top Ads materials that TikTok Creative Center recommends as related to the ad with `material_id`. `page` starts at 1; `limit` defaults to 20 and is capped at 100. Each ad has its title, brand, likes, comments, shares, CTR, objectives and video info. The list can be empty for a valid id.",
         "operationId": "tiktok-top-ads-recommend",
         "parameters": [
           {
@@ -3363,7 +3582,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns public Creative Center safety configuration flags related to search surfaces.",
+        "description": "Returns the Creative Center safety configuration flags for search: `top_ads_search`, `keyword_search`, `hashtag_search`, `creator_search`, `sound_search` and `cc_banner_key`. It carries feature flags only, not ad materials. Takes no parameters.",
         "operationId": "tiktok-top-ads-safety",
         "produces": [
           "application/json"
@@ -3410,7 +3629,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns Top Ads Spotlight materials handpicked by TikTok Creative Center.",
+        "description": "Lists the Top Ads Spotlight materials that TikTok Creative Center hand-picks. `page` starts at 1; `limit` defaults to 20 and is capped at 100. Each ad has its title, brand, likes, comments, shares, CTR, objectives and video info. `data.pagination` gives the page, size, total and `has_more`.",
         "operationId": "tiktok-top-ads-spotlight",
         "parameters": [
           {
@@ -3481,7 +3700,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns Top Ads search suggestions from TikTok Creative Center.",
+        "description": "Returns Top Ads search suggestions from TikTok Creative Center. `count` is the maximum number of suggestions (default 50) and `scenario` picks the suggestion scenario id (default 1). The `query` list can be empty for the default scenario.",
         "operationId": "tiktok-top-ads-suggestions",
         "parameters": [
           {
@@ -3550,7 +3769,7 @@
         "consumes": [
           "application/json"
         ],
-        "description": "Returns the current TikTok trending feed.",
+        "description": "Returns the current TikTok trending feed: `itemList` holds the videos, and `hasMore` and `cursor` describe paging. The response also has a `trendingTopics` field. Takes no parameters.",
         "operationId": "tiktok-trending",
         "produces": [
           "application/json"
