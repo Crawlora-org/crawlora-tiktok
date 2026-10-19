@@ -22,14 +22,17 @@ import java.util.TreeSet;
 /** Client for the TikTok endpoints hosted by Crawlora. */
 public final class Client implements AutoCloseable {
     public static final String DEFAULT_BASE_URL = "https://api.crawlora.net/api/v1";
-    public static final int OPERATION_COUNT = 25;
+    public static final int OPERATION_COUNT = 28;
     public static final List<String> OPERATION_IDS = List.of(
             "tiktok-category",
             "tiktok-challenge",
             "tiktok-challenge-list",
+            "tiktok-creative-center-filters",
             "tiktok-creative-center-hashtags",
+            "tiktok-creative-center-top-content",
             "tiktok-creative-center-videos",
             "tiktok-explore",
+            "tiktok-mobile-feed",
             "tiktok-popular-trend-country-industry-meta",
             "tiktok-post",
             "tiktok-profile",
@@ -56,11 +59,14 @@ public final class Client implements AutoCloseable {
         Map<String, Operation> operations = new LinkedHashMap<>();
         operations.put("tiktok-category", new Operation("tiktok-category", "GET", "/tiktok/category", Map.of(), List.of("application/json")));
         operations.put("tiktok-video-comments", new Operation("tiktok-video-comments", "GET", "/tiktok/comments", Map.ofEntries(Map.entry("aweme_id", new Param("aweme_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
-        operations.put("tiktok-creative-center-hashtags", new Operation("tiktok-creative-center-hashtags", "GET", "/tiktok/creative-center/hashtags", Map.ofEntries(Map.entry("country_code", new Param("country_code", "query", true, "string", List.of(), "csv")), Map.entry("period", new Param("period", "query", false, "integer", List.of("7", "30"), "csv"))), List.of("application/json")));
-        operations.put("tiktok-creative-center-videos", new Operation("tiktok-creative-center-videos", "GET", "/tiktok/creative-center/videos", Map.ofEntries(Map.entry("country_code", new Param("country_code", "query", true, "string", List.of(), "csv")), Map.entry("period", new Param("period", "query", false, "integer", List.of("7", "30"), "csv")), Map.entry("sort_by", new Param("sort_by", "query", false, "string", List.of("views", "engagement", "six_second_views"), "csv")), Map.entry("content_label_id", new Param("content_label_id", "query", false, "string", List.of(), "csv")), Map.entry("organic_only", new Param("organic_only", "query", false, "boolean", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-creative-center-filters", new Operation("tiktok-creative-center-filters", "GET", "/tiktok/creative-center/filters", Map.of(), List.of("application/json")));
+        operations.put("tiktok-creative-center-hashtags", new Operation("tiktok-creative-center-hashtags", "GET", "/tiktok/creative-center/hashtags", Map.ofEntries(Map.entry("country_code", new Param("country_code", "query", true, "string", List.of(), "csv")), Map.entry("period", new Param("period", "query", false, "integer", List.of("7", "30", "90"), "csv")), Map.entry("industry_id", new Param("industry_id", "query", false, "string", List.of("10000000000", "11000000000", "12000000000", "13000000000", "14000000000", "15000000000", "17000000000", "18000000000", "19000000000", "21000000000", "22000000000", "23000000000", "24000000000", "25000000000", "26000000000", "27000000000", "28000000000", "29000000000"), "csv"))), List.of("application/json")));
+        operations.put("tiktok-creative-center-top-content", new Operation("tiktok-creative-center-top-content", "GET", "/tiktok/creative-center/top-content", Map.ofEntries(Map.entry("include_comments", new Param("include_comments", "query", false, "boolean", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-creative-center-videos", new Operation("tiktok-creative-center-videos", "GET", "/tiktok/creative-center/videos", Map.ofEntries(Map.entry("country_code", new Param("country_code", "query", true, "string", List.of(), "csv")), Map.entry("period", new Param("period", "query", false, "integer", List.of("7", "30"), "csv")), Map.entry("sort_by", new Param("sort_by", "query", false, "string", List.of("views", "engagement", "six_second_views"), "csv")), Map.entry("content_label_id", new Param("content_label_id", "query", false, "string", List.of(), "csv")), Map.entry("content_label_ids", new Param("content_label_ids", "query", false, "array", List.of("11002", "11003", "11010", "11013", "11015"), "multi")), Map.entry("organic_only", new Param("organic_only", "query", false, "boolean", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-explore", new Operation("tiktok-explore", "GET", "/tiktok/explore/{id}", Map.ofEntries(Map.entry("id", new Param("id", "path", true, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-challenge", new Operation("tiktok-challenge", "GET", "/tiktok/hashtag/{name}", Map.ofEntries(Map.entry("name", new Param("name", "path", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-challenge-list", new Operation("tiktok-challenge-list", "GET", "/tiktok/hashtags", Map.ofEntries(Map.entry("id", new Param("id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-feed", new Operation("tiktok-mobile-feed", "GET", "/tiktok/mobile/feed", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-popular-trend-country-industry-meta", new Operation("tiktok-popular-trend-country-industry-meta", "GET", "/tiktok/popular-trend/country-industry-meta", Map.of(), List.of("application/json")));
         operations.put("tiktok-post", new Operation("tiktok-post", "GET", "/tiktok/post/{id}", Map.ofEntries(Map.entry("id", new Param("id", "path", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-profile-post", new Operation("tiktok-profile-post", "GET", "/tiktok/posts", Map.ofEntries(Map.entry("secUid", new Param("secUid", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of("0", "1", "2"), "csv"))), List.of("application/json")));
@@ -187,11 +193,14 @@ public final class Client implements AutoCloseable {
 
     public Object category(Map<String, ?> params) { return request("tiktok-category", params); }
     public Object videoComments(Map<String, ?> params) { return request("tiktok-video-comments", params); }
+    public Object creativeCenterFilters(Map<String, ?> params) { return request("tiktok-creative-center-filters", params); }
     public Object creativeCenterHashtags(Map<String, ?> params) { return request("tiktok-creative-center-hashtags", params); }
+    public Object creativeCenterTopContent(Map<String, ?> params) { return request("tiktok-creative-center-top-content", params); }
     public Object creativeCenterVideos(Map<String, ?> params) { return request("tiktok-creative-center-videos", params); }
     public Object explore(Map<String, ?> params) { return request("tiktok-explore", params); }
     public Object challenge(Map<String, ?> params) { return request("tiktok-challenge", params); }
     public Object challengeList(Map<String, ?> params) { return request("tiktok-challenge-list", params); }
+    public Object mobileFeed(Map<String, ?> params) { return request("tiktok-mobile-feed", params); }
     public Object popularTrendCountryIndustryMeta(Map<String, ?> params) { return request("tiktok-popular-trend-country-industry-meta", params); }
     public Object post(Map<String, ?> params) { return request("tiktok-post", params); }
     public Object profilePost(Map<String, ?> params) { return request("tiktok-profile-post", params); }

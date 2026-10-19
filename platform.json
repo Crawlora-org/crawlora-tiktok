@@ -1,11 +1,11 @@
 {
   "async_class_name": "AsyncTikTokClient",
   "class_name": "TikTokClient",
-  "contract_revision": "sha256:4c68b3ffb1086f7e35a137a7a0cf5ac6849821f94323e8004e5f05f62fb6f95a",
+  "contract_revision": "sha256:2150afc166e71c20642dfa0a7cb0e5b654c55e529f65420d6a4a502aeba8604b",
   "display_name": "TikTok",
   "general_sdk_version": "1.46.0-sdk.1",
   "golang_module_name": "github.com/Crawlora-org/crawlora-tiktok",
-  "golang_version": "0.2.0",
+  "golang_version": "0.3.0",
   "group_name": "tiktok",
   "java_description": "Java client for Crawlora's hosted TikTok API, with video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requires a Crawlora API key.",
   "maven_artifact_id": "crawlora-tiktok",
@@ -18,6 +18,14 @@
   "platform": "tiktok",
   "python_name": "crawlora-tiktok",
   "releases": [
+    {
+      "changes": [
+        "Added operations: tiktok-creative-center-filters, tiktok-creative-center-top-content, tiktok-mobile-feed.",
+        "Updated operation contracts: tiktok-creative-center-hashtags, tiktok-creative-center-videos."
+      ],
+      "date": "2026-10-19",
+      "version": "0.3.0"
+    },
     {
       "changes": [
         "Updated operation contracts: tiktok-category, tiktok-challenge, tiktok-challenge-list, tiktok-explore, tiktok-popular-trend-country-industry-meta, tiktok-post, tiktok-profile, tiktok-profile-post, tiktok-search, tiktok-search-hashtag, tiktok-search-user, tiktok-top-ads-analysis, tiktok-top-ads-detail, tiktok-top-ads-filters, tiktok-top-ads-list, tiktok-top-ads-location-info, tiktok-top-ads-locations, tiktok-top-ads-recommend, tiktok-top-ads-safety, tiktok-top-ads-spotlight, tiktok-top-ads-suggestions, tiktok-trending, tiktok-video-comments."
@@ -59,6 +67,6 @@
   "repository": "https://github.com/Crawlora-org/crawlora-tiktok",
   "ruby_changelog": "# Changelog\n\n## 0.1.1\n\n- Bump the Ruby package version to 0.1.1.\n\n## 0.1.0\n\n- Initial focused TikTok Ruby client for Crawlora's hosted API.",
   "ruby_gem_name": "crawlora-tiktok",
-  "source_contract_sha256": "58a42b604ca03b9d6cf27355e0e56f34719985b905a61df2f9f2a8c55f651f74",
-  "version": "0.2.0"
+  "source_contract_sha256": "4753f3b89c699324d0d1f68a4da637a5228838c5e26d476c7358bb5f1e02b491",
+  "version": "0.3.0"
 }

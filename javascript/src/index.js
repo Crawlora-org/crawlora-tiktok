@@ -9,14 +9,17 @@ import {
 
 export class TikTokClient extends CrawloraClient {
   constructor(options = {}) {
-    super({ ...options, userAgent: options.userAgent ?? "crawlora-tiktok-js/0.2.0" });
+    super({ ...options, userAgent: options.userAgent ?? "crawlora-tiktok-js/0.3.0" });
     this["category"] = (...args) => this.request("tiktok-category", ...args);
     this["videoComments"] = (...args) => this.request("tiktok-video-comments", ...args);
+    this["creativeCenterFilters"] = (...args) => this.request("tiktok-creative-center-filters", ...args);
     this["creativeCenterHashtags"] = (...args) => this.request("tiktok-creative-center-hashtags", ...args);
+    this["creativeCenterTopContent"] = (...args) => this.request("tiktok-creative-center-top-content", ...args);
     this["creativeCenterVideos"] = (...args) => this.request("tiktok-creative-center-videos", ...args);
     this["explore"] = (...args) => this.request("tiktok-explore", ...args);
     this["challenge"] = (...args) => this.request("tiktok-challenge", ...args);
     this["challengeList"] = (...args) => this.request("tiktok-challenge-list", ...args);
+    this["mobileFeed"] = (...args) => this.request("tiktok-mobile-feed", ...args);
     this["popularTrendCountryIndustryMeta"] = (...args) => this.request("tiktok-popular-trend-country-industry-meta", ...args);
     this["post"] = (...args) => this.request("tiktok-post", ...args);
     this["profilePost"] = (...args) => this.request("tiktok-profile-post", ...args);
@@ -47,5 +50,5 @@ export {
   CrawloraServerError
 };
 export { groups, operations, operationCount, OperationIds } from "./operations.js";
-export const VERSION = "0.2.0";
+export const VERSION = "0.3.0";
 export default TikTokClient;

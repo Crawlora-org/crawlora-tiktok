@@ -370,6 +370,42 @@ export interface ModelPopularTrendCountryIndustryMetaItem {
   "value"?: string;
 }
 
+export interface ModelTiktokmobileFeedResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileFeedResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileFeedResponse {
+  "count"?: number;
+  "fetched_at"?: string;
+  "host"?: string;
+  "items"?: Array<ModelTiktokmobileFeedItem>;
+}
+
+export interface ModelTiktokmobileFeedItem {
+  "author_id"?: number;
+  "aweme_id"?: string;
+  "create_time"?: number;
+  "share_url"?: string;
+  "statistics"?: ModelTiktokmobileFeedStatistics;
+}
+
+export interface ModelTiktokmobileFeedStatistics {
+  "aweme_id"?: string;
+  "collect_count"?: number;
+  "comment_count"?: number;
+  "digg_count"?: number;
+  "download_count"?: number;
+  "forward_count"?: number;
+  "lose_comment_count"?: number;
+  "lose_count"?: number;
+  "play_count"?: number;
+  "repost_count"?: number;
+  "share_count"?: number;
+  "whatsapp_share_count"?: number;
+}
+
 export interface ModelTiktokChallengeListResponseDoc {
   "code"?: number;
   "data"?: ModelTiktokChallengeListResp;
@@ -442,7 +478,9 @@ export interface ModelCreativecenterTrendingVideo {
   "content_tags"?: Array<ModelCreativecenterTrendingVideoContentTag>;
   "content_type"?: number;
   "cover_url"?: string;
+  "cover_urls"?: Array<ModelCreativecenterTrendingVideoCover>;
   "create_time"?: number;
+  "creator_id"?: string;
   "engagement_rate"?: number;
   "engagement_rate_lifetime"?: number;
   "item_id"?: string;
@@ -456,9 +494,78 @@ export interface ModelCreativecenterTrendingVideo {
   "video_views_lifetime"?: number;
 }
 
+export interface ModelCreativecenterTrendingVideoCover {
+  "format"?: string;
+  "url"?: string;
+}
+
 export interface ModelCreativecenterTrendingVideoContentTag {
   "id"?: string;
   "name"?: string;
+}
+
+export interface ModelCreativecenterTopContentResponseDoc {
+  "code"?: number;
+  "data"?: ModelCreativecenterTopContentResp;
+  "msg"?: string;
+}
+
+export interface ModelCreativecenterTopContentResp {
+  "last_update_time"?: number;
+  "objects"?: Array<ModelCreativecenterTopContentObject>;
+}
+
+export interface ModelCreativecenterTopContentObject {
+  "author"?: ModelCreativecenterTopContentAuthor;
+  "comment_keywords"?: Array<ModelCreativecenterTopContentCommentKeyword>;
+  "comments"?: Array<ModelCreativecenterTopContentComment>;
+  "item"?: ModelCreativecenterTopContentItem;
+  "last_update_time"?: number;
+  "metrics"?: ModelCreativecenterTopContentMetrics;
+  "name"?: string;
+}
+
+export interface ModelCreativecenterTopContentMetrics {
+  "engagement_rate"?: number;
+  "six_seconds_vtr"?: number;
+  "video_views"?: number;
+}
+
+export interface ModelCreativecenterTopContentItem {
+  "author_id"?: string;
+  "content_type"?: number;
+  "cover_url"?: string;
+  "cover_urls"?: Array<ModelCreativecenterTrendingVideoCover>;
+  "create_time"?: number;
+  "creator_id"?: string;
+  "item_id"?: string;
+  "title"?: string;
+  "video_url"?: string;
+}
+
+export interface ModelCreativecenterTopContentComment {
+  "comment_id"?: string;
+  "create_time"?: number;
+  "like_count"?: number;
+  "text"?: string;
+  "user_avatar_url"?: string;
+  "user_id"?: string;
+  "user_name"?: string;
+}
+
+export interface ModelCreativecenterTopContentCommentKeyword {
+  "keyword"?: string;
+  "mention_count"?: number;
+}
+
+export interface ModelCreativecenterTopContentAuthor {
+  "avatar_url"?: string;
+  "bio"?: string;
+  "creator_type"?: number;
+  "follower_count"?: number;
+  "handle"?: string;
+  "nickname"?: string;
+  "store_region"?: string;
 }
 
 export interface ModelCreativecenterTrendingHashtagsResponseDoc {
@@ -497,6 +604,42 @@ export interface ModelCreativecenterHashtagTopCreator {
 export interface ModelCreativecenterHashtagTrendPoint {
   "timestamp"?: number;
   "value"?: number;
+}
+
+export interface ModelCreativecenterFiltersResponseDoc {
+  "code"?: number;
+  "data"?: ModelCreativecenterCreativeCenterFiltersResp;
+  "msg"?: string;
+}
+
+export interface ModelCreativecenterCreativeCenterFiltersResp {
+  "hashtag_countries"?: Array<ModelCreativecenterCountryOption>;
+  "hashtag_periods"?: Array<number>;
+  "industries"?: Array<ModelCreativecenterIndustryOption>;
+  "video_content_tags"?: Array<ModelCreativecenterContentTagOption>;
+  "video_countries"?: Array<ModelCreativecenterCountryOption>;
+  "video_periods"?: Array<number>;
+  "video_sort_by"?: Array<ModelCreativecenterSortOption>;
+}
+
+export interface ModelCreativecenterSortOption {
+  "label"?: string;
+  "value"?: string;
+}
+
+export interface ModelCreativecenterCountryOption {
+  "code"?: string;
+  "name"?: string;
+}
+
+export interface ModelCreativecenterContentTagOption {
+  "id"?: string;
+  "name"?: string;
+}
+
+export interface ModelCreativecenterIndustryOption {
+  "id"?: string;
+  "name"?: string;
 }
 
 export interface ModelTiktokCommentsResponseDoc {
@@ -541,10 +684,20 @@ export interface TiktokVideoCommentsParams {
   "cursor"?: number;
 }
 
+export type TiktokCreativeCenterFiltersResponse = CrawloraResponse<ModelCreativecenterFiltersResponseDoc>;
+export interface TiktokCreativeCenterFiltersParams {
+}
+
 export type TiktokCreativeCenterHashtagsResponse = CrawloraResponse<ModelCreativecenterTrendingHashtagsResponseDoc>;
 export interface TiktokCreativeCenterHashtagsParams {
   "country_code": string;
-  "period"?: "7" | "30";
+  "period"?: "7" | "30" | "90";
+  "industry_id"?: "10000000000" | "11000000000" | "12000000000" | "13000000000" | "14000000000" | "15000000000" | "17000000000" | "18000000000" | "19000000000" | "21000000000" | "22000000000" | "23000000000" | "24000000000" | "25000000000" | "26000000000" | "27000000000" | "28000000000" | "29000000000";
+}
+
+export type TiktokCreativeCenterTopContentResponse = CrawloraResponse<ModelCreativecenterTopContentResponseDoc>;
+export interface TiktokCreativeCenterTopContentParams {
+  "include_comments"?: boolean;
 }
 
 export type TiktokCreativeCenterVideosResponse = CrawloraResponse<ModelCreativecenterTrendingVideosResponseDoc>;
@@ -553,6 +706,7 @@ export interface TiktokCreativeCenterVideosParams {
   "period"?: "7" | "30";
   "sort_by"?: "views" | "engagement" | "six_second_views";
   "content_label_id"?: string;
+  "content_label_ids"?: Array<"11002" | "11003" | "11010" | "11013" | "11015">;
   "organic_only"?: boolean;
 }
 
@@ -569,6 +723,12 @@ export interface TiktokChallengeParams {
 export type TiktokChallengeListResponse = CrawloraResponse<ModelTiktokChallengeListResponseDoc>;
 export interface TiktokChallengeListParams {
   "id": string;
+  "cursor"?: number;
+}
+
+export type TiktokMobileFeedResponse = CrawloraResponse<ModelTiktokmobileFeedResponseDoc>;
+export interface TiktokMobileFeedParams {
+  "count"?: number;
   "cursor"?: number;
 }
 
@@ -685,11 +845,14 @@ export interface TiktokTrendingParams {
 export interface TiktokService {
   category<T = TiktokCategoryResponse>(params?: TiktokCategoryParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   videoComments<T = TiktokVideoCommentsResponse>(params: TiktokVideoCommentsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  creativeCenterFilters<T = TiktokCreativeCenterFiltersResponse>(params?: TiktokCreativeCenterFiltersParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   creativeCenterHashtags<T = TiktokCreativeCenterHashtagsResponse>(params: TiktokCreativeCenterHashtagsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  creativeCenterTopContent<T = TiktokCreativeCenterTopContentResponse>(params?: TiktokCreativeCenterTopContentParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   creativeCenterVideos<T = TiktokCreativeCenterVideosResponse>(params: TiktokCreativeCenterVideosParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   explore<T = TiktokExploreResponse>(params: TiktokExploreParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   challenge<T = TiktokChallengeResponse>(params: TiktokChallengeParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   challengeList<T = TiktokChallengeListResponse>(params: TiktokChallengeListParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileFeed<T = TiktokMobileFeedResponse>(params?: TiktokMobileFeedParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   popularTrendCountryIndustryMeta<T = TiktokPopularTrendCountryIndustryMetaResponse>(params?: TiktokPopularTrendCountryIndustryMetaParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   post<T = TiktokPostResponse>(params: TiktokPostParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   profilePost<T = TiktokProfilePostResponse>(params: TiktokProfilePostParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
@@ -717,11 +880,14 @@ export interface CrawloraGeneratedGroups {
 export interface OperationParamsMap {
   "tiktok-category": TiktokCategoryParams;
   "tiktok-video-comments": TiktokVideoCommentsParams;
+  "tiktok-creative-center-filters": TiktokCreativeCenterFiltersParams;
   "tiktok-creative-center-hashtags": TiktokCreativeCenterHashtagsParams;
+  "tiktok-creative-center-top-content": TiktokCreativeCenterTopContentParams;
   "tiktok-creative-center-videos": TiktokCreativeCenterVideosParams;
   "tiktok-explore": TiktokExploreParams;
   "tiktok-challenge": TiktokChallengeParams;
   "tiktok-challenge-list": TiktokChallengeListParams;
+  "tiktok-mobile-feed": TiktokMobileFeedParams;
   "tiktok-popular-trend-country-industry-meta": TiktokPopularTrendCountryIndustryMetaParams;
   "tiktok-post": TiktokPostParams;
   "tiktok-profile-post": TiktokProfilePostParams;
@@ -745,11 +911,14 @@ export interface OperationParamsMap {
 export interface OperationResponseMap {
   "tiktok-category": TiktokCategoryResponse;
   "tiktok-video-comments": TiktokVideoCommentsResponse;
+  "tiktok-creative-center-filters": TiktokCreativeCenterFiltersResponse;
   "tiktok-creative-center-hashtags": TiktokCreativeCenterHashtagsResponse;
+  "tiktok-creative-center-top-content": TiktokCreativeCenterTopContentResponse;
   "tiktok-creative-center-videos": TiktokCreativeCenterVideosResponse;
   "tiktok-explore": TiktokExploreResponse;
   "tiktok-challenge": TiktokChallengeResponse;
   "tiktok-challenge-list": TiktokChallengeListResponse;
+  "tiktok-mobile-feed": TiktokMobileFeedResponse;
   "tiktok-popular-trend-country-industry-meta": TiktokPopularTrendCountryIndustryMetaResponse;
   "tiktok-post": TiktokPostResponse;
   "tiktok-profile-post": TiktokProfilePostResponse;
@@ -773,11 +942,14 @@ export interface OperationResponseMap {
 export interface OperationRequiredParamsMap {
   "tiktok-category": false;
   "tiktok-video-comments": true;
+  "tiktok-creative-center-filters": false;
   "tiktok-creative-center-hashtags": true;
+  "tiktok-creative-center-top-content": false;
   "tiktok-creative-center-videos": true;
   "tiktok-explore": true;
   "tiktok-challenge": true;
   "tiktok-challenge-list": true;
+  "tiktok-mobile-feed": false;
   "tiktok-popular-trend-country-industry-meta": false;
   "tiktok-post": true;
   "tiktok-profile-post": true;
@@ -808,11 +980,14 @@ export type OperationRequestArgs<I extends OperationId> =
 export type OperationIdLiteral =
   | "tiktok-category"
   | "tiktok-video-comments"
+  | "tiktok-creative-center-filters"
   | "tiktok-creative-center-hashtags"
+  | "tiktok-creative-center-top-content"
   | "tiktok-creative-center-videos"
   | "tiktok-explore"
   | "tiktok-challenge"
   | "tiktok-challenge-list"
+  | "tiktok-mobile-feed"
   | "tiktok-popular-trend-country-industry-meta"
   | "tiktok-post"
   | "tiktok-profile-post"
@@ -836,9 +1011,12 @@ export declare const OperationIds: Readonly<{
   TiktokCategory: "tiktok-category";
   TiktokChallenge: "tiktok-challenge";
   TiktokChallengeList: "tiktok-challenge-list";
+  TiktokCreativeCenterFilters: "tiktok-creative-center-filters";
   TiktokCreativeCenterHashtags: "tiktok-creative-center-hashtags";
+  TiktokCreativeCenterTopContent: "tiktok-creative-center-top-content";
   TiktokCreativeCenterVideos: "tiktok-creative-center-videos";
   TiktokExplore: "tiktok-explore";
+  TiktokMobileFeed: "tiktok-mobile-feed";
   TiktokPopularTrendCountryIndustryMeta: "tiktok-popular-trend-country-industry-meta";
   TiktokPost: "tiktok-post";
   TiktokProfile: "tiktok-profile";

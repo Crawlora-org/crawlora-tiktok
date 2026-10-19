@@ -3,8 +3,8 @@ require_relative "lib/crawlora/tiktok/version"
 Gem::Specification.new do |spec|
   spec.name = "crawlora-tiktok"
   spec.version = Crawlora::Tiktok::VERSION
-  spec.summary = "TikTok API client for Crawlora (25 endpoints)"
-  spec.description = "Ruby client for Crawlora's hosted TikTok API. Covers video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data across 25 endpoints."
+  spec.summary = "TikTok API client for Crawlora (28 endpoints)"
+  spec.description = "Ruby client for Crawlora's hosted TikTok API. Covers video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data across 28 endpoints."
   spec.authors = ["Crawlora"]
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6"

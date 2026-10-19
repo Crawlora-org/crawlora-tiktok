@@ -1,6 +1,6 @@
 # Crawlora TikTok API client for Ruby (`crawlora-tiktok`)
 
-This Ruby gem calls Crawlora's hosted TikTok API at `https://api.crawlora.net/api/v1`. It exposes 25 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data; it does not call or scrape TikTok directly. Requests require your Crawlora API key and use your account's service plan.
+This Ruby gem calls Crawlora's hosted TikTok API at `https://api.crawlora.net/api/v1`. It exposes 28 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data; it does not call or scrape TikTok directly. Requests require your Crawlora API key and use your account's service plan.
 
 ## Install
 
@@ -20,7 +20,7 @@ puts result
 client.close
 ```
 
-Use an operation-specific method for normal calls. `request(operation_id, params = {}, response_type: :auto)` is available for every operation. `response_type: :text` returns raw response text. This gem includes 25 API operations.
+Use an operation-specific method for normal calls. `request(operation_id, params = {}, response_type: :auto)` is available for every operation. `response_type: :text` returns raw response text. This gem includes 28 API operations.
 
 ```ruby
 client = Crawlora::Tiktok::Client.new(api_key: ENV.fetch("CRAWLORA_API_KEY"), timeout: 30)
@@ -38,11 +38,14 @@ Browse every route included in this gem. The [endpoint reference](https://github
 | --- | --- | --- | --- |
 | `GET` | `/tiktok/category` | `tiktok-category` | List TikTok explore categories |
 | `GET` | `/tiktok/comments` | `tiktok-video-comments` | Retrieve TikTok video comments |
+| `GET` | `/tiktok/creative-center/filters` | `tiktok-creative-center-filters` | Retrieve TikTok Creative Center filter taxonomy |
 | `GET` | `/tiktok/creative-center/hashtags` | `tiktok-creative-center-hashtags` | Retrieve TikTok Creative Center trending hashtags |
+| `GET` | `/tiktok/creative-center/top-content` | `tiktok-creative-center-top-content` | Retrieve TikTok Creative Center top content |
 | `GET` | `/tiktok/creative-center/videos` | `tiktok-creative-center-videos` | Retrieve TikTok Creative Center trending videos |
 | `GET` | `/tiktok/explore/{id}` | `tiktok-explore` | Retrieve the TikTok explore feed for a category |
 | `GET` | `/tiktok/hashtag/{name}` | `tiktok-challenge` | Retrieve TikTok hashtag details |
 | `GET` | `/tiktok/hashtags` | `tiktok-challenge-list` | Retrieve TikTok hashtag posts |
+| `GET` | `/tiktok/mobile/feed` | `tiktok-mobile-feed` | Retrieve the TikTok mobile For You feed |
 | `GET` | `/tiktok/popular-trend/country-industry-meta` | `tiktok-popular-trend-country-industry-meta` | Retrieve TikTok popular-trend country and industry metadata |
 | `GET` | `/tiktok/post/{id}` | `tiktok-post` | Retrieve TikTok video details |
 | `GET` | `/tiktok/posts` | `tiktok-profile-post` | Retrieve posts from a TikTok profile |

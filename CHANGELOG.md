@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 — 2026-10-19
+
+- Added operations: tiktok-creative-center-filters, tiktok-creative-center-top-content, tiktok-mobile-feed.
+- Updated operation contracts: tiktok-creative-center-hashtags, tiktok-creative-center-videos.
+
 ## 0.2.0 — 2026-10-14
 
 - Updated operation contracts: tiktok-category, tiktok-challenge, tiktok-challenge-list, tiktok-explore, tiktok-popular-trend-country-industry-meta, tiktok-post, tiktok-profile, tiktok-profile-post, tiktok-search, tiktok-search-hashtag, tiktok-search-user, tiktok-top-ads-analysis, tiktok-top-ads-detail, tiktok-top-ads-filters, tiktok-top-ads-list, tiktok-top-ads-location-info, tiktok-top-ads-locations, tiktok-top-ads-recommend, tiktok-top-ads-safety, tiktok-top-ads-spotlight, tiktok-top-ads-suggestions, tiktok-trending, tiktok-video-comments.

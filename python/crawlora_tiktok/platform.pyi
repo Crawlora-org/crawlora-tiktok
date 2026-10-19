@@ -395,6 +395,42 @@ ModelPopularTrendCountryIndustryMetaItem = TypedDict('ModelPopularTrendCountryIn
     'value': NotRequired[str],
 }, total=False)
 
+ModelTiktokmobileFeedResponseDoc = TypedDict('ModelTiktokmobileFeedResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileFeedResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileFeedResponse = TypedDict('ModelTiktokmobileFeedResponse', {
+    'count': NotRequired[int],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'items': NotRequired[list[ModelTiktokmobileFeedItem]],
+}, total=False)
+
+ModelTiktokmobileFeedItem = TypedDict('ModelTiktokmobileFeedItem', {
+    'author_id': NotRequired[int],
+    'aweme_id': NotRequired[str],
+    'create_time': NotRequired[int],
+    'share_url': NotRequired[str],
+    'statistics': NotRequired[ModelTiktokmobileFeedStatistics],
+}, total=False)
+
+ModelTiktokmobileFeedStatistics = TypedDict('ModelTiktokmobileFeedStatistics', {
+    'aweme_id': NotRequired[str],
+    'collect_count': NotRequired[int],
+    'comment_count': NotRequired[int],
+    'digg_count': NotRequired[int],
+    'download_count': NotRequired[int],
+    'forward_count': NotRequired[int],
+    'lose_comment_count': NotRequired[int],
+    'lose_count': NotRequired[int],
+    'play_count': NotRequired[int],
+    'repost_count': NotRequired[int],
+    'share_count': NotRequired[int],
+    'whatsapp_share_count': NotRequired[int],
+}, total=False)
+
 ModelTiktokChallengeListResponseDoc = TypedDict('ModelTiktokChallengeListResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokChallengeListResp],
@@ -467,7 +503,9 @@ ModelCreativecenterTrendingVideo = TypedDict('ModelCreativecenterTrendingVideo',
     'content_tags': NotRequired[list[ModelCreativecenterTrendingVideoContentTag]],
     'content_type': NotRequired[int],
     'cover_url': NotRequired[str],
+    'cover_urls': NotRequired[list[ModelCreativecenterTrendingVideoCover]],
     'create_time': NotRequired[int],
+    'creator_id': NotRequired[str],
     'engagement_rate': NotRequired[float],
     'engagement_rate_lifetime': NotRequired[float],
     'item_id': NotRequired[str],
@@ -481,9 +519,78 @@ ModelCreativecenterTrendingVideo = TypedDict('ModelCreativecenterTrendingVideo',
     'video_views_lifetime': NotRequired[int],
 }, total=False)
 
+ModelCreativecenterTrendingVideoCover = TypedDict('ModelCreativecenterTrendingVideoCover', {
+    'format': NotRequired[str],
+    'url': NotRequired[str],
+}, total=False)
+
 ModelCreativecenterTrendingVideoContentTag = TypedDict('ModelCreativecenterTrendingVideoContentTag', {
     'id': NotRequired[str],
     'name': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterTopContentResponseDoc = TypedDict('ModelCreativecenterTopContentResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelCreativecenterTopContentResp],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterTopContentResp = TypedDict('ModelCreativecenterTopContentResp', {
+    'last_update_time': NotRequired[int],
+    'objects': NotRequired[list[ModelCreativecenterTopContentObject]],
+}, total=False)
+
+ModelCreativecenterTopContentObject = TypedDict('ModelCreativecenterTopContentObject', {
+    'author': NotRequired[ModelCreativecenterTopContentAuthor],
+    'comment_keywords': NotRequired[list[ModelCreativecenterTopContentCommentKeyword]],
+    'comments': NotRequired[list[ModelCreativecenterTopContentComment]],
+    'item': NotRequired[ModelCreativecenterTopContentItem],
+    'last_update_time': NotRequired[int],
+    'metrics': NotRequired[ModelCreativecenterTopContentMetrics],
+    'name': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterTopContentMetrics = TypedDict('ModelCreativecenterTopContentMetrics', {
+    'engagement_rate': NotRequired[float],
+    'six_seconds_vtr': NotRequired[float],
+    'video_views': NotRequired[int],
+}, total=False)
+
+ModelCreativecenterTopContentItem = TypedDict('ModelCreativecenterTopContentItem', {
+    'author_id': NotRequired[str],
+    'content_type': NotRequired[int],
+    'cover_url': NotRequired[str],
+    'cover_urls': NotRequired[list[ModelCreativecenterTrendingVideoCover]],
+    'create_time': NotRequired[int],
+    'creator_id': NotRequired[str],
+    'item_id': NotRequired[str],
+    'title': NotRequired[str],
+    'video_url': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterTopContentComment = TypedDict('ModelCreativecenterTopContentComment', {
+    'comment_id': NotRequired[str],
+    'create_time': NotRequired[int],
+    'like_count': NotRequired[int],
+    'text': NotRequired[str],
+    'user_avatar_url': NotRequired[str],
+    'user_id': NotRequired[str],
+    'user_name': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterTopContentCommentKeyword = TypedDict('ModelCreativecenterTopContentCommentKeyword', {
+    'keyword': NotRequired[str],
+    'mention_count': NotRequired[int],
+}, total=False)
+
+ModelCreativecenterTopContentAuthor = TypedDict('ModelCreativecenterTopContentAuthor', {
+    'avatar_url': NotRequired[str],
+    'bio': NotRequired[str],
+    'creator_type': NotRequired[int],
+    'follower_count': NotRequired[int],
+    'handle': NotRequired[str],
+    'nickname': NotRequired[str],
+    'store_region': NotRequired[str],
 }, total=False)
 
 ModelCreativecenterTrendingHashtagsResponseDoc = TypedDict('ModelCreativecenterTrendingHashtagsResponseDoc', {
@@ -522,6 +629,42 @@ ModelCreativecenterHashtagTopCreator = TypedDict('ModelCreativecenterHashtagTopC
 ModelCreativecenterHashtagTrendPoint = TypedDict('ModelCreativecenterHashtagTrendPoint', {
     'timestamp': NotRequired[int],
     'value': NotRequired[float],
+}, total=False)
+
+ModelCreativecenterFiltersResponseDoc = TypedDict('ModelCreativecenterFiltersResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelCreativecenterCreativeCenterFiltersResp],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterCreativeCenterFiltersResp = TypedDict('ModelCreativecenterCreativeCenterFiltersResp', {
+    'hashtag_countries': NotRequired[list[ModelCreativecenterCountryOption]],
+    'hashtag_periods': NotRequired[list[int]],
+    'industries': NotRequired[list[ModelCreativecenterIndustryOption]],
+    'video_content_tags': NotRequired[list[ModelCreativecenterContentTagOption]],
+    'video_countries': NotRequired[list[ModelCreativecenterCountryOption]],
+    'video_periods': NotRequired[list[int]],
+    'video_sort_by': NotRequired[list[ModelCreativecenterSortOption]],
+}, total=False)
+
+ModelCreativecenterSortOption = TypedDict('ModelCreativecenterSortOption', {
+    'label': NotRequired[str],
+    'value': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterCountryOption = TypedDict('ModelCreativecenterCountryOption', {
+    'code': NotRequired[str],
+    'name': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterContentTagOption = TypedDict('ModelCreativecenterContentTagOption', {
+    'id': NotRequired[str],
+    'name': NotRequired[str],
+}, total=False)
+
+ModelCreativecenterIndustryOption = TypedDict('ModelCreativecenterIndustryOption', {
+    'id': NotRequired[str],
+    'name': NotRequired[str],
 }, total=False)
 
 ModelTiktokCommentsResponseDoc = TypedDict('ModelTiktokCommentsResponseDoc', {
@@ -572,13 +715,29 @@ TiktokVideoCommentsParams = TypedDict('TiktokVideoCommentsParams', {
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokCreativeCenterFiltersResponse = ModelCreativecenterFiltersResponseDoc
+TiktokCreativeCenterFiltersParams = TypedDict('TiktokCreativeCenterFiltersParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+}, total=False)
+
 TiktokCreativeCenterHashtagsResponse = ModelCreativecenterTrendingHashtagsResponseDoc
 TiktokCreativeCenterHashtagsParams = TypedDict('TiktokCreativeCenterHashtagsParams', {
     '_response_type': NotRequired[ResponseType],
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
     'country_code': Required[str],
-    'period': NotRequired[Literal['7', '30']],
+    'period': NotRequired[Literal['7', '30', '90']],
+    'industry_id': NotRequired[Literal['10000000000', '11000000000', '12000000000', '13000000000', '14000000000', '15000000000', '17000000000', '18000000000', '19000000000', '21000000000', '22000000000', '23000000000', '24000000000', '25000000000', '26000000000', '27000000000', '28000000000', '29000000000']],
+}, total=False)
+
+TiktokCreativeCenterTopContentResponse = ModelCreativecenterTopContentResponseDoc
+TiktokCreativeCenterTopContentParams = TypedDict('TiktokCreativeCenterTopContentParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'include_comments': NotRequired[bool],
 }, total=False)
 
 TiktokCreativeCenterVideosResponse = ModelCreativecenterTrendingVideosResponseDoc
@@ -590,6 +749,7 @@ TiktokCreativeCenterVideosParams = TypedDict('TiktokCreativeCenterVideosParams',
     'period': NotRequired[Literal['7', '30']],
     'sort_by': NotRequired[Literal['views', 'engagement', 'six_second_views']],
     'content_label_id': NotRequired[str],
+    'content_label_ids': NotRequired[list[Literal['11002', '11003', '11010', '11013', '11015']]],
     'organic_only': NotRequired[bool],
 }, total=False)
 
@@ -615,6 +775,15 @@ TiktokChallengeListParams = TypedDict('TiktokChallengeListParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
     'id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedResponse = ModelTiktokmobileFeedResponseDoc
+TiktokMobileFeedParams = TypedDict('TiktokMobileFeedParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
 
@@ -796,11 +965,23 @@ class TiktokGroup:
     @overload
     def video_comments(self, **params: Unpack[TiktokVideoCommentsDefaultParams]) -> TiktokVideoCommentsResponse: ...
     @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersStreamParams]) -> BinaryIO: ...
+    @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersTextResponseParams]) -> str: ...
+    @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersDefaultParams]) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsStreamParams]) -> BinaryIO: ...
     @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsTextResponseParams]) -> str: ...
     @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsDefaultParams]) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentStreamParams]) -> BinaryIO: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentTextResponseParams]) -> str: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentDefaultParams]) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     def creative_center_videos(self, **params: Unpack[TiktokCreativeCenterVideosStreamParams]) -> BinaryIO: ...
     @overload
@@ -825,6 +1006,12 @@ class TiktokGroup:
     def challenge_list(self, **params: Unpack[TiktokChallengeListTextResponseParams]) -> str: ...
     @overload
     def challenge_list(self, **params: Unpack[TiktokChallengeListDefaultParams]) -> TiktokChallengeListResponse: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
     @overload
     def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -937,11 +1124,14 @@ class TiktokGroup:
 OperationId = Literal[
     'tiktok-category',
     'tiktok-video-comments',
+    'tiktok-creative-center-filters',
     'tiktok-creative-center-hashtags',
+    'tiktok-creative-center-top-content',
     'tiktok-creative-center-videos',
     'tiktok-explore',
     'tiktok-challenge',
     'tiktok-challenge-list',
+    'tiktok-mobile-feed',
     'tiktok-popular-trend-country-industry-meta',
     'tiktok-post',
     'tiktok-profile-post',
@@ -1071,6 +1261,18 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-creative-center-filters'],
+        params: TiktokCreativeCenterFiltersParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-creative-center-hashtags'],
         params: TiktokCreativeCenterHashtagsParams,
         *,
@@ -1080,6 +1282,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-creative-center-top-content'],
+        params: TiktokCreativeCenterTopContentParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     def operation(
         self,
@@ -1128,6 +1342,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokChallengeListResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-feed'],
+        params: TiktokMobileFeedParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileFeedResponse: ...
     @overload
     def operation(
         self,
@@ -1383,6 +1609,18 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-creative-center-filters'],
+        params: TiktokCreativeCenterFiltersParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-creative-center-hashtags'],
         params: TiktokCreativeCenterHashtagsParams,
         *,
@@ -1392,6 +1630,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-creative-center-top-content'],
+        params: TiktokCreativeCenterTopContentParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     def request(
         self,
@@ -1440,6 +1690,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokChallengeListResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-feed'],
+        params: TiktokMobileFeedParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileFeedResponse: ...
     @overload
     def request(
         self,
@@ -1708,11 +1970,23 @@ class TikTokClient(CrawloraClient):
     @overload
     def video_comments(self, **params: Unpack[TiktokVideoCommentsDefaultParams]) -> TiktokVideoCommentsResponse: ...
     @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersStreamParams]) -> BinaryIO: ...
+    @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersTextResponseParams]) -> str: ...
+    @overload
+    def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersDefaultParams]) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsStreamParams]) -> BinaryIO: ...
     @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsTextResponseParams]) -> str: ...
     @overload
     def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsDefaultParams]) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentStreamParams]) -> BinaryIO: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentTextResponseParams]) -> str: ...
+    @overload
+    def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentDefaultParams]) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     def creative_center_videos(self, **params: Unpack[TiktokCreativeCenterVideosStreamParams]) -> BinaryIO: ...
     @overload
@@ -1737,6 +2011,12 @@ class TikTokClient(CrawloraClient):
     def challenge_list(self, **params: Unpack[TiktokChallengeListTextResponseParams]) -> str: ...
     @overload
     def challenge_list(self, **params: Unpack[TiktokChallengeListDefaultParams]) -> TiktokChallengeListResponse: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
+    @overload
+    def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
     @overload
     def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -1862,11 +2142,23 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def video_comments(self, **params: Unpack[TiktokVideoCommentsDefaultParams]) -> TiktokVideoCommentsResponse: ...
     @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersStreamParams]) -> BinaryIO: ...
+    @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersTextResponseParams]) -> str: ...
+    @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersDefaultParams]) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsStreamParams]) -> BinaryIO: ...
     @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsTextResponseParams]) -> str: ...
     @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsDefaultParams]) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentStreamParams]) -> BinaryIO: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentTextResponseParams]) -> str: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentDefaultParams]) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     async def creative_center_videos(self, **params: Unpack[TiktokCreativeCenterVideosStreamParams]) -> BinaryIO: ...
     @overload
@@ -1891,6 +2183,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     async def challenge_list(self, **params: Unpack[TiktokChallengeListTextResponseParams]) -> str: ...
     @overload
     async def challenge_list(self, **params: Unpack[TiktokChallengeListDefaultParams]) -> TiktokChallengeListResponse: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
     @overload
     async def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -2014,11 +2312,23 @@ class _AsyncTiktokGroup:
     @overload
     async def video_comments(self, **params: Unpack[TiktokVideoCommentsDefaultParams]) -> TiktokVideoCommentsResponse: ...
     @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersStreamParams]) -> BinaryIO: ...
+    @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersTextResponseParams]) -> str: ...
+    @overload
+    async def creative_center_filters(self, **params: Unpack[TiktokCreativeCenterFiltersDefaultParams]) -> TiktokCreativeCenterFiltersResponse: ...
+    @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsStreamParams]) -> BinaryIO: ...
     @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsTextResponseParams]) -> str: ...
     @overload
     async def creative_center_hashtags(self, **params: Unpack[TiktokCreativeCenterHashtagsDefaultParams]) -> TiktokCreativeCenterHashtagsResponse: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentStreamParams]) -> BinaryIO: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentTextResponseParams]) -> str: ...
+    @overload
+    async def creative_center_top_content(self, **params: Unpack[TiktokCreativeCenterTopContentDefaultParams]) -> TiktokCreativeCenterTopContentResponse: ...
     @overload
     async def creative_center_videos(self, **params: Unpack[TiktokCreativeCenterVideosStreamParams]) -> BinaryIO: ...
     @overload
@@ -2043,6 +2353,12 @@ class _AsyncTiktokGroup:
     async def challenge_list(self, **params: Unpack[TiktokChallengeListTextResponseParams]) -> str: ...
     @overload
     async def challenge_list(self, **params: Unpack[TiktokChallengeListDefaultParams]) -> TiktokChallengeListResponse: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
     @overload
     async def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -2194,12 +2510,31 @@ TiktokVideoCommentsStreamParams = TypedDict('TiktokVideoCommentsStreamParams', {
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokCreativeCenterFiltersDefaultParams = TypedDict('TiktokCreativeCenterFiltersDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+}, total=False)
+
+TiktokCreativeCenterFiltersTextResponseParams = TypedDict('TiktokCreativeCenterFiltersTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+}, total=False)
+
+TiktokCreativeCenterFiltersStreamParams = TypedDict('TiktokCreativeCenterFiltersStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+}, total=False)
+
 TiktokCreativeCenterHashtagsDefaultParams = TypedDict('TiktokCreativeCenterHashtagsDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': NotRequired[Literal["auto", "json"]],
     'country_code': Required[str],
-    'period': NotRequired[Literal['7', '30']],
+    'period': NotRequired[Literal['7', '30', '90']],
+    'industry_id': NotRequired[Literal['10000000000', '11000000000', '12000000000', '13000000000', '14000000000', '15000000000', '17000000000', '18000000000', '19000000000', '21000000000', '22000000000', '23000000000', '24000000000', '25000000000', '26000000000', '27000000000', '28000000000', '29000000000']],
 }, total=False)
 
 TiktokCreativeCenterHashtagsTextResponseParams = TypedDict('TiktokCreativeCenterHashtagsTextResponseParams', {
@@ -2207,7 +2542,8 @@ TiktokCreativeCenterHashtagsTextResponseParams = TypedDict('TiktokCreativeCenter
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["text"]],
     'country_code': Required[str],
-    'period': NotRequired[Literal['7', '30']],
+    'period': NotRequired[Literal['7', '30', '90']],
+    'industry_id': NotRequired[Literal['10000000000', '11000000000', '12000000000', '13000000000', '14000000000', '15000000000', '17000000000', '18000000000', '19000000000', '21000000000', '22000000000', '23000000000', '24000000000', '25000000000', '26000000000', '27000000000', '28000000000', '29000000000']],
 }, total=False)
 
 TiktokCreativeCenterHashtagsStreamParams = TypedDict('TiktokCreativeCenterHashtagsStreamParams', {
@@ -2215,7 +2551,29 @@ TiktokCreativeCenterHashtagsStreamParams = TypedDict('TiktokCreativeCenterHashta
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["stream"]],
     'country_code': Required[str],
-    'period': NotRequired[Literal['7', '30']],
+    'period': NotRequired[Literal['7', '30', '90']],
+    'industry_id': NotRequired[Literal['10000000000', '11000000000', '12000000000', '13000000000', '14000000000', '15000000000', '17000000000', '18000000000', '19000000000', '21000000000', '22000000000', '23000000000', '24000000000', '25000000000', '26000000000', '27000000000', '28000000000', '29000000000']],
+}, total=False)
+
+TiktokCreativeCenterTopContentDefaultParams = TypedDict('TiktokCreativeCenterTopContentDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'include_comments': NotRequired[bool],
+}, total=False)
+
+TiktokCreativeCenterTopContentTextResponseParams = TypedDict('TiktokCreativeCenterTopContentTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'include_comments': NotRequired[bool],
+}, total=False)
+
+TiktokCreativeCenterTopContentStreamParams = TypedDict('TiktokCreativeCenterTopContentStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'include_comments': NotRequired[bool],
 }, total=False)
 
 TiktokCreativeCenterVideosDefaultParams = TypedDict('TiktokCreativeCenterVideosDefaultParams', {
@@ -2226,6 +2584,7 @@ TiktokCreativeCenterVideosDefaultParams = TypedDict('TiktokCreativeCenterVideosD
     'period': NotRequired[Literal['7', '30']],
     'sort_by': NotRequired[Literal['views', 'engagement', 'six_second_views']],
     'content_label_id': NotRequired[str],
+    'content_label_ids': NotRequired[list[Literal['11002', '11003', '11010', '11013', '11015']]],
     'organic_only': NotRequired[bool],
 }, total=False)
 
@@ -2237,6 +2596,7 @@ TiktokCreativeCenterVideosTextResponseParams = TypedDict('TiktokCreativeCenterVi
     'period': NotRequired[Literal['7', '30']],
     'sort_by': NotRequired[Literal['views', 'engagement', 'six_second_views']],
     'content_label_id': NotRequired[str],
+    'content_label_ids': NotRequired[list[Literal['11002', '11003', '11010', '11013', '11015']]],
     'organic_only': NotRequired[bool],
 }, total=False)
 
@@ -2248,6 +2608,7 @@ TiktokCreativeCenterVideosStreamParams = TypedDict('TiktokCreativeCenterVideosSt
     'period': NotRequired[Literal['7', '30']],
     'sort_by': NotRequired[Literal['views', 'engagement', 'six_second_views']],
     'content_label_id': NotRequired[str],
+    'content_label_ids': NotRequired[list[Literal['11002', '11003', '11010', '11013', '11015']]],
     'organic_only': NotRequired[bool],
 }, total=False)
 
@@ -2314,6 +2675,30 @@ TiktokChallengeListStreamParams = TypedDict('TiktokChallengeListStreamParams', {
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["stream"]],
     'id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedDefaultParams = TypedDict('TiktokMobileFeedDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedTextResponseParams = TypedDict('TiktokMobileFeedTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedStreamParams = TypedDict('TiktokMobileFeedStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
 

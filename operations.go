@@ -31,11 +31,14 @@ type operationDefinition struct {
 var operations = map[string]operationDefinition{
 	"tiktok-category":                            operationDefinition{Method: "GET", Path: "/tiktok/category", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-video-comments":                      operationDefinition{Method: "GET", Path: "/tiktok/comments", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "aweme_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
-	"tiktok-creative-center-hashtags":            operationDefinition{Method: "GET", Path: "/tiktok/creative-center/hashtags", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "country_code", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "period", In: "query", Type: "integer", Enum: []string{"7", "30"}}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
-	"tiktok-creative-center-videos":              operationDefinition{Method: "GET", Path: "/tiktok/creative-center/videos", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "country_code", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "period", In: "query", Type: "integer", Enum: []string{"7", "30"}}, parameterDefinition{Name: "sort_by", In: "query", Type: "string", Enum: []string{"views", "engagement", "six_second_views"}}, parameterDefinition{Name: "content_label_id", In: "query", Type: "string"}, parameterDefinition{Name: "organic_only", In: "query", Type: "boolean"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-creative-center-filters":             operationDefinition{Method: "GET", Path: "/tiktok/creative-center/filters", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-creative-center-hashtags":            operationDefinition{Method: "GET", Path: "/tiktok/creative-center/hashtags", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "country_code", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "period", In: "query", Type: "integer", Enum: []string{"7", "30", "90"}}, parameterDefinition{Name: "industry_id", In: "query", Type: "string", Enum: []string{"10000000000", "11000000000", "12000000000", "13000000000", "14000000000", "15000000000", "17000000000", "18000000000", "19000000000", "21000000000", "22000000000", "23000000000", "24000000000", "25000000000", "26000000000", "27000000000", "28000000000", "29000000000"}}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-creative-center-top-content":         operationDefinition{Method: "GET", Path: "/tiktok/creative-center/top-content", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "include_comments", In: "query", Type: "boolean"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-creative-center-videos":              operationDefinition{Method: "GET", Path: "/tiktok/creative-center/videos", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "country_code", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "period", In: "query", Type: "integer", Enum: []string{"7", "30"}}, parameterDefinition{Name: "sort_by", In: "query", Type: "string", Enum: []string{"views", "engagement", "six_second_views"}}, parameterDefinition{Name: "content_label_id", In: "query", Type: "string"}, parameterDefinition{Name: "content_label_ids", In: "query", Type: "array", CollectionFormat: "multi", Enum: []string{"11002", "11003", "11010", "11013", "11015"}}, parameterDefinition{Name: "organic_only", In: "query", Type: "boolean"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-explore":                             operationDefinition{Method: "GET", Path: "/tiktok/explore/{id}", PathParams: []string{"id"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-challenge":                           operationDefinition{Method: "GET", Path: "/tiktok/hashtag/{name}", PathParams: []string{"name"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-challenge-list":                      operationDefinition{Method: "GET", Path: "/tiktok/hashtags", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-feed":                         operationDefinition{Method: "GET", Path: "/tiktok/mobile/feed", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-popular-trend-country-industry-meta": operationDefinition{Method: "GET", Path: "/tiktok/popular-trend/country-industry-meta", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-post":                                operationDefinition{Method: "GET", Path: "/tiktok/post/{id}", PathParams: []string{"id"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-profile-post":                        operationDefinition{Method: "GET", Path: "/tiktok/posts", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "secUid", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}, parameterDefinition{Name: "sort_type", In: "query", Type: "integer", Enum: []string{"0", "1", "2"}}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
@@ -57,7 +60,7 @@ var operations = map[string]operationDefinition{
 }
 
 // OperationCount reports how many selected-platform operations this module exposes.
-const OperationCount = 25
+const OperationCount = 28
 
 // OperationIDs returns the selected operation IDs in stable sorted order.
 func OperationIDs() []string {
@@ -79,9 +82,19 @@ func (c *Client) VideoComments(ctx context.Context, params Params) (any, error) 
 	return c.Call(ctx, "tiktok-video-comments", params)
 }
 
+// CreativeCenterFilters calls the tiktok-creative-center-filters operation.
+func (c *Client) CreativeCenterFilters(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-creative-center-filters", params)
+}
+
 // CreativeCenterHashtags calls the tiktok-creative-center-hashtags operation.
 func (c *Client) CreativeCenterHashtags(ctx context.Context, params Params) (any, error) {
 	return c.Call(ctx, "tiktok-creative-center-hashtags", params)
+}
+
+// CreativeCenterTopContent calls the tiktok-creative-center-top-content operation.
+func (c *Client) CreativeCenterTopContent(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-creative-center-top-content", params)
 }
 
 // CreativeCenterVideos calls the tiktok-creative-center-videos operation.
@@ -102,6 +115,11 @@ func (c *Client) Challenge(ctx context.Context, params Params) (any, error) {
 // ChallengeList calls the tiktok-challenge-list operation.
 func (c *Client) ChallengeList(ctx context.Context, params Params) (any, error) {
 	return c.Call(ctx, "tiktok-challenge-list", params)
+}
+
+// MobileFeed calls the tiktok-mobile-feed operation.
+func (c *Client) MobileFeed(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-feed", params)
 }
 
 // PopularTrendCountryIndustryMeta calls the tiktok-popular-trend-country-industry-meta operation.

@@ -1,6 +1,6 @@
 # crawlora-tiktok — TikTok API client for Python
 
-Python client for Crawlora's hosted TikTok API. It exposes 25 API endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requests go to [Crawlora](https://crawlora.net/?utm_source=pypi&utm_medium=referral&utm_campaign=platform-clients&utm_content=tiktok-python-homepage); the package does not run a browser or scrape
+Python client for Crawlora's hosted TikTok API. It exposes 28 API endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requests go to [Crawlora](https://crawlora.net/?utm_source=pypi&utm_medium=referral&utm_campaign=platform-clients&utm_content=tiktok-python-homepage); the package does not run a browser or scrape
 TikTok locally. A Crawlora account and `CRAWLORA_API_KEY` are required,
 and API use is billed under your Crawlora account. Crawlora is independent from and not endorsed by
 TikTok or its owners.
@@ -75,11 +75,14 @@ This package exposes every route below through direct snake_case methods and the
 | --- | --- | --- | --- |
 | `GET` | `/tiktok/category` | `tiktok-category` | List TikTok explore categories |
 | `GET` | `/tiktok/comments` | `tiktok-video-comments` | Retrieve TikTok video comments |
+| `GET` | `/tiktok/creative-center/filters` | `tiktok-creative-center-filters` | Retrieve TikTok Creative Center filter taxonomy |
 | `GET` | `/tiktok/creative-center/hashtags` | `tiktok-creative-center-hashtags` | Retrieve TikTok Creative Center trending hashtags |
+| `GET` | `/tiktok/creative-center/top-content` | `tiktok-creative-center-top-content` | Retrieve TikTok Creative Center top content |
 | `GET` | `/tiktok/creative-center/videos` | `tiktok-creative-center-videos` | Retrieve TikTok Creative Center trending videos |
 | `GET` | `/tiktok/explore/{id}` | `tiktok-explore` | Retrieve the TikTok explore feed for a category |
 | `GET` | `/tiktok/hashtag/{name}` | `tiktok-challenge` | Retrieve TikTok hashtag details |
 | `GET` | `/tiktok/hashtags` | `tiktok-challenge-list` | Retrieve TikTok hashtag posts |
+| `GET` | `/tiktok/mobile/feed` | `tiktok-mobile-feed` | Retrieve the TikTok mobile For You feed |
 | `GET` | `/tiktok/popular-trend/country-industry-meta` | `tiktok-popular-trend-country-industry-meta` | Retrieve TikTok popular-trend country and industry metadata |
 | `GET` | `/tiktok/post/{id}` | `tiktok-post` | Retrieve TikTok video details |
 | `GET` | `/tiktok/posts` | `tiktok-profile-post` | Retrieve posts from a TikTok profile |

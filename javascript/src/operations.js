@@ -75,6 +75,25 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-creative-center-filters": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-creative-center-filters",
+    "method": "GET",
+    "path": "/tiktok/creative-center/filters",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-creative-center-hashtags": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -99,11 +118,62 @@ export const operations = {
       {
         "enum": [
           "7",
-          "30"
+          "30",
+          "90"
         ],
         "in": "query",
         "name": "period",
         "type": "integer"
+      },
+      {
+        "enum": [
+          "10000000000",
+          "11000000000",
+          "12000000000",
+          "13000000000",
+          "14000000000",
+          "15000000000",
+          "17000000000",
+          "18000000000",
+          "19000000000",
+          "21000000000",
+          "22000000000",
+          "23000000000",
+          "24000000000",
+          "25000000000",
+          "26000000000",
+          "27000000000",
+          "28000000000",
+          "29000000000"
+        ],
+        "in": "query",
+        "name": "industry_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-creative-center-top-content": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-creative-center-top-content",
+    "method": "GET",
+    "path": "/tiktok/creative-center/top-content",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "include_comments",
+        "type": "boolean"
       }
     ],
     "security": [
@@ -156,6 +226,19 @@ export const operations = {
         "type": "string"
       },
       {
+        "collectionFormat": "multi",
+        "enum": [
+          "11002",
+          "11003",
+          "11010",
+          "11013",
+          "11015"
+        ],
+        "in": "query",
+        "name": "content_label_ids",
+        "type": "array"
+      },
+      {
         "in": "query",
         "name": "organic_only",
         "type": "boolean"
@@ -182,6 +265,40 @@ export const operations = {
       "application/json"
     ],
     "queryParams": [],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-feed": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-feed",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/feed",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
     "security": [
       "ApiKeyAuth"
     ]
@@ -841,9 +958,12 @@ export const groups = {
     "category": "tiktok-category",
     "challenge": "tiktok-challenge",
     "challengeList": "tiktok-challenge-list",
+    "creativeCenterFilters": "tiktok-creative-center-filters",
     "creativeCenterHashtags": "tiktok-creative-center-hashtags",
+    "creativeCenterTopContent": "tiktok-creative-center-top-content",
     "creativeCenterVideos": "tiktok-creative-center-videos",
     "explore": "tiktok-explore",
+    "mobileFeed": "tiktok-mobile-feed",
     "popularTrendCountryIndustryMeta": "tiktok-popular-trend-country-industry-meta",
     "post": "tiktok-post",
     "profile": "tiktok-profile",
@@ -866,15 +986,18 @@ export const groups = {
   }
 };
 
-export const operationCount = 25;
+export const operationCount = 28;
 
 export const OperationIds = Object.freeze({
   "TiktokCategory": "tiktok-category",
   "TiktokChallenge": "tiktok-challenge",
   "TiktokChallengeList": "tiktok-challenge-list",
+  "TiktokCreativeCenterFilters": "tiktok-creative-center-filters",
   "TiktokCreativeCenterHashtags": "tiktok-creative-center-hashtags",
+  "TiktokCreativeCenterTopContent": "tiktok-creative-center-top-content",
   "TiktokCreativeCenterVideos": "tiktok-creative-center-videos",
   "TiktokExplore": "tiktok-explore",
+  "TiktokMobileFeed": "tiktok-mobile-feed",
   "TiktokPopularTrendCountryIndustryMeta": "tiktok-popular-trend-country-industry-meta",
   "TiktokPost": "tiktok-post",
   "TiktokProfile": "tiktok-profile",

@@ -1,7 +1,7 @@
 {
   "name": "@crawlora-org/tiktok",
-  "version": "0.2.0",
-  "description": "Crawlora TikTok API client with 25 endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data",
+  "version": "0.3.0",
+  "description": "Crawlora TikTok API client with 28 endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data",
   "homepage": "https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=tiktok-javascript-homepage",
   "bugs": { "url": "https://github.com/Crawlora-org/crawlora-tiktok/issues" },
   "keywords": ["crawlora", "api-client", "sdk", "web-scraping", "scraping-api", "tiktok", "tiktok-api", "tiktok-scraper", "tiktok-data", "tiktok-video", "tiktok-user", "tiktok-hashtag-search", "tiktok-profiles-posts", "tiktok-comments", "tiktok-trends", "tiktok-creative-center", "tiktok-top-ads-data"],

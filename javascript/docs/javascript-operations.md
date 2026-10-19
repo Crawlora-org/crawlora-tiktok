@@ -2,17 +2,20 @@
 
 Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
 
-Total operations: `25`
+Total operations: `28`
 
 | Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | tiktok | `tiktok.category` | `tiktok-category` | `GET /tiktok/category` | none | `ApiKeyAuth` | `TiktokCategoryResponse` |  |
 | tiktok | `tiktok.videoComments` | `tiktok-video-comments` | `GET /tiktok/comments` | `aweme_id` (query string required)<br>`cursor` (query number) | `ApiKeyAuth` | `TiktokVideoCommentsResponse` |  |
-| tiktok | `tiktok.creativeCenterHashtags` | `tiktok-creative-center-hashtags` | `GET /tiktok/creative-center/hashtags` | `country_code` (query string required)<br>`period` (query "7" \| "30") | `ApiKeyAuth` | `TiktokCreativeCenterHashtagsResponse` |  |
-| tiktok | `tiktok.creativeCenterVideos` | `tiktok-creative-center-videos` | `GET /tiktok/creative-center/videos` | `country_code` (query string required)<br>`period` (query "7" \| "30")<br>`sort_by` (query "views" \| "engagement" \| "six_second_views")<br>`content_label_id` (query string)<br>`organic_only` (query boolean) | `ApiKeyAuth` | `TiktokCreativeCenterVideosResponse` |  |
+| tiktok | `tiktok.creativeCenterFilters` | `tiktok-creative-center-filters` | `GET /tiktok/creative-center/filters` | none | `ApiKeyAuth` | `TiktokCreativeCenterFiltersResponse` |  |
+| tiktok | `tiktok.creativeCenterHashtags` | `tiktok-creative-center-hashtags` | `GET /tiktok/creative-center/hashtags` | `country_code` (query string required)<br>`period` (query "7" \| "30" \| "90")<br>`industry_id` (query "10000000000" \| "11000000000" \| "12000000000" \| "13000000000" \| "14000000000" \| "15000000000" \| "17000000000" \| "18000000000" \| "19000000000" \| "21000000000" \| "22000000000" \| "23000000000" \| "24000000000" \| "25000000000" \| "26000000000" \| "27000000000" \| "28000000000" \| "29000000000") | `ApiKeyAuth` | `TiktokCreativeCenterHashtagsResponse` |  |
+| tiktok | `tiktok.creativeCenterTopContent` | `tiktok-creative-center-top-content` | `GET /tiktok/creative-center/top-content` | `include_comments` (query boolean) | `ApiKeyAuth` | `TiktokCreativeCenterTopContentResponse` |  |
+| tiktok | `tiktok.creativeCenterVideos` | `tiktok-creative-center-videos` | `GET /tiktok/creative-center/videos` | `country_code` (query string required)<br>`period` (query "7" \| "30")<br>`sort_by` (query "views" \| "engagement" \| "six_second_views")<br>`content_label_id` (query string)<br>`content_label_ids` (query Array<"11002" \| "11003" \| "11010" \| "11013" \| "11015">)<br>`organic_only` (query boolean) | `ApiKeyAuth` | `TiktokCreativeCenterVideosResponse` |  |
 | tiktok | `tiktok.explore` | `tiktok-explore` | `GET /tiktok/explore/{id}` | `id` (path number required) | `ApiKeyAuth` | `TiktokExploreResponse` |  |
 | tiktok | `tiktok.challenge` | `tiktok-challenge` | `GET /tiktok/hashtag/{name}` | `name` (path string required) | `ApiKeyAuth` | `TiktokChallengeResponse` |  |
 | tiktok | `tiktok.challengeList` | `tiktok-challenge-list` | `GET /tiktok/hashtags` | `id` (query string required)<br>`cursor` (query number) | `ApiKeyAuth` | `TiktokChallengeListResponse` |  |
+| tiktok | `tiktok.mobileFeed` | `tiktok-mobile-feed` | `GET /tiktok/mobile/feed` | `count` (query number)<br>`cursor` (query number) | `ApiKeyAuth` | `TiktokMobileFeedResponse` |  |
 | tiktok | `tiktok.popularTrendCountryIndustryMeta` | `tiktok-popular-trend-country-industry-meta` | `GET /tiktok/popular-trend/country-industry-meta` | none | `ApiKeyAuth` | `TiktokPopularTrendCountryIndustryMetaResponse` |  |
 | tiktok | `tiktok.post` | `tiktok-post` | `GET /tiktok/post/{id}` | `id` (path string required) | `ApiKeyAuth` | `TiktokPostResponse` |  |
 | tiktok | `tiktok.profilePost` | `tiktok-profile-post` | `GET /tiktok/posts` | `secUid` (query string required)<br>`cursor` (query number)<br>`sort_type` (query "0" \| "1" \| "2") | `ApiKeyAuth` | `TiktokProfilePostResponse` |  |

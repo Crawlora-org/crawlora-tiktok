@@ -1,6 +1,6 @@
 # Crawlora TikTok API client for PHP (`crawlora/tiktok`)
 
-This PHP package calls Crawlora's hosted TikTok API at `https://api.crawlora.net/api/v1`. It exposes 25 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. It does not call or scrape TikTok directly. Requests require a Crawlora API key and use your Crawlora account's service plan.
+This PHP package calls Crawlora's hosted TikTok API at `https://api.crawlora.net/api/v1`. It exposes 28 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. It does not call or scrape TikTok directly. Requests require a Crawlora API key and use your Crawlora account's service plan.
 
 ## Install
 
@@ -20,7 +20,7 @@ print_r($result);
 $client->close();
 ```
 
-The client uses PHP cURL and JSON. Constructor options are `apiKey`, `baseUrl`, and `timeout`. Call the operation-specific method for direct access to each supported operation, or `request($operationId, $params, $responseType)` to dispatch by operation ID. Set `$responseType` to `text` for raw text output such as transcript formats. The package includes 25 API operations.
+The client uses PHP cURL and JSON. Constructor options are `apiKey`, `baseUrl`, and `timeout`. Call the operation-specific method for direct access to each supported operation, or `request($operationId, $params, $responseType)` to dispatch by operation ID. Set `$responseType` to `text` for raw text output such as transcript formats. The package includes 28 API operations.
 
 ## Supported TikTok API endpoints
 
@@ -30,11 +30,14 @@ Browse every route included in this Composer package. The [endpoint reference](h
 | --- | --- | --- | --- |
 | `GET` | `/tiktok/category` | `tiktok-category` | List TikTok explore categories |
 | `GET` | `/tiktok/comments` | `tiktok-video-comments` | Retrieve TikTok video comments |
+| `GET` | `/tiktok/creative-center/filters` | `tiktok-creative-center-filters` | Retrieve TikTok Creative Center filter taxonomy |
 | `GET` | `/tiktok/creative-center/hashtags` | `tiktok-creative-center-hashtags` | Retrieve TikTok Creative Center trending hashtags |
+| `GET` | `/tiktok/creative-center/top-content` | `tiktok-creative-center-top-content` | Retrieve TikTok Creative Center top content |
 | `GET` | `/tiktok/creative-center/videos` | `tiktok-creative-center-videos` | Retrieve TikTok Creative Center trending videos |
 | `GET` | `/tiktok/explore/{id}` | `tiktok-explore` | Retrieve the TikTok explore feed for a category |
 | `GET` | `/tiktok/hashtag/{name}` | `tiktok-challenge` | Retrieve TikTok hashtag details |
 | `GET` | `/tiktok/hashtags` | `tiktok-challenge-list` | Retrieve TikTok hashtag posts |
+| `GET` | `/tiktok/mobile/feed` | `tiktok-mobile-feed` | Retrieve the TikTok mobile For You feed |
 | `GET` | `/tiktok/popular-trend/country-industry-meta` | `tiktok-popular-trend-country-industry-meta` | Retrieve TikTok popular-trend country and industry metadata |
 | `GET` | `/tiktok/post/{id}` | `tiktok-post` | Retrieve TikTok video details |
 | `GET` | `/tiktok/posts` | `tiktok-profile-post` | Retrieve posts from a TikTok profile |

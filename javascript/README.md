@@ -1,7 +1,7 @@
 # @crawlora-org/tiktok — TikTok API client for JavaScript and TypeScript
 
 JavaScript and TypeScript client for Crawlora's hosted TikTok API.
-It exposes 25 API endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data through [Crawlora](https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=tiktok-javascript-homepage). It does not run a browser or scrape TikTok locally. A Crawlora account and `CRAWLORA_API_KEY` are required, and API use is billed under your Crawlora account. Crawlora is independent from and not endorsed by TikTok or its owners.
+It exposes 28 API endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data through [Crawlora](https://crawlora.net/?utm_source=npm&utm_medium=referral&utm_campaign=platform-clients&utm_content=tiktok-javascript-homepage). It does not run a browser or scrape TikTok locally. A Crawlora account and `CRAWLORA_API_KEY` are required, and API use is billed under your Crawlora account. Crawlora is independent from and not endorsed by TikTok or its owners.
 
 ## Install
 
@@ -48,11 +48,14 @@ This package exposes each route below as a direct method and through the `tiktok
 | --- | --- | --- | --- |
 | `GET` | `/tiktok/category` | `tiktok-category` | List TikTok explore categories |
 | `GET` | `/tiktok/comments` | `tiktok-video-comments` | Retrieve TikTok video comments |
+| `GET` | `/tiktok/creative-center/filters` | `tiktok-creative-center-filters` | Retrieve TikTok Creative Center filter taxonomy |
 | `GET` | `/tiktok/creative-center/hashtags` | `tiktok-creative-center-hashtags` | Retrieve TikTok Creative Center trending hashtags |
+| `GET` | `/tiktok/creative-center/top-content` | `tiktok-creative-center-top-content` | Retrieve TikTok Creative Center top content |
 | `GET` | `/tiktok/creative-center/videos` | `tiktok-creative-center-videos` | Retrieve TikTok Creative Center trending videos |
 | `GET` | `/tiktok/explore/{id}` | `tiktok-explore` | Retrieve the TikTok explore feed for a category |
 | `GET` | `/tiktok/hashtag/{name}` | `tiktok-challenge` | Retrieve TikTok hashtag details |
 | `GET` | `/tiktok/hashtags` | `tiktok-challenge-list` | Retrieve TikTok hashtag posts |
+| `GET` | `/tiktok/mobile/feed` | `tiktok-mobile-feed` | Retrieve the TikTok mobile For You feed |
 | `GET` | `/tiktok/popular-trend/country-industry-meta` | `tiktok-popular-trend-country-industry-meta` | Retrieve TikTok popular-trend country and industry metadata |
 | `GET` | `/tiktok/post/{id}` | `tiktok-post` | Retrieve TikTok video details |
 | `GET` | `/tiktok/posts` | `tiktok-profile-post` | Retrieve posts from a TikTok profile |

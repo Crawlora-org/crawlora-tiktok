@@ -7,7 +7,7 @@ from .async_client import AsyncCrawloraClient
 class TikTokClient(CrawloraClient):
     """Synchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.2.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.3.0')
         super().__init__(*args, **kwargs)
 
     def category(self, **params: Any) -> Any:
@@ -22,11 +22,23 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-video-comments', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def creative_center_filters(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-creative-center-filters', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def creative_center_hashtags(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-creative-center-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def creative_center_top_content(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-creative-center-top-content', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def creative_center_videos(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -51,6 +63,12 @@ class TikTokClient(CrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-challenge-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_feed(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-feed', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def popular_trend_country_industry_meta(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -163,7 +181,7 @@ class TikTokClient(CrawloraClient):
 class AsyncTikTokClient(AsyncCrawloraClient):
     """Asynchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.2.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.3.0')
         super().__init__(*args, **kwargs)
 
     async def category(self, **params: Any) -> Any:
@@ -178,11 +196,23 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-video-comments', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def creative_center_filters(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-creative-center-filters', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def creative_center_hashtags(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-creative-center-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def creative_center_top_content(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-creative-center-top-content', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def creative_center_videos(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -207,6 +237,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-challenge-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_feed(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-feed', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def popular_trend_country_industry_meta(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')

@@ -1,6 +1,6 @@
 # Crawlora TikTok API client for Java
 
-The official Java client for Crawlora's hosted TikTok API. It exposes 25 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requests use your `x-api-key`; the client does not connect to the upstream site directly.
+The official Java client for Crawlora's hosted TikTok API. It exposes 28 endpoints covering video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requests use your `x-api-key`; the client does not connect to the upstream site directly.
 
 ## Install
 
@@ -8,7 +8,7 @@ The official Java client for Crawlora's hosted TikTok API. It exposes 25 endpoin
 <dependency>
   <groupId>net.crawlora</groupId>
   <artifactId>crawlora-tiktok</artifactId>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
 </dependency>
 ```
 
@@ -39,11 +39,14 @@ Browse every route included in this Java package. The [endpoint reference](https
 | --- | --- | --- | --- |
 | `GET` | `/tiktok/category` | `tiktok-category` | List TikTok explore categories |
 | `GET` | `/tiktok/comments` | `tiktok-video-comments` | Retrieve TikTok video comments |
+| `GET` | `/tiktok/creative-center/filters` | `tiktok-creative-center-filters` | Retrieve TikTok Creative Center filter taxonomy |
 | `GET` | `/tiktok/creative-center/hashtags` | `tiktok-creative-center-hashtags` | Retrieve TikTok Creative Center trending hashtags |
+| `GET` | `/tiktok/creative-center/top-content` | `tiktok-creative-center-top-content` | Retrieve TikTok Creative Center top content |
 | `GET` | `/tiktok/creative-center/videos` | `tiktok-creative-center-videos` | Retrieve TikTok Creative Center trending videos |
 | `GET` | `/tiktok/explore/{id}` | `tiktok-explore` | Retrieve the TikTok explore feed for a category |
 | `GET` | `/tiktok/hashtag/{name}` | `tiktok-challenge` | Retrieve TikTok hashtag details |
 | `GET` | `/tiktok/hashtags` | `tiktok-challenge-list` | Retrieve TikTok hashtag posts |
+| `GET` | `/tiktok/mobile/feed` | `tiktok-mobile-feed` | Retrieve the TikTok mobile For You feed |
 | `GET` | `/tiktok/popular-trend/country-industry-meta` | `tiktok-popular-trend-country-industry-meta` | Retrieve TikTok popular-trend country and industry metadata |
 | `GET` | `/tiktok/post/{id}` | `tiktok-post` | Retrieve TikTok video details |
 | `GET` | `/tiktok/posts` | `tiktok-profile-post` | Retrieve posts from a TikTok profile |

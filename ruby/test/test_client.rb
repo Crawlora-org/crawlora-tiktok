@@ -20,7 +20,7 @@ class PlatformClientTest < Minitest::Test
     assert_equal 1, calls.length
     assert_includes calls.first[0], "/tiktok/"
     assert_equal ["test-key"], calls.first[1]["x-api-key"]
-    assert_equal 25, Crawlora::Tiktok::Client.operation_count
+    assert_equal 28, Crawlora::Tiktok::Client.operation_count
     default_client = Crawlora::Tiktok::Client.new(api_key: "test-key", transport: transport)
     assert_equal "https://api.crawlora.net/api/v1", default_client.base_url
     assert_raises(Crawlora::Tiktok::Errors::ClientError) do
