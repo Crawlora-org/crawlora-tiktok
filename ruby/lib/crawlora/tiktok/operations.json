@@ -1,6 +1,6 @@
 {
   "platform": "tiktok",
-  "operationCount": 28,
+  "operationCount": 53,
   "operationIds": [
     "tiktok-category",
     "tiktok-challenge",
@@ -10,7 +10,32 @@
     "tiktok-creative-center-top-content",
     "tiktok-creative-center-videos",
     "tiktok-explore",
+    "tiktok-mobile-anchor-list",
+    "tiktok-mobile-comment-replies",
+    "tiktok-mobile-comments",
     "tiktok-mobile-feed",
+    "tiktok-mobile-feed-post",
+    "tiktok-mobile-hashtag",
+    "tiktok-mobile-hashtag-posts",
+    "tiktok-mobile-hashtags",
+    "tiktok-mobile-live-effects",
+    "tiktok-mobile-live-gifts",
+    "tiktok-mobile-live-search",
+    "tiktok-mobile-music-beats",
+    "tiktok-mobile-music-collections",
+    "tiktok-mobile-music-pick",
+    "tiktok-mobile-music-posts",
+    "tiktok-mobile-music-related",
+    "tiktok-mobile-music-trending",
+    "tiktok-mobile-search",
+    "tiktok-mobile-search-music",
+    "tiktok-mobile-search-place",
+    "tiktok-mobile-search-pre-info",
+    "tiktok-mobile-search-sug",
+    "tiktok-mobile-search-tabs",
+    "tiktok-mobile-search-user",
+    "tiktok-mobile-trending-categories",
+    "tiktok-mobile-trending-effects",
     "tiktok-popular-trend-country-industry-meta",
     "tiktok-post",
     "tiktok-profile",
@@ -41,7 +66,32 @@
     "explore": "tiktok-explore",
     "challenge": "tiktok-challenge",
     "challenge_list": "tiktok-challenge-list",
+    "mobile_anchor_list": "tiktok-mobile-anchor-list",
+    "mobile_comment_replies": "tiktok-mobile-comment-replies",
+    "mobile_comments": "tiktok-mobile-comments",
     "mobile_feed": "tiktok-mobile-feed",
+    "mobile_feed_post": "tiktok-mobile-feed-post",
+    "mobile_hashtag": "tiktok-mobile-hashtag",
+    "mobile_hashtag_posts": "tiktok-mobile-hashtag-posts",
+    "mobile_hashtags": "tiktok-mobile-hashtags",
+    "mobile_live_effects": "tiktok-mobile-live-effects",
+    "mobile_live_gifts": "tiktok-mobile-live-gifts",
+    "mobile_live_search": "tiktok-mobile-live-search",
+    "mobile_music_beats": "tiktok-mobile-music-beats",
+    "mobile_music_collections": "tiktok-mobile-music-collections",
+    "mobile_music_pick": "tiktok-mobile-music-pick",
+    "mobile_music_posts": "tiktok-mobile-music-posts",
+    "mobile_music_related": "tiktok-mobile-music-related",
+    "mobile_music_trending": "tiktok-mobile-music-trending",
+    "mobile_search": "tiktok-mobile-search",
+    "mobile_search_music": "tiktok-mobile-search-music",
+    "mobile_search_place": "tiktok-mobile-search-place",
+    "mobile_search_pre_info": "tiktok-mobile-search-pre-info",
+    "mobile_search_sug": "tiktok-mobile-search-sug",
+    "mobile_search_tabs": "tiktok-mobile-search-tabs",
+    "mobile_search_user": "tiktok-mobile-search-user",
+    "mobile_trending_categories": "tiktok-mobile-trending-categories",
+    "mobile_trending_effects": "tiktok-mobile-trending-effects",
     "popular_trend_country_industry_meta": "tiktok-popular-trend-country-industry-meta",
     "post": "tiktok-post",
     "profile_post": "tiktok-profile-post",
@@ -501,6 +551,148 @@
         "ApiKeyAuth"
       ]
     },
+    "tiktok-mobile-anchor-list": {
+      "id": "tiktok-mobile-anchor-list",
+      "method": "GET",
+      "path": "/tiktok/mobile/anchor/list",
+      "pathParams": [],
+      "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-comment-replies": {
+      "id": "tiktok-mobile-comment-replies",
+      "method": "GET",
+      "path": "/tiktok/mobile/comment/replies",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "aweme_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "comment_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Video id the comment belongs to",
+          "in": "query",
+          "name": "aweme_id",
+          "required": true,
+          "type": "string",
+          "x-example": "7680168962218511636"
+        },
+        {
+          "description": "Comment id to list replies for",
+          "in": "query",
+          "name": "comment_id",
+          "required": true,
+          "type": "string",
+          "x-example": "7680523330713240340"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        },
+        {
+          "default": 20,
+          "description": "Replies per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-comments": {
+      "id": "tiktok-mobile-comments",
+      "method": "GET",
+      "path": "/tiktok/mobile/comments",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "aweme_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Video id to list comments for",
+          "in": "query",
+          "name": "aweme_id",
+          "required": true,
+          "type": "string",
+          "x-example": "7681236055831416084"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        },
+        {
+          "default": 20,
+          "description": "Comments per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
     "tiktok-mobile-feed": {
       "id": "tiktok-mobile-feed",
       "method": "GET",
@@ -524,6 +716,944 @@
         {
           "default": 0,
           "description": "Videos to request (0 = app default, max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-feed-post": {
+      "id": "tiktok-mobile-feed-post",
+      "method": "GET",
+      "path": "/tiktok/mobile/feed/post",
+      "pathParams": [],
+      "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-hashtag": {
+      "id": "tiktok-mobile-hashtag",
+      "method": "GET",
+      "path": "/tiktok/mobile/hashtag",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "name",
+          "in": "query",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Hashtag name without the leading #",
+          "in": "query",
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "x-example": "readingvlog"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-hashtag-posts": {
+      "id": "tiktok-mobile-hashtag-posts",
+      "method": "GET",
+      "path": "/tiktok/mobile/hashtag/posts",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "name",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "sort",
+          "in": "query",
+          "type": "string",
+          "enum": [
+            "fresh",
+            "popular"
+          ]
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Hashtag name without the leading #",
+          "in": "query",
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "x-example": "readingvlog"
+        },
+        {
+          "default": "fresh",
+          "description": "Listing: fresh (newest) or popular (hot)",
+          "enum": [
+            "fresh",
+            "popular"
+          ],
+          "in": "query",
+          "name": "sort",
+          "type": "string"
+        },
+        {
+          "default": 20,
+          "description": "Videos per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-hashtags": {
+      "id": "tiktok-mobile-hashtags",
+      "method": "GET",
+      "path": "/tiktok/mobile/hashtags",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Keyword to search hashtags for",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "reading"
+        },
+        {
+          "default": 20,
+          "description": "Results per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-live-effects": {
+      "id": "tiktok-mobile-live-effects",
+      "method": "GET",
+      "path": "/tiktok/mobile/live/effects",
+      "pathParams": [],
+      "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-live-gifts": {
+      "id": "tiktok-mobile-live-gifts",
+      "method": "GET",
+      "path": "/tiktok/mobile/live/gifts",
+      "pathParams": [],
+      "queryParams": [],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-live-search": {
+      "id": "tiktok-mobile-live-search",
+      "method": "GET",
+      "path": "/tiktok/mobile/live/search",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search keyword",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "lofi"
+        },
+        {
+          "default": 0,
+          "description": "Results to request (0 = app default, max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-beats": {
+      "id": "tiktok-mobile-music-beats",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/beats",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 0,
+          "description": "Accepted for compatibility; not measured to change the page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-collections": {
+      "id": "tiktok-mobile-music-collections",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/collections",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 0,
+          "description": "Collections to request (0 = app default, max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Accepted for shape compatibility only; not a verified page token",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-pick": {
+      "id": "tiktok-mobile-music-pick",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/pick",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 20,
+          "description": "Sounds per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-posts": {
+      "id": "tiktok-mobile-music-posts",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/posts",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "music_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Sound (music) id",
+          "in": "query",
+          "name": "music_id",
+          "required": true,
+          "type": "string",
+          "x-example": "6799585653702019073"
+        },
+        {
+          "default": 0,
+          "description": "Accepted for compatibility; the server ignores it (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-related": {
+      "id": "tiktok-mobile-music-related",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/related",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "aweme_id",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Video id to find related sounds for",
+          "in": "query",
+          "name": "aweme_id",
+          "required": true,
+          "type": "string",
+          "x-example": "7681236055831416084"
+        },
+        {
+          "default": 20,
+          "description": "Sounds per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-music-trending": {
+      "id": "tiktok-mobile-music-trending",
+      "method": "GET",
+      "path": "/tiktok/mobile/music/trending",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 20,
+          "description": "Sounds per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search": {
+      "id": "tiktok-mobile-search",
+      "method": "GET",
+      "path": "/tiktok/mobile/search",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search keyword",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "lofi"
+        },
+        {
+          "default": 5,
+          "description": "Results per page (max 20)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Result offset",
+          "in": "query",
+          "name": "offset",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-music": {
+      "id": "tiktok-mobile-search-music",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/music",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search keyword",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "lofi"
+        },
+        {
+          "default": 20,
+          "description": "Sounds per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Result offset",
+          "in": "query",
+          "name": "offset",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-place": {
+      "id": "tiktok-mobile-search-place",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/place",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Place name or category to search for",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "pizza"
+        },
+        {
+          "default": 10,
+          "description": "Rows to return; the upstream caps the page at 10 regardless",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-pre-info": {
+      "id": "tiktok-mobile-search-pre-info",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/pre-info",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string"
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Seed keyword (optional; the app also requests this with an empty keyword)",
+          "in": "query",
+          "name": "keyword",
+          "type": "string",
+          "x-example": "lofi"
+        },
+        {
+          "default": 20,
+          "description": "Suggestion count (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-sug": {
+      "id": "tiktok-mobile-search-sug",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/sug",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Seed keyword to expand",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "lofi"
+        },
+        {
+          "default": 10,
+          "description": "Suggestions to return (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-tabs": {
+      "id": "tiktok-mobile-search-tabs",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/tabs",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search keyword",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "lofi"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-search-user": {
+      "id": "tiktok-mobile-search-user",
+      "method": "GET",
+      "path": "/tiktok/mobile/search/user",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "keyword",
+          "in": "query",
+          "type": "string",
+          "required": true
+        },
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "description": "Search keyword (a username or display name)",
+          "in": "query",
+          "name": "keyword",
+          "required": true,
+          "type": "string",
+          "x-example": "mrbeast"
+        },
+        {
+          "default": 20,
+          "description": "Users per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-trending-categories": {
+      "id": "tiktok-mobile-trending-categories",
+      "method": "GET",
+      "path": "/tiktok/mobile/trending/categories",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 20,
+          "description": "Categories per page (max 50)",
+          "in": "query",
+          "name": "count",
+          "type": "integer"
+        },
+        {
+          "default": 0,
+          "description": "Pagination cursor",
+          "in": "query",
+          "name": "cursor",
+          "type": "integer"
+        }
+      ],
+      "produces": [
+        "application/json"
+      ],
+      "security": [
+        "ApiKeyAuth"
+      ]
+    },
+    "tiktok-mobile-trending-effects": {
+      "id": "tiktok-mobile-trending-effects",
+      "method": "GET",
+      "path": "/tiktok/mobile/trending/effects",
+      "pathParams": [],
+      "queryParams": [
+        {
+          "name": "count",
+          "in": "query",
+          "type": "integer"
+        },
+        {
+          "name": "cursor",
+          "in": "query",
+          "type": "integer"
+        }
+      ],
+      "bodyParam": null,
+      "bodyRequired": false,
+      "params": [
+        {
+          "default": 20,
+          "description": "Videos per page (max 50)",
           "in": "query",
           "name": "count",
           "type": "integer"

@@ -370,6 +370,339 @@ export interface ModelPopularTrendCountryIndustryMetaItem {
   "value"?: string;
 }
 
+export interface ModelTiktokmobileStickerDiscoverResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileStickerDiscoverResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileStickerDiscoverResponse {
+  "aweme_list"?: Array<unknown>;
+  "cursor"?: number;
+  "extra"?: unknown;
+  "feed_session_id"?: string;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileCategoryListResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileCategoryListResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileCategoryListResponse {
+  "category_list"?: Array<unknown>;
+  "cursor"?: number;
+  "device_type"?: number;
+  "extra"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchUsersResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileSearchUsersResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchUsersResponse {
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+  "user_list"?: Array<unknown>;
+}
+
+export interface ModelTiktokmobileSearchTabsResponseDoc {
+  "fetched_at"?: string;
+  "host"?: string;
+  "is_failed"?: number;
+  "keyword"?: string;
+  "tabs"?: Array<string>;
+}
+
+export interface ModelTiktokmobileSearchSuggestionResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileSearchSuggestionResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchSuggestionResponse {
+  "extra"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "rid"?: string;
+  "status_code"?: number;
+  "status_msg"?: string;
+  "sug_list"?: Array<ModelTiktokmobileSearchSuggestion>;
+}
+
+export interface ModelTiktokmobileSearchSuggestion {
+  "content"?: string;
+  "extra_info"?: unknown;
+  "highlight_pos"?: unknown;
+  "pos"?: unknown;
+  "rich_sug_sec_pos"?: unknown;
+  "sug_type"?: string;
+  "word_record"?: unknown;
+}
+
+export interface ModelTiktokmobileSearchPreInfoResponseDoc {
+  "fetched_at"?: string;
+  "host"?: string;
+  "pre_info_id"?: string;
+  "ttl"?: number;
+}
+
+export interface ModelTiktokmobileSearchPlaceResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileSearchPlaceResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchPlaceResponse {
+  "cursor"?: number;
+  "extra"?: unknown;
+  "feedback_type"?: string;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "poi_info"?: ModelTiktokmobilePlacePoicontainer;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobilePlacePoicontainer {
+  "poi_info"?: Array<unknown>;
+}
+
+export interface ModelTiktokmobileSearchMusicResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileSearchMusicResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchMusicResponse {
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "music"?: Array<unknown>;
+  "music_info_list"?: Array<unknown>;
+  "status_code"?: number;
+  "status_msg"?: string;
+  "total"?: number;
+}
+
+export interface ModelTiktokmobileSearchGeneralResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileSearchGeneralResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileSearchGeneralResponse {
+  "cursor"?: number;
+  "data"?: Array<unknown>;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileHotMusicResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileHotMusicResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileHotMusicResponse {
+  "cursor"?: number;
+  "extra"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "msg"?: string;
+  "music_list"?: Array<unknown>;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicRelatedResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileMusicRelatedResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicRelatedResponse {
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "music_list"?: Array<unknown>;
+  "music_type"?: number;
+  "recall_info_list"?: Array<unknown>;
+  "similar_song_ids"?: Array<unknown>;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicFreshAwemeResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileMusicFreshAwemeResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicFreshAwemeResponse {
+  "aweme_list"?: Array<unknown>;
+  "cursor"?: number;
+  "extra"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicPickResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileMusicPickResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicPickResponse {
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "mc_list"?: Array<unknown>;
+  "music_list"?: Array<unknown>;
+  "radio_cursor"?: number;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicCollectionFeedResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileMusicCollectionFeedResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicCollectionFeedResponse {
+  "cursor"?: number;
+  "extra"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "mcf_list"?: Array<unknown>;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicBeatsSongsResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileMusicBeatsSongsResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileMusicBeatsSongsResponse {
+  "extra"?: unknown;
+  "log_pb"?: unknown;
+  "music_list"?: Array<unknown>;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileLiveSearchResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileLiveSearchResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileLiveSearchResponse {
+  "cursor"?: number;
+  "data"?: Array<unknown>;
+  "extra"?: unknown;
+  "extra_data"?: unknown;
+  "feedback_type"?: string;
+  "global_doodle_config"?: unknown;
+  "guide_search_words"?: unknown;
+  "has_more"?: boolean;
+  "log_pb"?: unknown;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileLiveGiftsResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileWebcastGiftListResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileWebcastGiftListResponse {
+  "data"?: unknown;
+  "extra"?: unknown;
+  "status_code"?: number;
+}
+
+export interface ModelTiktokmobileLiveEffectsResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileWebcastEffectsResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileWebcastEffectsResponse {
+  "data"?: ModelTiktokmobileWebcastEffectsData;
+  "extra"?: unknown;
+  "status_code"?: number;
+}
+
+export interface ModelTiktokmobileWebcastEffectsData {
+  "assets"?: Array<unknown>;
+}
+
+export interface ModelTiktokmobileHashtagSearchResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileHashtagSearchResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileHashtagSearchResponse {
+  "challenge_list"?: Array<unknown>;
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileHashtagPostsResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileHashtagPostsResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileHashtagPostsResponse {
+  "aweme_list"?: Array<unknown>;
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileHashtagInfoResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileHashtagInfoResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileHashtagInfoResponse {
+  "ch_info"?: unknown;
+  "hashtag_name"?: string;
+  "status_code"?: number;
+  "status_msg"?: string;
+}
+
+export interface ModelTiktokmobileFeedPostResponseDoc {
+  "fetched_at"?: string;
+  "host"?: string;
+  "items"?: Record<string, unknown>;
+  "note"?: string;
+  "strings"?: Array<string>;
+}
+
 export interface ModelTiktokmobileFeedResponseDoc {
   "code"?: number;
   "data"?: ModelTiktokmobileFeedResponse;
@@ -404,6 +737,43 @@ export interface ModelTiktokmobileFeedStatistics {
   "repost_count"?: number;
   "share_count"?: number;
   "whatsapp_share_count"?: number;
+}
+
+export interface ModelTiktokmobileCommentsResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileCommentsResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileCommentsResponse {
+  "comments"?: Array<unknown>;
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+  "total"?: number;
+}
+
+export interface ModelTiktokmobileCommentRepliesResponseDoc {
+  "code"?: number;
+  "data"?: ModelTiktokmobileCommentRepliesResponse;
+  "msg"?: string;
+}
+
+export interface ModelTiktokmobileCommentRepliesResponse {
+  "comments"?: Array<unknown>;
+  "cursor"?: number;
+  "has_more"?: boolean;
+  "status_code"?: number;
+  "status_msg"?: string;
+  "total"?: number;
+}
+
+export interface ModelTiktokmobileAnchorListResponseDoc {
+  "anchors"?: Array<unknown>;
+  "count"?: number;
+  "fetched_at"?: string;
+  "host"?: string;
 }
 
 export interface ModelTiktokChallengeListResponseDoc {
@@ -726,8 +1096,158 @@ export interface TiktokChallengeListParams {
   "cursor"?: number;
 }
 
+export type TiktokMobileAnchorListResponse = CrawloraResponse<ModelTiktokmobileAnchorListResponseDoc>;
+export interface TiktokMobileAnchorListParams {
+}
+
+export type TiktokMobileCommentRepliesResponse = CrawloraResponse<ModelTiktokmobileCommentRepliesResponseDoc>;
+export interface TiktokMobileCommentRepliesParams {
+  "aweme_id": string;
+  "comment_id": string;
+  "cursor"?: number;
+  "count"?: number;
+}
+
+export type TiktokMobileCommentsResponse = CrawloraResponse<ModelTiktokmobileCommentsResponseDoc>;
+export interface TiktokMobileCommentsParams {
+  "aweme_id": string;
+  "cursor"?: number;
+  "count"?: number;
+}
+
 export type TiktokMobileFeedResponse = CrawloraResponse<ModelTiktokmobileFeedResponseDoc>;
 export interface TiktokMobileFeedParams {
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileFeedPostResponse = CrawloraResponse<ModelTiktokmobileFeedPostResponseDoc>;
+export interface TiktokMobileFeedPostParams {
+}
+
+export type TiktokMobileHashtagResponse = CrawloraResponse<ModelTiktokmobileHashtagInfoResponseDoc>;
+export interface TiktokMobileHashtagParams {
+  "name": string;
+}
+
+export type TiktokMobileHashtagPostsResponse = CrawloraResponse<ModelTiktokmobileHashtagPostsResponseDoc>;
+export interface TiktokMobileHashtagPostsParams {
+  "name": string;
+  "sort"?: "fresh" | "popular";
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileHashtagsResponse = CrawloraResponse<ModelTiktokmobileHashtagSearchResponseDoc>;
+export interface TiktokMobileHashtagsParams {
+  "keyword": string;
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileLiveEffectsResponse = CrawloraResponse<ModelTiktokmobileLiveEffectsResponseDoc>;
+export interface TiktokMobileLiveEffectsParams {
+}
+
+export type TiktokMobileLiveGiftsResponse = CrawloraResponse<ModelTiktokmobileLiveGiftsResponseDoc>;
+export interface TiktokMobileLiveGiftsParams {
+}
+
+export type TiktokMobileLiveSearchResponse = CrawloraResponse<ModelTiktokmobileLiveSearchResponseDoc>;
+export interface TiktokMobileLiveSearchParams {
+  "keyword": string;
+  "count"?: number;
+}
+
+export type TiktokMobileMusicBeatsResponse = CrawloraResponse<ModelTiktokmobileMusicBeatsSongsResponseDoc>;
+export interface TiktokMobileMusicBeatsParams {
+  "count"?: number;
+}
+
+export type TiktokMobileMusicCollectionsResponse = CrawloraResponse<ModelTiktokmobileMusicCollectionFeedResponseDoc>;
+export interface TiktokMobileMusicCollectionsParams {
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileMusicPickResponse = CrawloraResponse<ModelTiktokmobileMusicPickResponseDoc>;
+export interface TiktokMobileMusicPickParams {
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileMusicPostsResponse = CrawloraResponse<ModelTiktokmobileMusicFreshAwemeResponseDoc>;
+export interface TiktokMobileMusicPostsParams {
+  "music_id": string;
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileMusicRelatedResponse = CrawloraResponse<ModelTiktokmobileMusicRelatedResponseDoc>;
+export interface TiktokMobileMusicRelatedParams {
+  "aweme_id": string;
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileMusicTrendingResponse = CrawloraResponse<ModelTiktokmobileHotMusicResponseDoc>;
+export interface TiktokMobileMusicTrendingParams {
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileSearchResponse = CrawloraResponse<ModelTiktokmobileSearchGeneralResponseDoc>;
+export interface TiktokMobileSearchParams {
+  "keyword": string;
+  "count"?: number;
+  "offset"?: number;
+}
+
+export type TiktokMobileSearchMusicResponse = CrawloraResponse<ModelTiktokmobileSearchMusicResponseDoc>;
+export interface TiktokMobileSearchMusicParams {
+  "keyword": string;
+  "count"?: number;
+  "offset"?: number;
+}
+
+export type TiktokMobileSearchPlaceResponse = CrawloraResponse<ModelTiktokmobileSearchPlaceResponseDoc>;
+export interface TiktokMobileSearchPlaceParams {
+  "keyword": string;
+  "count"?: number;
+}
+
+export type TiktokMobileSearchPreInfoResponse = CrawloraResponse<ModelTiktokmobileSearchPreInfoResponseDoc>;
+export interface TiktokMobileSearchPreInfoParams {
+  "keyword"?: string;
+  "count"?: number;
+}
+
+export type TiktokMobileSearchSugResponse = CrawloraResponse<ModelTiktokmobileSearchSuggestionResponseDoc>;
+export interface TiktokMobileSearchSugParams {
+  "keyword": string;
+  "count"?: number;
+}
+
+export type TiktokMobileSearchTabsResponse = CrawloraResponse<ModelTiktokmobileSearchTabsResponseDoc>;
+export interface TiktokMobileSearchTabsParams {
+  "keyword": string;
+}
+
+export type TiktokMobileSearchUserResponse = CrawloraResponse<ModelTiktokmobileSearchUsersResponseDoc>;
+export interface TiktokMobileSearchUserParams {
+  "keyword": string;
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileTrendingCategoriesResponse = CrawloraResponse<ModelTiktokmobileCategoryListResponseDoc>;
+export interface TiktokMobileTrendingCategoriesParams {
+  "count"?: number;
+  "cursor"?: number;
+}
+
+export type TiktokMobileTrendingEffectsResponse = CrawloraResponse<ModelTiktokmobileStickerDiscoverResponseDoc>;
+export interface TiktokMobileTrendingEffectsParams {
   "count"?: number;
   "cursor"?: number;
 }
@@ -852,7 +1372,32 @@ export interface TiktokService {
   explore<T = TiktokExploreResponse>(params: TiktokExploreParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   challenge<T = TiktokChallengeResponse>(params: TiktokChallengeParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   challengeList<T = TiktokChallengeListResponse>(params: TiktokChallengeListParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileAnchorList<T = TiktokMobileAnchorListResponse>(params?: TiktokMobileAnchorListParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileCommentReplies<T = TiktokMobileCommentRepliesResponse>(params: TiktokMobileCommentRepliesParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileComments<T = TiktokMobileCommentsResponse>(params: TiktokMobileCommentsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   mobileFeed<T = TiktokMobileFeedResponse>(params?: TiktokMobileFeedParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileFeedPost<T = TiktokMobileFeedPostResponse>(params?: TiktokMobileFeedPostParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileHashtag<T = TiktokMobileHashtagResponse>(params: TiktokMobileHashtagParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileHashtagPosts<T = TiktokMobileHashtagPostsResponse>(params: TiktokMobileHashtagPostsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileHashtags<T = TiktokMobileHashtagsResponse>(params: TiktokMobileHashtagsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileLiveEffects<T = TiktokMobileLiveEffectsResponse>(params?: TiktokMobileLiveEffectsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileLiveGifts<T = TiktokMobileLiveGiftsResponse>(params?: TiktokMobileLiveGiftsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileLiveSearch<T = TiktokMobileLiveSearchResponse>(params: TiktokMobileLiveSearchParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicBeats<T = TiktokMobileMusicBeatsResponse>(params?: TiktokMobileMusicBeatsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicCollections<T = TiktokMobileMusicCollectionsResponse>(params?: TiktokMobileMusicCollectionsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicPick<T = TiktokMobileMusicPickResponse>(params?: TiktokMobileMusicPickParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicPosts<T = TiktokMobileMusicPostsResponse>(params: TiktokMobileMusicPostsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicRelated<T = TiktokMobileMusicRelatedResponse>(params: TiktokMobileMusicRelatedParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileMusicTrending<T = TiktokMobileMusicTrendingResponse>(params?: TiktokMobileMusicTrendingParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearch<T = TiktokMobileSearchResponse>(params: TiktokMobileSearchParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchMusic<T = TiktokMobileSearchMusicResponse>(params: TiktokMobileSearchMusicParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchPlace<T = TiktokMobileSearchPlaceResponse>(params: TiktokMobileSearchPlaceParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchPreInfo<T = TiktokMobileSearchPreInfoResponse>(params?: TiktokMobileSearchPreInfoParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchSug<T = TiktokMobileSearchSugResponse>(params: TiktokMobileSearchSugParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchTabs<T = TiktokMobileSearchTabsResponse>(params: TiktokMobileSearchTabsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileSearchUser<T = TiktokMobileSearchUserResponse>(params: TiktokMobileSearchUserParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileTrendingCategories<T = TiktokMobileTrendingCategoriesResponse>(params?: TiktokMobileTrendingCategoriesParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
+  mobileTrendingEffects<T = TiktokMobileTrendingEffectsResponse>(params?: TiktokMobileTrendingEffectsParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   popularTrendCountryIndustryMeta<T = TiktokPopularTrendCountryIndustryMetaResponse>(params?: TiktokPopularTrendCountryIndustryMetaParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   post<T = TiktokPostResponse>(params: TiktokPostParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
   profilePost<T = TiktokProfilePostResponse>(params: TiktokProfilePostParams, options?: import('./index.js').CrawloraRequestOptions): Promise<T>;
@@ -887,7 +1432,32 @@ export interface OperationParamsMap {
   "tiktok-explore": TiktokExploreParams;
   "tiktok-challenge": TiktokChallengeParams;
   "tiktok-challenge-list": TiktokChallengeListParams;
+  "tiktok-mobile-anchor-list": TiktokMobileAnchorListParams;
+  "tiktok-mobile-comment-replies": TiktokMobileCommentRepliesParams;
+  "tiktok-mobile-comments": TiktokMobileCommentsParams;
   "tiktok-mobile-feed": TiktokMobileFeedParams;
+  "tiktok-mobile-feed-post": TiktokMobileFeedPostParams;
+  "tiktok-mobile-hashtag": TiktokMobileHashtagParams;
+  "tiktok-mobile-hashtag-posts": TiktokMobileHashtagPostsParams;
+  "tiktok-mobile-hashtags": TiktokMobileHashtagsParams;
+  "tiktok-mobile-live-effects": TiktokMobileLiveEffectsParams;
+  "tiktok-mobile-live-gifts": TiktokMobileLiveGiftsParams;
+  "tiktok-mobile-live-search": TiktokMobileLiveSearchParams;
+  "tiktok-mobile-music-beats": TiktokMobileMusicBeatsParams;
+  "tiktok-mobile-music-collections": TiktokMobileMusicCollectionsParams;
+  "tiktok-mobile-music-pick": TiktokMobileMusicPickParams;
+  "tiktok-mobile-music-posts": TiktokMobileMusicPostsParams;
+  "tiktok-mobile-music-related": TiktokMobileMusicRelatedParams;
+  "tiktok-mobile-music-trending": TiktokMobileMusicTrendingParams;
+  "tiktok-mobile-search": TiktokMobileSearchParams;
+  "tiktok-mobile-search-music": TiktokMobileSearchMusicParams;
+  "tiktok-mobile-search-place": TiktokMobileSearchPlaceParams;
+  "tiktok-mobile-search-pre-info": TiktokMobileSearchPreInfoParams;
+  "tiktok-mobile-search-sug": TiktokMobileSearchSugParams;
+  "tiktok-mobile-search-tabs": TiktokMobileSearchTabsParams;
+  "tiktok-mobile-search-user": TiktokMobileSearchUserParams;
+  "tiktok-mobile-trending-categories": TiktokMobileTrendingCategoriesParams;
+  "tiktok-mobile-trending-effects": TiktokMobileTrendingEffectsParams;
   "tiktok-popular-trend-country-industry-meta": TiktokPopularTrendCountryIndustryMetaParams;
   "tiktok-post": TiktokPostParams;
   "tiktok-profile-post": TiktokProfilePostParams;
@@ -918,7 +1488,32 @@ export interface OperationResponseMap {
   "tiktok-explore": TiktokExploreResponse;
   "tiktok-challenge": TiktokChallengeResponse;
   "tiktok-challenge-list": TiktokChallengeListResponse;
+  "tiktok-mobile-anchor-list": TiktokMobileAnchorListResponse;
+  "tiktok-mobile-comment-replies": TiktokMobileCommentRepliesResponse;
+  "tiktok-mobile-comments": TiktokMobileCommentsResponse;
   "tiktok-mobile-feed": TiktokMobileFeedResponse;
+  "tiktok-mobile-feed-post": TiktokMobileFeedPostResponse;
+  "tiktok-mobile-hashtag": TiktokMobileHashtagResponse;
+  "tiktok-mobile-hashtag-posts": TiktokMobileHashtagPostsResponse;
+  "tiktok-mobile-hashtags": TiktokMobileHashtagsResponse;
+  "tiktok-mobile-live-effects": TiktokMobileLiveEffectsResponse;
+  "tiktok-mobile-live-gifts": TiktokMobileLiveGiftsResponse;
+  "tiktok-mobile-live-search": TiktokMobileLiveSearchResponse;
+  "tiktok-mobile-music-beats": TiktokMobileMusicBeatsResponse;
+  "tiktok-mobile-music-collections": TiktokMobileMusicCollectionsResponse;
+  "tiktok-mobile-music-pick": TiktokMobileMusicPickResponse;
+  "tiktok-mobile-music-posts": TiktokMobileMusicPostsResponse;
+  "tiktok-mobile-music-related": TiktokMobileMusicRelatedResponse;
+  "tiktok-mobile-music-trending": TiktokMobileMusicTrendingResponse;
+  "tiktok-mobile-search": TiktokMobileSearchResponse;
+  "tiktok-mobile-search-music": TiktokMobileSearchMusicResponse;
+  "tiktok-mobile-search-place": TiktokMobileSearchPlaceResponse;
+  "tiktok-mobile-search-pre-info": TiktokMobileSearchPreInfoResponse;
+  "tiktok-mobile-search-sug": TiktokMobileSearchSugResponse;
+  "tiktok-mobile-search-tabs": TiktokMobileSearchTabsResponse;
+  "tiktok-mobile-search-user": TiktokMobileSearchUserResponse;
+  "tiktok-mobile-trending-categories": TiktokMobileTrendingCategoriesResponse;
+  "tiktok-mobile-trending-effects": TiktokMobileTrendingEffectsResponse;
   "tiktok-popular-trend-country-industry-meta": TiktokPopularTrendCountryIndustryMetaResponse;
   "tiktok-post": TiktokPostResponse;
   "tiktok-profile-post": TiktokProfilePostResponse;
@@ -949,7 +1544,32 @@ export interface OperationRequiredParamsMap {
   "tiktok-explore": true;
   "tiktok-challenge": true;
   "tiktok-challenge-list": true;
+  "tiktok-mobile-anchor-list": false;
+  "tiktok-mobile-comment-replies": true;
+  "tiktok-mobile-comments": true;
   "tiktok-mobile-feed": false;
+  "tiktok-mobile-feed-post": false;
+  "tiktok-mobile-hashtag": true;
+  "tiktok-mobile-hashtag-posts": true;
+  "tiktok-mobile-hashtags": true;
+  "tiktok-mobile-live-effects": false;
+  "tiktok-mobile-live-gifts": false;
+  "tiktok-mobile-live-search": true;
+  "tiktok-mobile-music-beats": false;
+  "tiktok-mobile-music-collections": false;
+  "tiktok-mobile-music-pick": false;
+  "tiktok-mobile-music-posts": true;
+  "tiktok-mobile-music-related": true;
+  "tiktok-mobile-music-trending": false;
+  "tiktok-mobile-search": true;
+  "tiktok-mobile-search-music": true;
+  "tiktok-mobile-search-place": true;
+  "tiktok-mobile-search-pre-info": false;
+  "tiktok-mobile-search-sug": true;
+  "tiktok-mobile-search-tabs": true;
+  "tiktok-mobile-search-user": true;
+  "tiktok-mobile-trending-categories": false;
+  "tiktok-mobile-trending-effects": false;
   "tiktok-popular-trend-country-industry-meta": false;
   "tiktok-post": true;
   "tiktok-profile-post": true;
@@ -987,7 +1607,32 @@ export type OperationIdLiteral =
   | "tiktok-explore"
   | "tiktok-challenge"
   | "tiktok-challenge-list"
+  | "tiktok-mobile-anchor-list"
+  | "tiktok-mobile-comment-replies"
+  | "tiktok-mobile-comments"
   | "tiktok-mobile-feed"
+  | "tiktok-mobile-feed-post"
+  | "tiktok-mobile-hashtag"
+  | "tiktok-mobile-hashtag-posts"
+  | "tiktok-mobile-hashtags"
+  | "tiktok-mobile-live-effects"
+  | "tiktok-mobile-live-gifts"
+  | "tiktok-mobile-live-search"
+  | "tiktok-mobile-music-beats"
+  | "tiktok-mobile-music-collections"
+  | "tiktok-mobile-music-pick"
+  | "tiktok-mobile-music-posts"
+  | "tiktok-mobile-music-related"
+  | "tiktok-mobile-music-trending"
+  | "tiktok-mobile-search"
+  | "tiktok-mobile-search-music"
+  | "tiktok-mobile-search-place"
+  | "tiktok-mobile-search-pre-info"
+  | "tiktok-mobile-search-sug"
+  | "tiktok-mobile-search-tabs"
+  | "tiktok-mobile-search-user"
+  | "tiktok-mobile-trending-categories"
+  | "tiktok-mobile-trending-effects"
   | "tiktok-popular-trend-country-industry-meta"
   | "tiktok-post"
   | "tiktok-profile-post"
@@ -1016,7 +1661,32 @@ export declare const OperationIds: Readonly<{
   TiktokCreativeCenterTopContent: "tiktok-creative-center-top-content";
   TiktokCreativeCenterVideos: "tiktok-creative-center-videos";
   TiktokExplore: "tiktok-explore";
+  TiktokMobileAnchorList: "tiktok-mobile-anchor-list";
+  TiktokMobileCommentReplies: "tiktok-mobile-comment-replies";
+  TiktokMobileComments: "tiktok-mobile-comments";
   TiktokMobileFeed: "tiktok-mobile-feed";
+  TiktokMobileFeedPost: "tiktok-mobile-feed-post";
+  TiktokMobileHashtag: "tiktok-mobile-hashtag";
+  TiktokMobileHashtagPosts: "tiktok-mobile-hashtag-posts";
+  TiktokMobileHashtags: "tiktok-mobile-hashtags";
+  TiktokMobileLiveEffects: "tiktok-mobile-live-effects";
+  TiktokMobileLiveGifts: "tiktok-mobile-live-gifts";
+  TiktokMobileLiveSearch: "tiktok-mobile-live-search";
+  TiktokMobileMusicBeats: "tiktok-mobile-music-beats";
+  TiktokMobileMusicCollections: "tiktok-mobile-music-collections";
+  TiktokMobileMusicPick: "tiktok-mobile-music-pick";
+  TiktokMobileMusicPosts: "tiktok-mobile-music-posts";
+  TiktokMobileMusicRelated: "tiktok-mobile-music-related";
+  TiktokMobileMusicTrending: "tiktok-mobile-music-trending";
+  TiktokMobileSearch: "tiktok-mobile-search";
+  TiktokMobileSearchMusic: "tiktok-mobile-search-music";
+  TiktokMobileSearchPlace: "tiktok-mobile-search-place";
+  TiktokMobileSearchPreInfo: "tiktok-mobile-search-pre-info";
+  TiktokMobileSearchSug: "tiktok-mobile-search-sug";
+  TiktokMobileSearchTabs: "tiktok-mobile-search-tabs";
+  TiktokMobileSearchUser: "tiktok-mobile-search-user";
+  TiktokMobileTrendingCategories: "tiktok-mobile-trending-categories";
+  TiktokMobileTrendingEffects: "tiktok-mobile-trending-effects";
   TiktokPopularTrendCountryIndustryMeta: "tiktok-popular-trend-country-industry-meta";
   TiktokPost: "tiktok-post";
   TiktokProfile: "tiktok-profile";

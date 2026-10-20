@@ -2325,6 +2325,80 @@
       },
       "type": "object"
     },
+    "tiktokmobile.CategoryListResponse": {
+      "properties": {
+        "category_list": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "device_type": {
+          "type": "integer"
+        },
+        "extra": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.CommentRepliesResponse": {
+      "properties": {
+        "comments": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.CommentsResponse": {
+      "properties": {
+        "comments": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
     "tiktokmobile.FeedItem": {
       "properties": {
         "author_id": {
@@ -2406,6 +2480,535 @@
       },
       "type": "object"
     },
+    "tiktokmobile.HashtagInfoResponse": {
+      "properties": {
+        "ch_info": {},
+        "hashtag_name": {
+          "type": "string"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.HashtagPostsResponse": {
+      "properties": {
+        "aweme_list": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.HashtagSearchResponse": {
+      "properties": {
+        "challenge_list": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.HotMusicResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "extra": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "msg": {
+          "type": "string"
+        },
+        "music_list": {
+          "items": {},
+          "type": "array"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.LiveSearchResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "extra": {},
+        "extra_data": {},
+        "feedback_type": {
+          "type": "string"
+        },
+        "global_doodle_config": {},
+        "guide_search_words": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.MusicBeatsSongsResponse": {
+      "properties": {
+        "extra": {},
+        "log_pb": {},
+        "music_list": {
+          "items": {},
+          "type": "array"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.MusicCollectionFeedResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "extra": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "mcf_list": {
+          "items": {},
+          "type": "array"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.MusicFreshAwemeResponse": {
+      "properties": {
+        "aweme_list": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "extra": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.MusicPickResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "mc_list": {
+          "items": {},
+          "type": "array"
+        },
+        "music_list": {
+          "items": {},
+          "type": "array"
+        },
+        "radio_cursor": {
+          "type": "integer"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.MusicRelatedResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "music_list": {
+          "items": {},
+          "type": "array"
+        },
+        "music_type": {
+          "type": "integer"
+        },
+        "recall_info_list": {
+          "items": {},
+          "type": "array"
+        },
+        "similar_song_ids": {
+          "items": {},
+          "type": "array"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.PlacePOIContainer": {
+      "properties": {
+        "poi_info": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchGeneralResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "data": {
+          "items": {},
+          "type": "array"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchMusicResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "music": {
+          "items": {},
+          "type": "array"
+        },
+        "music_info_list": {
+          "items": {},
+          "type": "array"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        },
+        "total": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchPlaceResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "extra": {},
+        "feedback_type": {
+          "type": "string"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "poi_info": {
+          "$ref": "#/definitions/tiktokmobile.PlacePOIContainer"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchSuggestion": {
+      "properties": {
+        "content": {
+          "type": "string"
+        },
+        "extra_info": {},
+        "highlight_pos": {},
+        "pos": {},
+        "rich_sug_sec_pos": {},
+        "sug_type": {
+          "type": "string"
+        },
+        "word_record": {}
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchSuggestionResponse": {
+      "properties": {
+        "extra": {},
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "rid": {
+          "type": "string"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        },
+        "sug_list": {
+          "items": {
+            "$ref": "#/definitions/tiktokmobile.SearchSuggestion"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.SearchUsersResponse": {
+      "properties": {
+        "cursor": {
+          "type": "integer"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        },
+        "user_list": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.StickerDiscoverResponse": {
+      "properties": {
+        "aweme_list": {
+          "items": {},
+          "type": "array"
+        },
+        "cursor": {
+          "type": "integer"
+        },
+        "extra": {},
+        "feed_session_id": {
+          "type": "string"
+        },
+        "has_more": {
+          "type": "boolean"
+        },
+        "log_pb": {},
+        "status_code": {
+          "type": "integer"
+        },
+        "status_msg": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.WebcastEffectsData": {
+      "properties": {
+        "assets": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.WebcastEffectsResponse": {
+      "properties": {
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.WebcastEffectsData"
+        },
+        "extra": {},
+        "status_code": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.WebcastGiftListResponse": {
+      "properties": {
+        "data": {},
+        "extra": {},
+        "status_code": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.anchorListResponseDoc": {
+      "properties": {
+        "anchors": {
+          "items": {},
+          "type": "array"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "fetched_at": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.categoryListResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.CategoryListResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.commentRepliesResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.CommentRepliesResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.commentsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.CommentsResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.feedPostResponseDoc": {
+      "properties": {
+        "fetched_at": {
+          "example": "2026-10-20T08:20:00Z",
+          "type": "string"
+        },
+        "host": {
+          "example": "aggr16-normal.tiktokv.us",
+          "type": "string"
+        },
+        "items": {
+          "additionalProperties": {},
+          "type": "object"
+        },
+        "note": {
+          "type": "string"
+        },
+        "strings": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
     "tiktokmobile.feedResponseDoc": {
       "properties": {
         "code": {
@@ -2414,6 +3017,338 @@
         },
         "data": {
           "$ref": "#/definitions/tiktokmobile.FeedResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.hashtagInfoResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.HashtagInfoResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.hashtagPostsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.HashtagPostsResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.hashtagSearchResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.HashtagSearchResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.hotMusicResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.HotMusicResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.liveEffectsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.WebcastEffectsResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.liveGiftsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.WebcastGiftListResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.liveSearchResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.LiveSearchResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.musicBeatsSongsResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.MusicBeatsSongsResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.musicCollectionFeedResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.MusicCollectionFeedResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.musicFreshAwemeResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.MusicFreshAwemeResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.musicPickResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.MusicPickResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.musicRelatedResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.MusicRelatedResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchGeneralResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.SearchGeneralResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchMusicResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.SearchMusicResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchPlaceResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.SearchPlaceResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchPreInfoResponseDoc": {
+      "properties": {
+        "fetched_at": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        },
+        "pre_info_id": {
+          "type": "string"
+        },
+        "ttl": {
+          "example": 40,
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchSuggestionResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.SearchSuggestionResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchTabsResponseDoc": {
+      "properties": {
+        "fetched_at": {
+          "type": "string"
+        },
+        "host": {
+          "example": "aggr32-normal.tiktokv.us",
+          "type": "string"
+        },
+        "is_failed": {
+          "example": 0,
+          "type": "integer"
+        },
+        "keyword": {
+          "example": "lofi",
+          "type": "string"
+        },
+        "tabs": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.searchUsersResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.SearchUsersResponse"
+        },
+        "msg": {
+          "example": "OK",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "tiktokmobile.stickerDiscoverResponseDoc": {
+      "properties": {
+        "code": {
+          "example": 200,
+          "type": "integer"
+        },
+        "data": {
+          "$ref": "#/definitions/tiktokmobile.StickerDiscoverResponse"
         },
         "msg": {
           "example": "OK",
@@ -3011,6 +3946,12 @@
               "$ref": "#/definitions/app.Response"
             }
           },
+          "404": {
+            "description": "Hashtag does not exist",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
           "429": {
             "description": "Rate limit exceeded",
             "schema": {
@@ -3105,6 +4046,197 @@
         ]
       }
     },
+    "/tiktok/mobile/anchor/list": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the anchor catalogue TikTok exposes for attaching a tag, product or place to a video. Entry shapes vary by anchor type, so each entry is returned as raw JSON rather than coerced into one schema.",
+        "operationId": "tiktok-mobile-anchor-list",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.anchorListResponseDoc"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Anchor catalogue used by the video composer",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/comment/replies": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the replies to one comment as the mobile app returns them, with `cursor`, `has_more` and `total`. The measured call sends both the video id and the comment id; this route answers even in windows where the top-level comment list is degraded.",
+        "operationId": "tiktok-mobile-comment-replies",
+        "parameters": [
+          {
+            "description": "Video id the comment belongs to",
+            "in": "query",
+            "name": "aweme_id",
+            "required": true,
+            "type": "string",
+            "x-example": "7680168962218511636"
+          },
+          {
+            "description": "Comment id to list replies for",
+            "in": "query",
+            "name": "comment_id",
+            "required": true,
+            "type": "string",
+            "x-example": "7680523330713240340"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          },
+          {
+            "default": 20,
+            "description": "Replies per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.commentRepliesResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve replies to a TikTok comment",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/comments": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the top-level comments of one video as the mobile app returns them: each comment has its full `user` projection, `text`, `digg_count` and `reply_comment_total`, plus `cursor`, `has_more` and `total`. This route needs a signed-in app session and throttles independently of the replies route. A page with no comments (including an empty body) is returned as an empty result, because that is the documented degraded shape in a throttle window.",
+        "operationId": "tiktok-mobile-comments",
+        "parameters": [
+          {
+            "description": "Video id to list comments for",
+            "in": "query",
+            "name": "aweme_id",
+            "required": true,
+            "type": "string",
+            "x-example": "7681236055831416084"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          },
+          {
+            "default": 20,
+            "description": "Comments per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.commentsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve comments for a TikTok video",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
     "/tiktok/mobile/feed": {
       "get": {
         "consumes": [
@@ -3169,6 +4301,1395 @@
           }
         ],
         "summary": "Retrieve the TikTok mobile For You feed",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/feed/post": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Calls the app's primary feed route - `POST /aweme/v2/feed/`, which the Android client sends with a protobuf request body and answers with protobuf - and returns a schema-free decode: field numbers become keys, length-delimited fields become strings when printable, nested messages when they parse and base64 otherwise, plus a flat list of every string leaf. Field numbering is inferred because TikTok publishes no schema for this message; use the JSON `GET /tiktok/mobile/feed` route when you need the stable structured contract.",
+        "operationId": "tiktok-mobile-feed-post",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.feedPostResponseDoc"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Fetch the app's primary feed call (POST, protobuf) decoded without a schema",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/hashtag": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns one hashtag's detail by name: `challenge_info` (cid, hashtag_name, desc, ...) and `stats` (view and video counts), exactly as the mobile API returns them. Hashtags are addressed by name; an internal id is rejected upstream.",
+        "operationId": "tiktok-mobile-hashtag",
+        "parameters": [
+          {
+            "description": "Hashtag name without the leading #",
+            "in": "query",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "x-example": "readingvlog"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.hashtagInfoResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "404": {
+            "description": "Hashtag not found",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve a TikTok hashtag",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/hashtag/posts": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Lists videos for one hashtag name as the mobile app returns them (`aweme_list` with author, music and statistics), plus `cursor` and `has_more`. `sort=fresh` is the newest list and works from any measured egress; `sort=popular` is the hot list and only answers from a US egress.",
+        "operationId": "tiktok-mobile-hashtag-posts",
+        "parameters": [
+          {
+            "description": "Hashtag name without the leading #",
+            "in": "query",
+            "name": "name",
+            "required": true,
+            "type": "string",
+            "x-example": "readingvlog"
+          },
+          {
+            "default": "fresh",
+            "description": "Listing: fresh (newest) or popular (hot)",
+            "enum": [
+              "fresh",
+              "popular"
+            ],
+            "in": "query",
+            "name": "sort",
+            "type": "string"
+          },
+          {
+            "default": 20,
+            "description": "Videos per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.hashtagPostsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve videos for a TikTok hashtag",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/hashtags": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Searches hashtags by keyword and returns the matching hashtag objects unmodified, with `cursor` and `has_more` for paging.",
+        "operationId": "tiktok-mobile-hashtags",
+        "parameters": [
+          {
+            "description": "Keyword to search hashtags for",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "reading"
+          },
+          {
+            "default": 20,
+            "description": "Results per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.hashtagSearchResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok hashtags",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/live/effects": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the complete LIVE effects/sticker asset catalogue in one call: `data.assets` (2,032 assets, each with `id`, `name`, `describe`, `resource_url`, `resource_uri`, `md5`, `size`, `resource_type`, `download_type`, `model_requirements`, `sticker_asset_variant` and `video_resource_list`). There are no request parameters and no paging, and the body is large because the catalogue is complete.",
+        "operationId": "tiktok-mobile-live-effects",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.liveEffectsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok LIVE effects",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/live/gifts": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the complete LIVE gift catalogue in one call: `data.gifts` (771 gift objects with `diamond_count`, `describe`, `duration`, `gift_resources`, `gift_skins`, `batch_gift_info` and `combo`) plus the gift config and resource maps (`gift_configs`, `gifts_info`, `doodle_templates`, `gift_name_group_map`, `gift_resource_group_map`). There are no request parameters and no paging: the response is a single complete catalogue.",
+        "operationId": "tiktok-mobile-live-gifts",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.liveGiftsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok LIVE gifts",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/live/search": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Searches the mobile app's LIVE surface by keyword: `data` of `{type, anchor}` entries with `feedback_type` set to `live`, plus `cursor` and `has_more`. `keyword` is required; without it the gateway answers a valid but empty envelope. This is the API's first LIVE endpoint.",
+        "operationId": "tiktok-mobile-live-search",
+        "parameters": [
+          {
+            "description": "Search keyword",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "lofi"
+          },
+          {
+            "default": 0,
+            "description": "Results to request (0 = app default, max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.liveSearchResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok LIVE streams",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/beats": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the mobile app's beats/songs chart unmodified: `music_list` of the same full sound objects the pick chart returns (`id_str`, `title`, `user_count`, `album`, `artists`, `cover_*`), ordered as the app's beats list. The measured envelope carries no paging fields.",
+        "operationId": "tiktok-mobile-music-beats",
+        "parameters": [
+          {
+            "default": 0,
+            "description": "Accepted for compatibility; not measured to change the page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.musicBeatsSongsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok music beats",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/collections": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the mobile app's sound-collection feed unmodified: `mcf_list`, where each entry is `{collection, music_list}` (the measured default page holds 8 entries), plus `cursor` and `has_more`. This route is first-page only: the returned `cursor` is not a reusable page token, so callers should not page with it.",
+        "operationId": "tiktok-mobile-music-collections",
+        "parameters": [
+          {
+            "default": 0,
+            "description": "Collections to request (0 = app default, max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Accepted for shape compatibility only; not a verified page token",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.musicCollectionFeedResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok music collections",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/pick": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the mobile app's sound pick/chart list: `music_list` of full sound objects (id, title, author, user_count, duration, ...) plus the chart list `mc_list` and `radio_cursor`.",
+        "operationId": "tiktok-mobile-music-pick",
+        "parameters": [
+          {
+            "default": 20,
+            "description": "Sounds per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.musicPickResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok sound chart picks",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/posts": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Lists the videos that use one sound, as the mobile app returns them: `aweme_list` of full video objects (with `author`, `statistics` and `added_sound_music_info`), plus `cursor` and `has_more`. `music_id` is required. `count` is accepted but ignored upstream - the server returns its own default page, so page with `cursor`.",
+        "operationId": "tiktok-mobile-music-posts",
+        "parameters": [
+          {
+            "description": "Sound (music) id",
+            "in": "query",
+            "name": "music_id",
+            "required": true,
+            "type": "string",
+            "x-example": "6799585653702019073"
+          },
+          {
+            "default": 0,
+            "description": "Accepted for compatibility; the server ignores it (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.musicFreshAwemeResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve videos for a TikTok sound",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/related": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns sounds related to one video: `music_list` of full sound objects, `recall_info_list` explaining why each was recalled, `similar_song_ids`, plus `cursor` and `has_more`.",
+        "operationId": "tiktok-mobile-music-related",
+        "parameters": [
+          {
+            "description": "Video id to find related sounds for",
+            "in": "query",
+            "name": "aweme_id",
+            "required": true,
+            "type": "string",
+            "x-example": "7681236055831416084"
+          },
+          {
+            "default": 20,
+            "description": "Sounds per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.musicRelatedResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve sounds related to a TikTok video",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/music/trending": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the mobile app's trending sound chart: `music_list` of full sound objects (`id_str`, `title`, `user_count`, `album`, `artists`, `cover_large`/`cover_medium`/`cover_thumb`, `binded_challenge_id`, `collect_stat`, `audition_duration`) unmodified, plus `cursor` and `has_more` for paging. This is the chart behind `music.trending`.",
+        "operationId": "tiktok-mobile-music-trending",
+        "parameters": [
+          {
+            "default": 20,
+            "description": "Sounds per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.hotMusicResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok trending sounds",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Keyword search returning the mobile API result documents unmodified: each entry has `aweme_info` (a full video object with statistics), `card_profile` and search metadata, plus `cursor` and `has_more`. Keep `count` small (20 already exceeds one megabyte of upstream JSON).",
+        "operationId": "tiktok-mobile-search",
+        "parameters": [
+          {
+            "description": "Search keyword",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "lofi"
+          },
+          {
+            "default": 5,
+            "description": "Results per page (max 20)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Result offset",
+            "in": "query",
+            "name": "offset",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchGeneralResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok videos on the mobile API",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/music": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Keyword search over sounds, returning `music_info_list` of full sound objects unmodified with `cursor`, `has_more` and `total`.",
+        "operationId": "tiktok-mobile-search-music",
+        "parameters": [
+          {
+            "description": "Search keyword",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "lofi"
+          },
+          {
+            "default": 20,
+            "description": "Sounds per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Result offset",
+            "in": "query",
+            "name": "offset",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchMusicResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok sounds on the mobile API",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/place": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns TikTok's place (POI) search results for a keyword, unmodified: each row carries `poi_name`, `poi_id`, `poi_type`, `video_count`, `poi_rating`, `poi_distance`, `poi_location`, `lat`/`lng`, `img_url`, `opening_time`, `price_level` and `parent_poi`. Useful for mapping a location or category to the places TikTok knows about, and for seeing how many videos each place carries. `keyword` is required. The page is capped at 10 rows upstream and this route is first-page-only — the returned `cursor` is not a reusable page token.",
+        "operationId": "tiktok-mobile-search-place",
+        "parameters": [
+          {
+            "description": "Place name or category to search for",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "pizza"
+          },
+          {
+            "default": 10,
+            "description": "Rows to return; the upstream caps the page at 10 regardless",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchPlaceResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok places",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/pre-info": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the `pre_info_id` token the app attaches to a search session (with its TTL). The token is short-lived; the app requests one before the search stream and reuses it for the following calls.",
+        "operationId": "tiktok-mobile-search-pre-info",
+        "parameters": [
+          {
+            "description": "Seed keyword (optional; the app also requests this with an empty keyword)",
+            "in": "query",
+            "name": "keyword",
+            "type": "string",
+            "x-example": "lofi"
+          },
+          {
+            "default": 20,
+            "description": "Suggestion count (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchPreInfoResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Pre-search info token for a search session",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/sug": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the mobile app's search typeahead for a seed keyword: `sug_list` of suggestions, each with `content`, `sug_type`, `word_record` (`group_id`, `words_position`, `words_content`, `words_source`) and positional fields, unmodified. Useful for query expansion and for seeing the phrases the app itself associates with a seed term. `keyword` is required; without it the upstream answers a well-formed but empty envelope.",
+        "operationId": "tiktok-mobile-search-sug",
+        "parameters": [
+          {
+            "description": "Seed keyword to expand",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "lofi"
+          },
+          {
+            "default": 10,
+            "description": "Suggestions to return (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchSuggestionResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok search suggestions",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/tabs": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the tab keys the mobile search screen offers for a keyword (`general`, `video`, `photos`, `user`, `music`, `live`, `place`, `hashtag`), plus the gateway's `is_failed` flag. Measured on the mobile search edge with a form POST.",
+        "operationId": "tiktok-mobile-search-tabs",
+        "parameters": [
+          {
+            "description": "Search keyword",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "lofi"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchTabsResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search tabs available for a keyword",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/search/user": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Keyword search over users, returning `user_list` unmodified. Each `user_info` carries the populated creator statistics (follower_count, following_count, total_favorited, aweme_count, custom_verify).",
+        "operationId": "tiktok-mobile-search-user",
+        "parameters": [
+          {
+            "description": "Search keyword (a username or display name)",
+            "in": "query",
+            "name": "keyword",
+            "required": true,
+            "type": "string",
+            "x-example": "mrbeast"
+          },
+          {
+            "default": 20,
+            "description": "Users per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.searchUsersResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Search TikTok users on the mobile API",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/trending/categories": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the discover-category feed unmodified: each `category_list` entry is `{aweme_list, category_type, challenge_info, click_track_url_list, desc, track_url_list}`, with `cursor` and `has_more` for paging.",
+        "operationId": "tiktok-mobile-trending-categories",
+        "parameters": [
+          {
+            "default": 20,
+            "description": "Categories per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.categoryListResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok trending categories",
+        "tags": [
+          "tiktok"
+        ]
+      }
+    },
+    "/tiktok/mobile/trending/effects": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "description": "Returns the effect/sticker discovery feed unmodified: `aweme_list` of full video objects, each additionally carrying `stickers` and `sticker_detail`, plus `feed_session_id`, `cursor` and `has_more`.",
+        "operationId": "tiktok-mobile-trending-effects",
+        "parameters": [
+          {
+            "default": 20,
+            "description": "Videos per page (max 50)",
+            "in": "query",
+            "name": "count",
+            "type": "integer"
+          },
+          {
+            "default": 0,
+            "description": "Pagination cursor",
+            "in": "query",
+            "name": "cursor",
+            "type": "integer"
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/tiktokmobile.stickerDiscoverResponseDoc"
+            }
+          },
+          "400": {
+            "description": "Invalid input",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "429": {
+            "description": "Rate limit exceeded",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "$ref": "#/definitions/app.Response"
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ],
+        "summary": "Retrieve TikTok trending effects",
         "tags": [
           "tiktok"
         ]

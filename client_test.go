@@ -19,7 +19,7 @@ func TestGeneratedClientRequestAndAllowlist(t *testing.T) {
 		if r.Header.Get("x-api-key") != "test-key" {
 			t.Errorf("x-api-key = %q", r.Header.Get("x-api-key"))
 		}
-		if r.URL.EscapedPath() != "/api/v1/tiktok/search" {
+		if r.URL.EscapedPath() != "/api/v1/tiktok/mobile/live/search" {
 			t.Errorf("escaped path = %q", r.URL.EscapedPath())
 		}
 		if "keyword" != "" {
@@ -40,21 +40,21 @@ func TestGeneratedClientRequestAndAllowlist(t *testing.T) {
 	client := NewClient("test-key")
 	client.BaseURL = server.URL + "/api/v1"
 	client.HTTPClient = server.Client()
-	got, err := client.Call(context.Background(), "tiktok-search", Params{"keyword": "space & value", "cursor": 1, "count": 1})
+	got, err := client.Call(context.Background(), "tiktok-mobile-live-search", Params{"keyword": "space & value", "count": 1})
 	if err != nil {
 		t.Fatal(err)
 	}
 	if got.(map[string]any)["ok"] != true {
 		t.Fatalf("JSON result = %#v", got)
 	}
-	if OperationCount != 28 || len(OperationIDs()) != OperationCount {
+	if OperationCount != 53 || len(OperationIDs()) != OperationCount {
 		t.Fatalf("operation count = %d IDs=%d", OperationCount, len(OperationIDs()))
 	}
 	if _, err := client.Call(context.Background(), "unselected-operation", nil); err == nil || !strings.Contains(err.Error(), "unknown") {
 		t.Fatalf("unselected operation error = %v", err)
 	}
 	if "" != "" {
-		if _, err := client.Call(context.Background(), "tiktok-search", Params{"keyword": "space & value", "cursor": 1, "count": 1}); err == nil || !strings.Contains(err.Error(), "invalid value") {
+		if _, err := client.Call(context.Background(), "tiktok-mobile-live-search", Params{"keyword": "space & value", "count": 1}); err == nil || !strings.Contains(err.Error(), "invalid value") {
 			t.Fatalf("invalid enum error = %v", err)
 		}
 	}
@@ -72,7 +72,7 @@ func TestGeneratedClientTextResponse(t *testing.T) {
 	client := NewClient("key")
 	client.BaseURL = server.URL + "/api/v1"
 	client.HTTPClient = server.Client()
-	got, err := client.Call(context.Background(), "tiktok-search", Params{"keyword": "space & value", "cursor": 1, "count": 1, "responseType": "text"})
+	got, err := client.Call(context.Background(), "tiktok-mobile-live-search", Params{"keyword": "space & value", "count": 1, "responseType": "text"})
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -90,7 +90,7 @@ func TestGeneratedClientErrorsAndTimeout(t *testing.T) {
 		client := NewClient("key")
 		client.BaseURL = server.URL + "/api/v1"
 		client.HTTPClient = server.Client()
-		_, err := client.Call(context.Background(), "tiktok-search", Params{"keyword": "space & value", "cursor": 1, "count": 1})
+		_, err := client.Call(context.Background(), "tiktok-mobile-live-search", Params{"keyword": "space & value", "count": 1})
 		if err == nil || !strings.Contains(err.Error(), "502") {
 			t.Fatalf("HTTP error = %v", err)
 		}
@@ -105,7 +105,7 @@ func TestGeneratedClientErrorsAndTimeout(t *testing.T) {
 		client.BaseURL = server.URL + "/api/v1"
 		client.HTTPClient = server.Client()
 		client.Timeout = 10 * time.Millisecond
-		_, err := client.Call(context.Background(), "tiktok-search", Params{"keyword": "space & value", "cursor": 1, "count": 1})
+		_, err := client.Call(context.Background(), "tiktok-mobile-live-search", Params{"keyword": "space & value", "count": 1})
 		if err == nil {
 			t.Fatal("expected request timeout")
 		}

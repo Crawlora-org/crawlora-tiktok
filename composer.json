@@ -1,6 +1,6 @@
 {
   "name": "crawlora/tiktok",
-  "description": "Crawlora TikTok API client with 28 endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data",
+  "description": "Crawlora TikTok API client with 53 endpoints for video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data",
   "keywords": [
     "crawlora",
     "api-client",

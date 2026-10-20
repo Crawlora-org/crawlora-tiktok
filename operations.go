@@ -38,7 +38,32 @@ var operations = map[string]operationDefinition{
 	"tiktok-explore":                             operationDefinition{Method: "GET", Path: "/tiktok/explore/{id}", PathParams: []string{"id"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-challenge":                           operationDefinition{Method: "GET", Path: "/tiktok/hashtag/{name}", PathParams: []string{"name"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-challenge-list":                      operationDefinition{Method: "GET", Path: "/tiktok/hashtags", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-anchor-list":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/anchor/list", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-comment-replies":              operationDefinition{Method: "GET", Path: "/tiktok/mobile/comment/replies", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "aweme_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "comment_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-comments":                     operationDefinition{Method: "GET", Path: "/tiktok/mobile/comments", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "aweme_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-mobile-feed":                         operationDefinition{Method: "GET", Path: "/tiktok/mobile/feed", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-feed-post":                    operationDefinition{Method: "GET", Path: "/tiktok/mobile/feed/post", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-hashtag":                      operationDefinition{Method: "GET", Path: "/tiktok/mobile/hashtag", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "name", In: "query", Type: "string", Required: true}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-hashtag-posts":                operationDefinition{Method: "GET", Path: "/tiktok/mobile/hashtag/posts", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "name", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "sort", In: "query", Type: "string", Enum: []string{"fresh", "popular"}}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-hashtags":                     operationDefinition{Method: "GET", Path: "/tiktok/mobile/hashtags", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-live-effects":                 operationDefinition{Method: "GET", Path: "/tiktok/mobile/live/effects", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-live-gifts":                   operationDefinition{Method: "GET", Path: "/tiktok/mobile/live/gifts", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-live-search":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/live/search", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-beats":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/beats", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-collections":            operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/collections", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-pick":                   operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/pick", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-posts":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/posts", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "music_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-related":                operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/related", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "aweme_id", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-music-trending":               operationDefinition{Method: "GET", Path: "/tiktok/mobile/music/trending", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search":                       operationDefinition{Method: "GET", Path: "/tiktok/mobile/search", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "offset", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-music":                 operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/music", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "offset", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-place":                 operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/place", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-pre-info":              operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/pre-info", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string"}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-sug":                   operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/sug", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-tabs":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/tabs", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-search-user":                  operationDefinition{Method: "GET", Path: "/tiktok/mobile/search/user", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "keyword", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-trending-categories":          operationDefinition{Method: "GET", Path: "/tiktok/mobile/trending/categories", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
+	"tiktok-mobile-trending-effects":             operationDefinition{Method: "GET", Path: "/tiktok/mobile/trending/effects", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "count", In: "query", Type: "integer"}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-popular-trend-country-industry-meta": operationDefinition{Method: "GET", Path: "/tiktok/popular-trend/country-industry-meta", PathParams: nil, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-post":                                operationDefinition{Method: "GET", Path: "/tiktok/post/{id}", PathParams: []string{"id"}, QueryParams: nil, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
 	"tiktok-profile-post":                        operationDefinition{Method: "GET", Path: "/tiktok/posts", PathParams: nil, QueryParams: []parameterDefinition{parameterDefinition{Name: "secUid", In: "query", Type: "string", Required: true}, parameterDefinition{Name: "cursor", In: "query", Type: "integer"}, parameterDefinition{Name: "sort_type", In: "query", Type: "integer", Enum: []string{"0", "1", "2"}}}, Produces: []string{"application/json"}, Security: []string{"ApiKeyAuth"}},
@@ -60,7 +85,7 @@ var operations = map[string]operationDefinition{
 }
 
 // OperationCount reports how many selected-platform operations this module exposes.
-const OperationCount = 28
+const OperationCount = 53
 
 // OperationIDs returns the selected operation IDs in stable sorted order.
 func OperationIDs() []string {
@@ -117,9 +142,134 @@ func (c *Client) ChallengeList(ctx context.Context, params Params) (any, error) 
 	return c.Call(ctx, "tiktok-challenge-list", params)
 }
 
+// MobileAnchorList calls the tiktok-mobile-anchor-list operation.
+func (c *Client) MobileAnchorList(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-anchor-list", params)
+}
+
+// MobileCommentReplies calls the tiktok-mobile-comment-replies operation.
+func (c *Client) MobileCommentReplies(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-comment-replies", params)
+}
+
+// MobileComments calls the tiktok-mobile-comments operation.
+func (c *Client) MobileComments(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-comments", params)
+}
+
 // MobileFeed calls the tiktok-mobile-feed operation.
 func (c *Client) MobileFeed(ctx context.Context, params Params) (any, error) {
 	return c.Call(ctx, "tiktok-mobile-feed", params)
+}
+
+// MobileFeedPost calls the tiktok-mobile-feed-post operation.
+func (c *Client) MobileFeedPost(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-feed-post", params)
+}
+
+// MobileHashtag calls the tiktok-mobile-hashtag operation.
+func (c *Client) MobileHashtag(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-hashtag", params)
+}
+
+// MobileHashtagPosts calls the tiktok-mobile-hashtag-posts operation.
+func (c *Client) MobileHashtagPosts(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-hashtag-posts", params)
+}
+
+// MobileHashtags calls the tiktok-mobile-hashtags operation.
+func (c *Client) MobileHashtags(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-hashtags", params)
+}
+
+// MobileLiveEffects calls the tiktok-mobile-live-effects operation.
+func (c *Client) MobileLiveEffects(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-live-effects", params)
+}
+
+// MobileLiveGifts calls the tiktok-mobile-live-gifts operation.
+func (c *Client) MobileLiveGifts(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-live-gifts", params)
+}
+
+// MobileLiveSearch calls the tiktok-mobile-live-search operation.
+func (c *Client) MobileLiveSearch(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-live-search", params)
+}
+
+// MobileMusicBeats calls the tiktok-mobile-music-beats operation.
+func (c *Client) MobileMusicBeats(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-beats", params)
+}
+
+// MobileMusicCollections calls the tiktok-mobile-music-collections operation.
+func (c *Client) MobileMusicCollections(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-collections", params)
+}
+
+// MobileMusicPick calls the tiktok-mobile-music-pick operation.
+func (c *Client) MobileMusicPick(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-pick", params)
+}
+
+// MobileMusicPosts calls the tiktok-mobile-music-posts operation.
+func (c *Client) MobileMusicPosts(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-posts", params)
+}
+
+// MobileMusicRelated calls the tiktok-mobile-music-related operation.
+func (c *Client) MobileMusicRelated(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-related", params)
+}
+
+// MobileMusicTrending calls the tiktok-mobile-music-trending operation.
+func (c *Client) MobileMusicTrending(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-music-trending", params)
+}
+
+// MobileSearch calls the tiktok-mobile-search operation.
+func (c *Client) MobileSearch(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search", params)
+}
+
+// MobileSearchMusic calls the tiktok-mobile-search-music operation.
+func (c *Client) MobileSearchMusic(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-music", params)
+}
+
+// MobileSearchPlace calls the tiktok-mobile-search-place operation.
+func (c *Client) MobileSearchPlace(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-place", params)
+}
+
+// MobileSearchPreInfo calls the tiktok-mobile-search-pre-info operation.
+func (c *Client) MobileSearchPreInfo(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-pre-info", params)
+}
+
+// MobileSearchSug calls the tiktok-mobile-search-sug operation.
+func (c *Client) MobileSearchSug(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-sug", params)
+}
+
+// MobileSearchTabs calls the tiktok-mobile-search-tabs operation.
+func (c *Client) MobileSearchTabs(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-tabs", params)
+}
+
+// MobileSearchUser calls the tiktok-mobile-search-user operation.
+func (c *Client) MobileSearchUser(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-search-user", params)
+}
+
+// MobileTrendingCategories calls the tiktok-mobile-trending-categories operation.
+func (c *Client) MobileTrendingCategories(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-trending-categories", params)
+}
+
+// MobileTrendingEffects calls the tiktok-mobile-trending-effects operation.
+func (c *Client) MobileTrendingEffects(ctx context.Context, params Params) (any, error) {
+	return c.Call(ctx, "tiktok-mobile-trending-effects", params)
 }
 
 // PopularTrendCountryIndustryMeta calls the tiktok-popular-trend-country-industry-meta operation.

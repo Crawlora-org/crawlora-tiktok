@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 — 2026-10-20
+
+- Added operations: tiktok-mobile-anchor-list, tiktok-mobile-comment-replies, tiktok-mobile-comments, tiktok-mobile-feed-post, tiktok-mobile-hashtag, tiktok-mobile-hashtag-posts, tiktok-mobile-hashtags, tiktok-mobile-live-effects, tiktok-mobile-live-gifts, tiktok-mobile-live-search, tiktok-mobile-music-beats, tiktok-mobile-music-collections, tiktok-mobile-music-pick, tiktok-mobile-music-posts, tiktok-mobile-music-related, tiktok-mobile-music-trending, tiktok-mobile-search, tiktok-mobile-search-music, tiktok-mobile-search-place, tiktok-mobile-search-pre-info, tiktok-mobile-search-sug, tiktok-mobile-search-tabs, tiktok-mobile-search-user, tiktok-mobile-trending-categories, tiktok-mobile-trending-effects.
+- Updated operation contracts: tiktok-challenge.
+
 ## 0.3.0 — 2026-10-19
 
 - Added operations: tiktok-creative-center-filters, tiktok-creative-center-top-content, tiktok-mobile-feed.
