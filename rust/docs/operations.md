@@ -1,0 +1,61 @@
+# Crawlora TikTok Rust SDK Operations
+
+Generated from `openapi/public.json`. Deprecated, admin, and internal operations are excluded from this SDK contract.
+
+Total operations: `53`
+
+| Group | SDK method | Operation ID | HTTP | Params | Auth | Response | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| tiktok | `tiktok.category` | `tiktok-category` | `GET /tiktok/category` | none | `ApiKeyAuth` | `TiktokCategoryResponse` |  |
+| tiktok | `tiktok.video_comments` | `tiktok-video-comments` | `GET /tiktok/comments` | `aweme_id` (query String required)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokVideoCommentsResponse` |  |
+| tiktok | `tiktok.creative_center_filters` | `tiktok-creative-center-filters` | `GET /tiktok/creative-center/filters` | none | `ApiKeyAuth` | `TiktokCreativeCenterFiltersResponse` |  |
+| tiktok | `tiktok.creative_center_hashtags` | `tiktok-creative-center-hashtags` | `GET /tiktok/creative-center/hashtags` | `country_code` (query String required)<br>`period` (query String enum{7, 30, 90})<br>`industry_id` (query String enum{10000000000, 11000000000, 12000000000, 13000000000, 14000000000, 15000000000, 17000000000, 18000000000, 19000000000, 21000000000, 22000000000, 23000000000, 24000000000, 25000000000, 26000000000, 27000000000, 28000000000, 29000000000}) | `ApiKeyAuth` | `TiktokCreativeCenterHashtagsResponse` |  |
+| tiktok | `tiktok.creative_center_top_content` | `tiktok-creative-center-top-content` | `GET /tiktok/creative-center/top-content` | `include_comments` (query bool) | `ApiKeyAuth` | `TiktokCreativeCenterTopContentResponse` |  |
+| tiktok | `tiktok.creative_center_videos` | `tiktok-creative-center-videos` | `GET /tiktok/creative-center/videos` | `country_code` (query String required)<br>`period` (query String enum{7, 30})<br>`sort_by` (query String enum{views, engagement, six_second_views})<br>`content_label_id` (query String)<br>`content_label_ids` (query Vec<String> enum{11002, 11003, 11010, 11013, 11015})<br>`organic_only` (query bool) | `ApiKeyAuth` | `TiktokCreativeCenterVideosResponse` |  |
+| tiktok | `tiktok.explore` | `tiktok-explore` | `GET /tiktok/explore/{id}` | `id` (path i64 required) | `ApiKeyAuth` | `TiktokExploreResponse` |  |
+| tiktok | `tiktok.challenge` | `tiktok-challenge` | `GET /tiktok/hashtag/{name}` | `name` (path String required) | `ApiKeyAuth` | `TiktokChallengeResponse` |  |
+| tiktok | `tiktok.challenge_list` | `tiktok-challenge-list` | `GET /tiktok/hashtags` | `id` (query String required)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokChallengeListResponse` |  |
+| tiktok | `tiktok.mobile_anchor_list` | `tiktok-mobile-anchor-list` | `GET /tiktok/mobile/anchor/list` | none | `ApiKeyAuth` | `TiktokMobileAnchorListResponse` |  |
+| tiktok | `tiktok.mobile_comment_replies` | `tiktok-mobile-comment-replies` | `GET /tiktok/mobile/comment/replies` | `aweme_id` (query String required)<br>`comment_id` (query String required)<br>`cursor` (query i64)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileCommentRepliesResponse` |  |
+| tiktok | `tiktok.mobile_comments` | `tiktok-mobile-comments` | `GET /tiktok/mobile/comments` | `aweme_id` (query String required)<br>`cursor` (query i64)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileCommentsResponse` |  |
+| tiktok | `tiktok.mobile_feed` | `tiktok-mobile-feed` | `GET /tiktok/mobile/feed` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileFeedResponse` |  |
+| tiktok | `tiktok.mobile_feed_post` | `tiktok-mobile-feed-post` | `GET /tiktok/mobile/feed/post` | none | `ApiKeyAuth` | `TiktokMobileFeedPostResponse` |  |
+| tiktok | `tiktok.mobile_hashtag` | `tiktok-mobile-hashtag` | `GET /tiktok/mobile/hashtag` | `name` (query String required) | `ApiKeyAuth` | `TiktokMobileHashtagResponse` |  |
+| tiktok | `tiktok.mobile_hashtag_posts` | `tiktok-mobile-hashtag-posts` | `GET /tiktok/mobile/hashtag/posts` | `name` (query String required)<br>`sort` (query String enum{fresh, popular})<br>`count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileHashtagPostsResponse` |  |
+| tiktok | `tiktok.mobile_hashtags` | `tiktok-mobile-hashtags` | `GET /tiktok/mobile/hashtags` | `keyword` (query String required)<br>`count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileHashtagsResponse` |  |
+| tiktok | `tiktok.mobile_live_effects` | `tiktok-mobile-live-effects` | `GET /tiktok/mobile/live/effects` | none | `ApiKeyAuth` | `TiktokMobileLiveEffectsResponse` |  |
+| tiktok | `tiktok.mobile_live_gifts` | `tiktok-mobile-live-gifts` | `GET /tiktok/mobile/live/gifts` | none | `ApiKeyAuth` | `TiktokMobileLiveGiftsResponse` |  |
+| tiktok | `tiktok.mobile_live_search` | `tiktok-mobile-live-search` | `GET /tiktok/mobile/live/search` | `keyword` (query String required)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileLiveSearchResponse` |  |
+| tiktok | `tiktok.mobile_music_beats` | `tiktok-mobile-music-beats` | `GET /tiktok/mobile/music/beats` | `count` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicBeatsResponse` |  |
+| tiktok | `tiktok.mobile_music_collections` | `tiktok-mobile-music-collections` | `GET /tiktok/mobile/music/collections` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicCollectionsResponse` |  |
+| tiktok | `tiktok.mobile_music_pick` | `tiktok-mobile-music-pick` | `GET /tiktok/mobile/music/pick` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicPickResponse` |  |
+| tiktok | `tiktok.mobile_music_posts` | `tiktok-mobile-music-posts` | `GET /tiktok/mobile/music/posts` | `music_id` (query String required)<br>`count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicPostsResponse` |  |
+| tiktok | `tiktok.mobile_music_related` | `tiktok-mobile-music-related` | `GET /tiktok/mobile/music/related` | `aweme_id` (query String required)<br>`count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicRelatedResponse` |  |
+| tiktok | `tiktok.mobile_music_trending` | `tiktok-mobile-music-trending` | `GET /tiktok/mobile/music/trending` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileMusicTrendingResponse` |  |
+| tiktok | `tiktok.mobile_search` | `tiktok-mobile-search` | `GET /tiktok/mobile/search` | `keyword` (query String required)<br>`count` (query i64)<br>`offset` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchResponse` |  |
+| tiktok | `tiktok.mobile_search_music` | `tiktok-mobile-search-music` | `GET /tiktok/mobile/search/music` | `keyword` (query String required)<br>`count` (query i64)<br>`offset` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchMusicResponse` |  |
+| tiktok | `tiktok.mobile_search_place` | `tiktok-mobile-search-place` | `GET /tiktok/mobile/search/place` | `keyword` (query String required)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchPlaceResponse` |  |
+| tiktok | `tiktok.mobile_search_pre_info` | `tiktok-mobile-search-pre-info` | `GET /tiktok/mobile/search/pre-info` | `keyword` (query String)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchPreInfoResponse` |  |
+| tiktok | `tiktok.mobile_search_sug` | `tiktok-mobile-search-sug` | `GET /tiktok/mobile/search/sug` | `keyword` (query String required)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchSugResponse` |  |
+| tiktok | `tiktok.mobile_search_tabs` | `tiktok-mobile-search-tabs` | `GET /tiktok/mobile/search/tabs` | `keyword` (query String required) | `ApiKeyAuth` | `TiktokMobileSearchTabsResponse` |  |
+| tiktok | `tiktok.mobile_search_user` | `tiktok-mobile-search-user` | `GET /tiktok/mobile/search/user` | `keyword` (query String required)<br>`count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileSearchUserResponse` |  |
+| tiktok | `tiktok.mobile_trending_categories` | `tiktok-mobile-trending-categories` | `GET /tiktok/mobile/trending/categories` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileTrendingCategoriesResponse` |  |
+| tiktok | `tiktok.mobile_trending_effects` | `tiktok-mobile-trending-effects` | `GET /tiktok/mobile/trending/effects` | `count` (query i64)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokMobileTrendingEffectsResponse` |  |
+| tiktok | `tiktok.popular_trend_country_industry_meta` | `tiktok-popular-trend-country-industry-meta` | `GET /tiktok/popular-trend/country-industry-meta` | none | `ApiKeyAuth` | `TiktokPopularTrendCountryIndustryMetaResponse` |  |
+| tiktok | `tiktok.post` | `tiktok-post` | `GET /tiktok/post/{id}` | `id` (path String required) | `ApiKeyAuth` | `TiktokPostResponse` |  |
+| tiktok | `tiktok.profile_post` | `tiktok-profile-post` | `GET /tiktok/posts` | `secUid` (query String required)<br>`cursor` (query i64)<br>`sort_type` (query String enum{0, 1, 2}) | `ApiKeyAuth` | `TiktokProfilePostResponse` |  |
+| tiktok | `tiktok.profile` | `tiktok-profile` | `GET /tiktok/profile/{handler}` | `handler` (path String required) | `ApiKeyAuth` | `TiktokProfileResponse` |  |
+| tiktok | `tiktok.search` | `tiktok-search` | `GET /tiktok/search` | `keyword` (query String required)<br>`cursor` (query i64)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokSearchResponse` |  |
+| tiktok | `tiktok.search_hashtag` | `tiktok-search-hashtag` | `GET /tiktok/search/hashtag` | `keyword` (query String required)<br>`cursor` (query i64)<br>`count` (query i64) | `ApiKeyAuth` | `TiktokSearchHashtagResponse` |  |
+| tiktok | `tiktok.search_user` | `tiktok-search-user` | `GET /tiktok/search/user` | `keyword` (query String required)<br>`cursor` (query i64) | `ApiKeyAuth` | `TiktokSearchUserResponse` |  |
+| tiktok | `tiktok.top_ads_analysis` | `tiktok-top-ads-analysis` | `GET /tiktok/top-ads/analysis` | `material_id` (query String required)<br>`metric` (query String enum{retain_ctr, retain_cvr, click_cnt, convert_cnt, play_retain_cnt})<br>`period_type` (query String enum{7, 30, 180}) | `ApiKeyAuth` | `TiktokTopAdsAnalysisResponse` |  |
+| tiktok | `tiktok.top_ads_detail` | `tiktok-top-ads-detail` | `GET /tiktok/top-ads/detail` | `material_id` (query String required) | `ApiKeyAuth` | `TiktokTopAdsDetailResponse` |  |
+| tiktok | `tiktok.top_ads_filters` | `tiktok-top-ads-filters` | `GET /tiktok/top-ads/filters` | none | `ApiKeyAuth` | `TiktokTopAdsFiltersResponse` |  |
+| tiktok | `tiktok.top_ads_list` | `tiktok-top-ads-list` | `GET /tiktok/top-ads/list` | `period` (query String enum{7, 30, 180})<br>`page` (query i64)<br>`limit` (query i64)<br>`order_by` (query String enum{for_you, impression, ctr, play_2s_rate, play_6s_rate, cvr, like})<br>`country_code` (query String)<br>`keyword` (query String)<br>`industry` (query String)<br>`objective` (query String)<br>`ad_language` (query String)<br>`pattern_label` (query String)<br>`duration` (query String enum{time-2, time-3, time-4, time-5, time-6, time-7})<br>`like` (query String enum{1, 2, 3, 4, 5})<br>`ad_format` (query String enum{1, 2}) | `ApiKeyAuth` | `TiktokTopAdsListResponse` |  |
+| tiktok | `tiktok.top_ads_location_info` | `tiktok-top-ads-location-info` | `GET /tiktok/top-ads/location-info` | `module` (query i64) | `ApiKeyAuth` | `TiktokTopAdsLocationInfoResponse` |  |
+| tiktok | `tiktok.top_ads_locations` | `tiktok-top-ads-locations` | `GET /tiktok/top-ads/locations` | none | `ApiKeyAuth` | `TiktokTopAdsLocationsResponse` |  |
+| tiktok | `tiktok.top_ads_recommend` | `tiktok-top-ads-recommend` | `GET /tiktok/top-ads/recommend` | `material_id` (query String required)<br>`page` (query i64)<br>`limit` (query i64) | `ApiKeyAuth` | `TiktokTopAdsRecommendResponse` |  |
+| tiktok | `tiktok.top_ads_safety` | `tiktok-top-ads-safety` | `GET /tiktok/top-ads/safety` | none | `ApiKeyAuth` | `TiktokTopAdsSafetyResponse` |  |
+| tiktok | `tiktok.top_ads_spotlight` | `tiktok-top-ads-spotlight` | `GET /tiktok/top-ads/spotlight` | `page` (query i64)<br>`limit` (query i64) | `ApiKeyAuth` | `TiktokTopAdsSpotlightResponse` |  |
+| tiktok | `tiktok.top_ads_suggestions` | `tiktok-top-ads-suggestions` | `GET /tiktok/top-ads/suggestions` | `count` (query i64)<br>`scenario` (query i64) | `ApiKeyAuth` | `TiktokTopAdsSuggestionsResponse` |  |
+| tiktok | `tiktok.trending` | `tiktok-trending` | `GET /tiktok/trending` | none | `ApiKeyAuth` | `TiktokTrendingResponse` |  |

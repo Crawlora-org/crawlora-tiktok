@@ -75,6 +75,8 @@
   "repository": "https://github.com/Crawlora-org/crawlora-tiktok",
   "ruby_changelog": "# Changelog\n\n## 0.1.1\n\n- Bump the Ruby package version to 0.1.1.\n\n## 0.1.0\n\n- Initial focused TikTok Ruby client for Crawlora's hosted API.",
   "ruby_gem_name": "crawlora-tiktok",
+  "rust_crate_name": "crawlora-tiktok",
+  "rust_module_name": "crawlora_tiktok",
   "source_contract_sha256": "028417aa35bb4e3b380212e775e9b5e7aa0c0b5394a87f69cbf6d50b5a05aa94",
   "version": "0.4.0"
 }
