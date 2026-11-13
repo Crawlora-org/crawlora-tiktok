@@ -26,8 +26,13 @@ func TestGeneratedClientRequestAndAllowlist(t *testing.T) {
 			if got := r.URL.Query().Get("keyword"); got != "space & value" {
 				t.Errorf("query value = %q", got)
 			}
-			if false && len(r.URL.Query()["keyword"]) != 2 {
-				t.Errorf("array query values = %#v", r.URL.Query()["keyword"])
+			if false {
+				if got := r.URL.Query().Get("keyword"); got != "" {
+					t.Errorf("array query value = %q, want %q", got, "")
+				}
+				if false && len(r.URL.Query()["keyword"]) != 2 {
+					t.Errorf("array query values = %#v", r.URL.Query()["keyword"])
+				}
 			}
 		}
 		if "keyword" != "" && !strings.Contains(r.URL.RawQuery, "keyword=space+%26+value") {
@@ -47,7 +52,7 @@ func TestGeneratedClientRequestAndAllowlist(t *testing.T) {
 	if got.(map[string]any)["ok"] != true {
 		t.Fatalf("JSON result = %#v", got)
 	}
-	if OperationCount != 53 || len(OperationIDs()) != OperationCount {
+	if OperationCount != 90 || len(OperationIDs()) != OperationCount {
 		t.Fatalf("operation count = %d IDs=%d", OperationCount, len(OperationIDs()))
 	}
 	if _, err := client.Call(context.Background(), "unselected-operation", nil); err == nil || !strings.Contains(err.Error(), "unknown") {

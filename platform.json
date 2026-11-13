@@ -1,11 +1,12 @@
 {
+  "api_path_prefix": "/tiktok/",
   "async_class_name": "AsyncTikTokClient",
   "class_name": "TikTokClient",
-  "contract_revision": "sha256:a027d217d59233b22a7523eb4b5063fa5ec396297a0cfdae9f87f7deaad2402f",
+  "contract_revision": "sha256:5823222daa31ec6f43dbc20c0ebf31a2e341cdbf1e93509f340d2126c102421f",
   "display_name": "TikTok",
   "general_sdk_version": "1.46.0-sdk.1",
   "golang_module_name": "github.com/Crawlora-org/crawlora-tiktok",
-  "golang_version": "0.4.0",
+  "golang_version": "0.5.0",
   "group_name": "tiktok",
   "java_description": "Java client for Crawlora's hosted TikTok API, with video, user, and hashtag search; profiles and posts; comments; trends; Creative Center; and Top Ads data. Requires a Crawlora API key.",
   "maven_artifact_id": "crawlora-tiktok",
@@ -18,6 +19,14 @@
   "platform": "tiktok",
   "python_name": "crawlora-tiktok",
   "releases": [
+    {
+      "changes": [
+        "Added operations: tiktok-mobile-collection-detail, tiktok-mobile-collection-list, tiktok-mobile-collection-videos, tiktok-mobile-feed-offline, tiktok-mobile-live-hashtags, tiktok-mobile-live-room, tiktok-mobile-live-room-by-user, tiktok-mobile-live-tabs, tiktok-mobile-music-chart, tiktok-mobile-music-choices, tiktok-mobile-music-collection-list, tiktok-mobile-music-detail, tiktok-mobile-mv-videos, tiktok-mobile-place-detail, tiktok-mobile-place-info, tiktok-mobile-place-media, tiktok-mobile-place-photos, tiktok-mobile-place-reviews, tiktok-mobile-place-videos, tiktok-mobile-playlist-detail, tiktok-mobile-playlist-list, tiktok-mobile-playlist-videos, tiktok-mobile-search-effects, tiktok-mobile-search-hashtags, tiktok-mobile-search-photos, tiktok-mobile-search-stream, tiktok-mobile-search-videos, tiktok-mobile-translation-description, tiktok-mobile-user-followers, tiktok-mobile-user-following, tiktok-mobile-user-original-effects, tiktok-mobile-user-original-music, tiktok-mobile-user-posts, tiktok-mobile-user-profile, tiktok-mobile-user-recommendations, tiktok-mobile-video-detail, tiktok-mobile-video-subtitles.",
+        "Updated operation contracts: tiktok-mobile-feed, tiktok-mobile-music-posts, tiktok-mobile-search, tiktok-mobile-search-place."
+      ],
+      "date": "2026-11-13",
+      "version": "0.5.0"
+    },
     {
       "changes": [
         "Added operations: tiktok-mobile-anchor-list, tiktok-mobile-comment-replies, tiktok-mobile-comments, tiktok-mobile-feed-post, tiktok-mobile-hashtag, tiktok-mobile-hashtag-posts, tiktok-mobile-hashtags, tiktok-mobile-live-effects, tiktok-mobile-live-gifts, tiktok-mobile-live-search, tiktok-mobile-music-beats, tiktok-mobile-music-collections, tiktok-mobile-music-pick, tiktok-mobile-music-posts, tiktok-mobile-music-related, tiktok-mobile-music-trending, tiktok-mobile-search, tiktok-mobile-search-music, tiktok-mobile-search-place, tiktok-mobile-search-pre-info, tiktok-mobile-search-sug, tiktok-mobile-search-tabs, tiktok-mobile-search-user, tiktok-mobile-trending-categories, tiktok-mobile-trending-effects.",
@@ -77,6 +86,6 @@
   "ruby_gem_name": "crawlora-tiktok",
   "rust_crate_name": "crawlora-tiktok",
   "rust_module_name": "crawlora_tiktok",
-  "source_contract_sha256": "028417aa35bb4e3b380212e775e9b5e7aa0c0b5394a87f69cbf6d50b5a05aa94",
-  "version": "0.4.0"
+  "source_contract_sha256": "123c5406ee3b92b07d2ef3dbe21a6ded54b79b25d26c13cbb905a34e3ecc7118",
+  "version": "0.5.0"
 }

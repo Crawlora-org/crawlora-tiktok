@@ -7,7 +7,7 @@ from .async_client import AsyncCrawloraClient
 class TikTokClient(CrawloraClient):
     """Synchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.4.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.5.0')
         super().__init__(*args, **kwargs)
 
     def category(self, **params: Any) -> Any:
@@ -70,6 +70,24 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-anchor-list', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_collection_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-collection-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_collection_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-collection-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_collection_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-collection-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_comment_replies(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
@@ -87,6 +105,12 @@ class TikTokClient(CrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-feed', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_feed_offline(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-feed-offline', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def mobile_feed_post(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -124,11 +148,35 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-live-gifts', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_live_hashtags(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-live-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_live_room(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-live-room', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_live_room_by_user(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-live-room-by-user', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_live_search(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-live-search', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_live_tabs(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-live-tabs', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def mobile_music_beats(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -136,11 +184,35 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-music-beats', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_music_chart(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-music-chart', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_music_choices(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-music-choices', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_music_collection_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-music-collection-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_music_collections(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-music-collections', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_music_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-music-detail', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def mobile_music_pick(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -166,17 +238,95 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-music-trending', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_mv_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-mv-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_info(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-info', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_media(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-media', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_photos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-photos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_reviews(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-reviews', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_place_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-place-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_playlist_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-playlist-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_playlist_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-playlist-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_playlist_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-playlist-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_search(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-search', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_search_effects(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-search-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_search_hashtags(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-search-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_search_music(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-search-music', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_search_photos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-search-photos', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def mobile_search_place(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -189,6 +339,12 @@ class TikTokClient(CrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-search-pre-info', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_search_stream(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-search-stream', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def mobile_search_sug(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -208,6 +364,18 @@ class TikTokClient(CrawloraClient):
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-search-user', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    def mobile_search_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-search-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_translation_description(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-translation-description', params, response_type=response_type, timeout=timeout, headers=headers)
+
     def mobile_trending_categories(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
@@ -219,6 +387,60 @@ class TikTokClient(CrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return self.request('tiktok-mobile-trending-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_followers(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-followers', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_following(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-following', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_original_effects(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-original-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_original_music(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-original-music', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_posts(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-posts', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_profile(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-profile', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_user_recommendations(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-user-recommendations', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_video_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-video-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    def mobile_video_subtitles(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return self.request('tiktok-mobile-video-subtitles', params, response_type=response_type, timeout=timeout, headers=headers)
 
     def popular_trend_country_industry_meta(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -331,7 +553,7 @@ class TikTokClient(CrawloraClient):
 class AsyncTikTokClient(AsyncCrawloraClient):
     """Asynchronous TikTok API client."""
     def __init__(self, *args: Any, **kwargs: Any) -> None:
-        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.4.0')
+        kwargs.setdefault('user_agent', 'crawlora-tiktok-python/0.5.0')
         super().__init__(*args, **kwargs)
 
     async def category(self, **params: Any) -> Any:
@@ -394,6 +616,24 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-anchor-list', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_collection_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-collection-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_collection_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-collection-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_collection_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-collection-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_comment_replies(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
@@ -411,6 +651,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-feed', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_feed_offline(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-feed-offline', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def mobile_feed_post(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -448,11 +694,35 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-live-gifts', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_live_hashtags(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-live-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_live_room(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-live-room', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_live_room_by_user(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-live-room-by-user', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_live_search(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-live-search', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_live_tabs(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-live-tabs', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def mobile_music_beats(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -460,11 +730,35 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-music-beats', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_music_chart(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-music-chart', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_music_choices(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-music-choices', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_music_collection_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-music-collection-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_music_collections(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-music-collections', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_music_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-music-detail', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def mobile_music_pick(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -490,17 +784,95 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-music-trending', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_mv_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-mv-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_info(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-info', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_media(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-media', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_photos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-photos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_reviews(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-reviews', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_place_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-place-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_playlist_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-playlist-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_playlist_list(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-playlist-list', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_playlist_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-playlist-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_search(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-search', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_search_effects(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-search-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_search_hashtags(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-search-hashtags', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_search_music(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-search-music', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_search_photos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-search-photos', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def mobile_search_place(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -513,6 +885,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-search-pre-info', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_search_stream(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-search-stream', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def mobile_search_sug(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
@@ -532,6 +910,18 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-search-user', params, response_type=response_type, timeout=timeout, headers=headers)
 
+    async def mobile_search_videos(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-search-videos', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_translation_description(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-translation-description', params, response_type=response_type, timeout=timeout, headers=headers)
+
     async def mobile_trending_categories(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')
         timeout = params.pop('_timeout', None)
@@ -543,6 +933,60 @@ class AsyncTikTokClient(AsyncCrawloraClient):
         timeout = params.pop('_timeout', None)
         headers = params.pop('_headers', None)
         return await self.request('tiktok-mobile-trending-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_followers(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-followers', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_following(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-following', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_original_effects(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-original-effects', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_original_music(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-original-music', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_posts(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-posts', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_profile(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-profile', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_user_recommendations(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-user-recommendations', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_video_detail(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-video-detail', params, response_type=response_type, timeout=timeout, headers=headers)
+
+    async def mobile_video_subtitles(self, **params: Any) -> Any:
+        response_type = params.pop('_response_type', 'auto')
+        timeout = params.pop('_timeout', None)
+        headers = params.pop('_headers', None)
+        return await self.request('tiktok-mobile-video-subtitles', params, response_type=response_type, timeout=timeout, headers=headers)
 
     async def popular_trend_country_industry_meta(self, **params: Any) -> Any:
         response_type = params.pop('_response_type', 'auto')

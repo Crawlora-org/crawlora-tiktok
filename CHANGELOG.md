@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0 — 2026-11-13
+
+- Added operations: tiktok-mobile-collection-detail, tiktok-mobile-collection-list, tiktok-mobile-collection-videos, tiktok-mobile-feed-offline, tiktok-mobile-live-hashtags, tiktok-mobile-live-room, tiktok-mobile-live-room-by-user, tiktok-mobile-live-tabs, tiktok-mobile-music-chart, tiktok-mobile-music-choices, tiktok-mobile-music-collection-list, tiktok-mobile-music-detail, tiktok-mobile-mv-videos, tiktok-mobile-place-detail, tiktok-mobile-place-info, tiktok-mobile-place-media, tiktok-mobile-place-photos, tiktok-mobile-place-reviews, tiktok-mobile-place-videos, tiktok-mobile-playlist-detail, tiktok-mobile-playlist-list, tiktok-mobile-playlist-videos, tiktok-mobile-search-effects, tiktok-mobile-search-hashtags, tiktok-mobile-search-photos, tiktok-mobile-search-stream, tiktok-mobile-search-videos, tiktok-mobile-translation-description, tiktok-mobile-user-followers, tiktok-mobile-user-following, tiktok-mobile-user-original-effects, tiktok-mobile-user-original-music, tiktok-mobile-user-posts, tiktok-mobile-user-profile, tiktok-mobile-user-recommendations, tiktok-mobile-video-detail, tiktok-mobile-video-subtitles.
+- Updated operation contracts: tiktok-mobile-feed, tiktok-mobile-music-posts, tiktok-mobile-search, tiktok-mobile-search-place.
+
 ## 0.4.0 — 2026-10-20
 
 - Added operations: tiktok-mobile-anchor-list, tiktok-mobile-comment-replies, tiktok-mobile-comments, tiktok-mobile-feed-post, tiktok-mobile-hashtag, tiktok-mobile-hashtag-posts, tiktok-mobile-hashtags, tiktok-mobile-live-effects, tiktok-mobile-live-gifts, tiktok-mobile-live-search, tiktok-mobile-music-beats, tiktok-mobile-music-collections, tiktok-mobile-music-pick, tiktok-mobile-music-posts, tiktok-mobile-music-related, tiktok-mobile-music-trending, tiktok-mobile-search, tiktok-mobile-search-music, tiktok-mobile-search-place, tiktok-mobile-search-pre-info, tiktok-mobile-search-sug, tiktok-mobile-search-tabs, tiktok-mobile-search-user, tiktok-mobile-trending-categories, tiktok-mobile-trending-effects.
