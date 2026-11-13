@@ -395,6 +395,153 @@ ModelPopularTrendCountryIndustryMetaItem = TypedDict('ModelPopularTrendCountryIn
     'value': NotRequired[str],
 }, total=False)
 
+ModelTiktokmobileVideoSubtitlesResponseDoc = TypedDict('ModelTiktokmobileVideoSubtitlesResponseDoc', {
+    'content_source': NotRequired[str],
+    'cue_count': NotRequired[int],
+    'cues': NotRequired[list[ModelTiktokmobileSubtitleCue]],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'language': NotRequired[str],
+    'variant': NotRequired[str],
+    'video_id': NotRequired[str],
+    'webvtt': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileSubtitleCue = TypedDict('ModelTiktokmobileSubtitleCue', {
+    'end': NotRequired[str],
+    'end_ms': NotRequired[int],
+    'start': NotRequired[str],
+    'start_ms': NotRequired[int],
+    'text': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileVideoDetailResponseDoc = TypedDict('ModelTiktokmobileVideoDetailResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileVideoDetailResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileVideoDetailResponse = TypedDict('ModelTiktokmobileVideoDetailResponse', {
+    'aweme_detail': NotRequired[Any],
+    'extra': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserRecommendationsResponseDoc = TypedDict('ModelTiktokmobileUserRecommendationsResponseDoc', {
+    'extra': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'user_list': NotRequired[list[Any]],
+}, total=False)
+
+ModelTiktokmobileUserProfileResponseDoc = TypedDict('ModelTiktokmobileUserProfileResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileUserProfileResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserProfileResponse = TypedDict('ModelTiktokmobileUserProfileResponse', {
+    'common': NotRequired[Any],
+    'extra': NotRequired[Any],
+    'header': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'nav_bar': NotRequired[Any],
+    'profile_tab': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserPostsResponseDoc = TypedDict('ModelTiktokmobileUserPostsResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileUserPostsResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserPostsResponse = TypedDict('ModelTiktokmobileUserPostsResponse', {
+    'aweme_list': NotRequired[list[Any]],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'max_cursor': NotRequired[int],
+    'min_cursor': NotRequired[int],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserOriginalMusicResponseDoc = TypedDict('ModelTiktokmobileUserOriginalMusicResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileUserOriginalMusicResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserOriginalMusicResponse = TypedDict('ModelTiktokmobileUserOriginalMusicResponse', {
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'groups': NotRequired[list[Any]],
+    'has_more': NotRequired[bool],
+    'honor_label': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'music': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserOriginalEffectsResponseDoc = TypedDict('ModelTiktokmobileUserOriginalEffectsResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileUserOriginalEffectsResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserOriginalEffectsResponse = TypedDict('ModelTiktokmobileUserOriginalEffectsResponse', {
+    'cursor': NotRequired[int],
+    'effect': NotRequired[list[Any]],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserFollowingResponseDoc = TypedDict('ModelTiktokmobileUserFollowingResponseDoc', {
+    'extra': NotRequired[Any],
+    'followings': NotRequired[list[Any]],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'max_time': NotRequired[int],
+    'min_time': NotRequired[int],
+    'myself_user_id': NotRequired[Any],
+    'next_page_token': NotRequired[str],
+    'offset': NotRequired[int],
+    'rec_has_more': NotRequired[bool],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'total': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobileUserFollowersResponseDoc = TypedDict('ModelTiktokmobileUserFollowersResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileUserFollowersResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileUserFollowersResponse = TypedDict('ModelTiktokmobileUserFollowersResponse', {
+    'extra': NotRequired[Any],
+    'followers': NotRequired[list[Any]],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'max_time': NotRequired[int],
+    'min_time': NotRequired[int],
+    'myself_user_id': NotRequired[str],
+    'next_page_token': NotRequired[str],
+    'offset': NotRequired[int],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'total': NotRequired[int],
+}, total=False)
+
 ModelTiktokmobileStickerDiscoverResponseDoc = TypedDict('ModelTiktokmobileStickerDiscoverResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileStickerDiscoverResponse],
@@ -425,6 +572,41 @@ ModelTiktokmobileCategoryListResponse = TypedDict('ModelTiktokmobileCategoryList
     'extra': NotRequired[Any],
     'has_more': NotRequired[bool],
     'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileTranslationDescriptionResponseDoc = TypedDict('ModelTiktokmobileTranslationDescriptionResponseDoc', {
+    'extra': NotRequired[Any],
+    'fetched_at': NotRequired[str],
+    'format': NotRequired[int],
+    'host': NotRequired[str],
+    'item_id': NotRequired[str],
+    'log_pb': NotRequired[Any],
+    'perf_metrics': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'target_lang': NotRequired[str],
+    'text': NotRequired[str],
+    'translated_client_text': NotRequired[Any],
+    'variant': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileSearchVideosResponseDoc = TypedDict('ModelTiktokmobileSearchVideosResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileSearchVideosResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileSearchVideosResponse = TypedDict('ModelTiktokmobileSearchVideosResponse', {
+    'aweme_list': NotRequired[list[Any]],
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'feedback_type': NotRequired[str],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'search_id': NotRequired[str],
+    'search_item_list': NotRequired[list[Any]],
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
 }, total=False)
@@ -477,6 +659,20 @@ ModelTiktokmobileSearchSuggestion = TypedDict('ModelTiktokmobileSearchSuggestion
     'word_record': NotRequired[Any],
 }, total=False)
 
+ModelTiktokmobileSearchStreamResponseDoc = TypedDict('ModelTiktokmobileSearchStreamResponseDoc', {
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'documents': NotRequired[list[Any]],
+    'fetched_at': NotRequired[str],
+    'frame_count': NotRequired[int],
+    'frames': NotRequired[list[Any]],
+    'has_more': NotRequired[bool],
+    'host': NotRequired[str],
+    'keyword': NotRequired[str],
+    'offset': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
 ModelTiktokmobileSearchPreInfoResponseDoc = TypedDict('ModelTiktokmobileSearchPreInfoResponseDoc', {
     'fetched_at': NotRequired[str],
     'host': NotRequired[str],
@@ -505,6 +701,20 @@ ModelTiktokmobilePlacePoicontainer = TypedDict('ModelTiktokmobilePlacePoicontain
     'poi_info': NotRequired[list[Any]],
 }, total=False)
 
+ModelTiktokmobileSearchPhotosResponseDoc = TypedDict('ModelTiktokmobileSearchPhotosResponseDoc', {
+    'aweme_list': NotRequired[list[Any]],
+    'backtrace': NotRequired[Any],
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'feedback_type': NotRequired[str],
+    'has_more': NotRequired[int],
+    'log_pb': NotRequired[Any],
+    'response_cropped': NotRequired[int],
+    'search_item_list': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
 ModelTiktokmobileSearchMusicResponseDoc = TypedDict('ModelTiktokmobileSearchMusicResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileSearchMusicResponse],
@@ -521,6 +731,28 @@ ModelTiktokmobileSearchMusicResponse = TypedDict('ModelTiktokmobileSearchMusicRe
     'total': NotRequired[int],
 }, total=False)
 
+ModelTiktokmobileHashtagSuggestionsResponseDoc = TypedDict('ModelTiktokmobileHashtagSuggestionsResponseDoc', {
+    'extra': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'rid': NotRequired[str],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'sug_list': NotRequired[list[Any]],
+    'words_query_record': NotRequired[Any],
+}, total=False)
+
+ModelTiktokmobileSearchEffectsResponseDoc = TypedDict('ModelTiktokmobileSearchEffectsResponseDoc', {
+    'bind_effects': NotRequired[Any],
+    'collection': NotRequired[Any],
+    'cursor': NotRequired[int],
+    'effects': NotRequired[list[Any]],
+    'has_more': NotRequired[bool],
+    'search_id': NotRequired[str],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'use_hot': NotRequired[bool],
+}, total=False)
+
 ModelTiktokmobileSearchGeneralResponseDoc = TypedDict('ModelTiktokmobileSearchGeneralResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileSearchGeneralResponse],
@@ -531,8 +763,196 @@ ModelTiktokmobileSearchGeneralResponse = TypedDict('ModelTiktokmobileSearchGener
     'cursor': NotRequired[int],
     'data': NotRequired[list[Any]],
     'has_more': NotRequired[bool],
+    'search_id': NotRequired[str],
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaylistVideosResponseDoc = TypedDict('ModelTiktokmobilePlaylistVideosResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobilePlaylistVideosResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaylistVideosResponse = TypedDict('ModelTiktokmobilePlaylistVideosResponse', {
+    'cursor': NotRequired[int],
+    'has_more': NotRequired[bool],
+    'item_list': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaylistListResponseDoc = TypedDict('ModelTiktokmobilePlaylistListResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobilePlaylistListResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaylistListResponse = TypedDict('ModelTiktokmobilePlaylistListResponse', {
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'mix_list': NotRequired[list[ModelTiktokmobilePlaylistSummary]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'total': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobilePlaylistSummary = TypedDict('ModelTiktokmobilePlaylistSummary', {
+    'author': NotRequired[Any],
+    'creator_name': NotRequired[str],
+    'last_add_video_timestamp': NotRequired[int],
+    'mix_id': NotRequired[str],
+    'mix_type': NotRequired[int],
+    'name': NotRequired[str],
+    'share_info': NotRequired[Any],
+    'statistic': NotRequired[Any],
+    'status': NotRequired[Any],
+}, total=False)
+
+ModelTiktokmobilePlaylistDetailResponseDoc = TypedDict('ModelTiktokmobilePlaylistDetailResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobilePlaylistDetailResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaylistDetailResponse = TypedDict('ModelTiktokmobilePlaylistDetailResponse', {
+    'extra': NotRequired[Any],
+    'is_collect': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'mix': NotRequired[ModelTiktokmobilePlaylistSummary],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaceVideosResponseDoc = TypedDict('ModelTiktokmobilePlaceVideosResponseDoc', {
+    'aweme_list': NotRequired[list[Any]],
+    'cursor': NotRequired[int],
+    'fetched_at': NotRequired[str],
+    'has_more': NotRequired[bool],
+    'host': NotRequired[str],
+    'item_count': NotRequired[int],
+    'poi_id': NotRequired[str],
+    'poi_info': NotRequired[Any],
+}, total=False)
+
+ModelTiktokmobilePlaceReviewsResponseDoc = TypedDict('ModelTiktokmobilePlaceReviewsResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobilePlaceReviewsResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaceReviewsResponse = TypedDict('ModelTiktokmobilePlaceReviewsResponse', {
+    'collect_info': NotRequired[Any],
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'folded_cursor': NotRequired[int],
+    'folded_has_more': NotRequired[bool],
+    'has_more': NotRequired[bool],
+    'is_hide_review_summary': NotRequired[bool],
+    'landing_tab': NotRequired[int],
+    'log_pb': NotRequired[Any],
+    'poi_id': NotRequired[str],
+    'poi_name': NotRequired[str],
+    'post_review_description': NotRequired[str],
+    'post_review_sub_description': NotRequired[str],
+    'review_summary': NotRequired[Any],
+    'review_tags': NotRequired[list[Any]],
+    'reviews': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlacePhotosResponseDoc = TypedDict('ModelTiktokmobilePlacePhotosResponseDoc', {
+    'categories': NotRequired[list[Any]],
+    'category_tab_info': NotRequired[Any],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'photo_count': NotRequired[int],
+    'poi_id': NotRequired[str],
+    'title': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaceMediaResponseDoc = TypedDict('ModelTiktokmobilePlaceMediaResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobilePlaceMediaResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaceMediaResponse = TypedDict('ModelTiktokmobilePlaceMediaResponse', {
+    'data_version': NotRequired[str],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'item_list': NotRequired[list[Any]],
+    'log_pb': NotRequired[Any],
+    'next_cursor': NotRequired[str],
+    'pos': NotRequired[Any],
+    'post_bottom_bar_style': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'title': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobilePlaceInfoResponseDoc = TypedDict('ModelTiktokmobilePlaceInfoResponseDoc', {
+    'address': NotRequired[str],
+    'average_price': NotRequired[str],
+    'category': NotRequired[str],
+    'city_code': NotRequired[str],
+    'claim_store_status': NotRequired[bool],
+    'cover': NotRequired[Any],
+    'favorite_count': NotRequired[int],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'is_collected': NotRequired[bool],
+    'latitude': NotRequired[str],
+    'longitude': NotRequired[str],
+    'name': NotRequired[str],
+    'no_rating': NotRequired[bool],
+    'opening_hours': NotRequired[str],
+    'opening_status': NotRequired[bool],
+    'parent_poi': NotRequired[Any],
+    'place': NotRequired[dict[str, Any]],
+    'poi_id': NotRequired[str],
+    'region_code': NotRequired[str],
+    'review_count': NotRequired[int],
+    'review_score': NotRequired[float],
+    'review_score_display': NotRequired[str],
+    'share_desc': NotRequired[str],
+    'share_url': NotRequired[str],
+    'video_count': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobilePlaceDetailResponseDoc = TypedDict('ModelTiktokmobilePlaceDetailResponseDoc', {
+    'fetched_at': NotRequired[str],
+    'frame_count': NotRequired[int],
+    'frames': NotRequired[list[Any]],
+    'has_more_posts': NotRequired[bool],
+    'has_more_reviews': NotRequired[bool],
+    'host': NotRequired[str],
+    'layout': NotRequired[dict[str, Any]],
+    'nodes': NotRequired[dict[str, Any]],
+    'page_id': NotRequired[str],
+    'poi_id': NotRequired[str],
+    'post_count': NotRequired[int],
+    'post_cursor': NotRequired[int],
+    'review_count': NotRequired[int],
+    'top_video_count': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobileMvFeedResponseDoc = TypedDict('ModelTiktokmobileMvFeedResponseDoc', {
+    'aweme_list': NotRequired[list[Any]],
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'fetched_at': NotRequired[str],
+    'has_more': NotRequired[bool],
+    'host': NotRequired[str],
+    'item_count': NotRequired[int],
+    'log_pb': NotRequired[Any],
+    'mv_id': NotRequired[str],
+    'original_aweme_id': NotRequired[str],
+    'page_extra': NotRequired[Any],
+    'top_awemes': NotRequired[list[Any]],
 }, total=False)
 
 ModelTiktokmobileHotMusicResponseDoc = TypedDict('ModelTiktokmobileHotMusicResponseDoc', {
@@ -577,10 +997,12 @@ ModelTiktokmobileMusicFreshAwemeResponseDoc = TypedDict('ModelTiktokmobileMusicF
 
 ModelTiktokmobileMusicFreshAwemeResponse = TypedDict('ModelTiktokmobileMusicFreshAwemeResponse', {
     'aweme_list': NotRequired[list[Any]],
+    'can_pin_video': NotRequired[Any],
     'cursor': NotRequired[int],
     'extra': NotRequired[Any],
     'has_more': NotRequired[bool],
     'log_pb': NotRequired[Any],
+    'need_lazy_loading': NotRequired[Any],
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
 }, total=False)
@@ -601,6 +1023,29 @@ ModelTiktokmobileMusicPickResponse = TypedDict('ModelTiktokmobileMusicPickRespon
     'status_msg': NotRequired[str],
 }, total=False)
 
+ModelTiktokmobileMusicDetailResponseDoc = TypedDict('ModelTiktokmobileMusicDetailResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileMusicDetailResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileMusicDetailResponse = TypedDict('ModelTiktokmobileMusicDetailResponse', {
+    'ai_recommend_music': NotRequired[Any],
+    'ai_recommend_video': NotRequired[Any],
+    'behind_the_song_exist': NotRequired[bool],
+    'cost_time_info': NotRequired[Any],
+    'extra': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'msg': NotRequired[str],
+    'music_chart_rank': NotRequired[Any],
+    'music_info': NotRequired[Any],
+    'rec_list': NotRequired[Any],
+    'similar_music': NotRequired[Any],
+    'similar_music_ids': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
 ModelTiktokmobileMusicCollectionFeedResponseDoc = TypedDict('ModelTiktokmobileMusicCollectionFeedResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileMusicCollectionFeedResponse],
@@ -617,6 +1062,44 @@ ModelTiktokmobileMusicCollectionFeedResponse = TypedDict('ModelTiktokmobileMusic
     'status_msg': NotRequired[str],
 }, total=False)
 
+ModelTiktokmobileMusicCollectionListResponseDoc = TypedDict('ModelTiktokmobileMusicCollectionListResponseDoc', {
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'mc_list': NotRequired[list[Any]],
+    'msg': NotRequired[str],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileMusicChoicesResponseDoc = TypedDict('ModelTiktokmobileMusicChoicesResponseDoc', {
+    'extra': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'music_list': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileMusicChartResponseDoc = TypedDict('ModelTiktokmobileMusicChartResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileMusicChartResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileMusicChartResponse = TypedDict('ModelTiktokmobileMusicChartResponse', {
+    'chart_info': NotRequired[Any],
+    'cover_image_url': NotRequired[str],
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'log_pb': NotRequired[Any],
+    'msg': NotRequired[str],
+    'music_list': NotRequired[list[Any]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
 ModelTiktokmobileMusicBeatsSongsResponseDoc = TypedDict('ModelTiktokmobileMusicBeatsSongsResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileMusicBeatsSongsResponse],
@@ -629,6 +1112,12 @@ ModelTiktokmobileMusicBeatsSongsResponse = TypedDict('ModelTiktokmobileMusicBeat
     'music_list': NotRequired[list[Any]],
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveTabsResponseDoc = TypedDict('ModelTiktokmobileLiveTabsResponseDoc', {
+    'data': NotRequired[list[Any]],
+    'extra': NotRequired[Any],
+    'status_code': NotRequired[int],
 }, total=False)
 
 ModelTiktokmobileLiveSearchResponseDoc = TypedDict('ModelTiktokmobileLiveSearchResponseDoc', {
@@ -649,6 +1138,89 @@ ModelTiktokmobileLiveSearchResponse = TypedDict('ModelTiktokmobileLiveSearchResp
     'log_pb': NotRequired[Any],
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveRoomInfoResponseDoc = TypedDict('ModelTiktokmobileLiveRoomInfoResponseDoc', {
+    'cover': NotRequired[Any],
+    'create_time': NotRequired[int],
+    'data': NotRequired[Any],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'owner': NotRequired[ModelTiktokmobileLiveRoomOwner],
+    'room_id': NotRequired[str],
+    'stats': NotRequired[ModelTiktokmobileLiveRoomStats],
+    'status': NotRequired[int],
+    'stream': NotRequired[ModelTiktokmobileLiveRoomStream],
+    'title': NotRequired[str],
+    'user_count': NotRequired[int],
+    'user_id': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveRoomStream = TypedDict('ModelTiktokmobileLiveRoomStream', {
+    'candidate_resolution': NotRequired[list[str]],
+    'default_resolution': NotRequired[str],
+    'flv_pull_url': NotRequired[dict[str, str]],
+    'hls_pull_url': NotRequired[str],
+    'rtmp_pull_url': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveRoomStats = TypedDict('ModelTiktokmobileLiveRoomStats', {
+    'comment_count': NotRequired[int],
+    'enter_count': NotRequired[int],
+    'follow_count': NotRequired[int],
+    'like_count': NotRequired[int],
+    'replay_viewers': NotRequired[int],
+    'share_count': NotRequired[int],
+    'total_user': NotRequired[int],
+    'watch_user_count': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobileLiveRoomOwner = TypedDict('ModelTiktokmobileLiveRoomOwner', {
+    'avatar': NotRequired[Any],
+    'nickname': NotRequired[str],
+    'user_id': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveHashtagCatalogResponseDoc = TypedDict('ModelTiktokmobileLiveHashtagCatalogResponseDoc', {
+    'extra': NotRequired[Any],
+    'fetched_at': NotRequired[str],
+    'game_hashtag': NotRequired[ModelTiktokmobileLiveHashtag],
+    'game_tag_count': NotRequired[int],
+    'game_tag_list': NotRequired[list[ModelTiktokmobileLiveGameTag]],
+    'hashtags': NotRequired[list[ModelTiktokmobileLiveHashtag]],
+    'host': NotRequired[str],
+    'live_studio_hashtags': NotRequired[list[ModelTiktokmobileLiveHashtag]],
+    'live_voice_hashtags': NotRequired[list[ModelTiktokmobileLiveHashtag]],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+    'third_party_hashtags': NotRequired[list[ModelTiktokmobileLiveHashtag]],
+}, total=False)
+
+ModelTiktokmobileLiveHashtag = TypedDict('ModelTiktokmobileLiveHashtag', {
+    'id': NotRequired[int],
+    'image': NotRequired[Any],
+    'namespace': NotRequired[int],
+    'title': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveGameTag = TypedDict('ModelTiktokmobileLiveGameTag', {
+    'bundle_id': NotRequired[str],
+    'full_name': NotRequired[str],
+    'game_category': NotRequired[list[ModelTiktokmobileLiveGameCategory]],
+    'gar': NotRequired[list[Any]],
+    'hashtag_id': NotRequired[list[Any]],
+    'hashtag_list': NotRequired[list[ModelTiktokmobileLiveHashtag]],
+    'id': NotRequired[int],
+    'is_new_game': NotRequired[bool],
+    'landscape': NotRequired[int],
+    'package_name': NotRequired[str],
+    'short_name': NotRequired[str],
+    'show_name': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileLiveGameCategory = TypedDict('ModelTiktokmobileLiveGameCategory', {
+    'game_type': NotRequired[int],
+    'title': NotRequired[str],
 }, total=False)
 
 ModelTiktokmobileLiveGiftsResponseDoc = TypedDict('ModelTiktokmobileLiveGiftsResponseDoc', {
@@ -728,6 +1300,16 @@ ModelTiktokmobileFeedPostResponseDoc = TypedDict('ModelTiktokmobileFeedPostRespo
     'strings': NotRequired[list[str]],
 }, total=False)
 
+ModelTiktokmobileOfflineFeedResponseDoc = TypedDict('ModelTiktokmobileOfflineFeedResponseDoc', {
+    'count': NotRequired[int],
+    'fetched_at': NotRequired[str],
+    'host': NotRequired[str],
+    'items': NotRequired[dict[str, Any]],
+    'note': NotRequired[str],
+    'pull_type': NotRequired[int],
+    'strings': NotRequired[list[str]],
+}, total=False)
+
 ModelTiktokmobileFeedResponseDoc = TypedDict('ModelTiktokmobileFeedResponseDoc', {
     'code': NotRequired[int],
     'data': NotRequired[ModelTiktokmobileFeedResponse],
@@ -743,6 +1325,7 @@ ModelTiktokmobileFeedResponse = TypedDict('ModelTiktokmobileFeedResponse', {
 
 ModelTiktokmobileFeedItem = TypedDict('ModelTiktokmobileFeedItem', {
     'author_id': NotRequired[int],
+    'author_id_str': NotRequired[str],
     'aweme_id': NotRequired[str],
     'create_time': NotRequired[int],
     'share_url': NotRequired[str],
@@ -792,6 +1375,53 @@ ModelTiktokmobileCommentRepliesResponse = TypedDict('ModelTiktokmobileCommentRep
     'status_code': NotRequired[int],
     'status_msg': NotRequired[str],
     'total': NotRequired[int],
+}, total=False)
+
+ModelTiktokmobileCollectionVideosResponseDoc = TypedDict('ModelTiktokmobileCollectionVideosResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileCollectionVideosResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileCollectionVideosResponse = TypedDict('ModelTiktokmobileCollectionVideosResponse', {
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'items': NotRequired[list[Any]],
+    'log_pb': NotRequired[Any],
+    'max_cursor': NotRequired[int],
+    'min_cursor': NotRequired[int],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileCollectionListResponseDoc = TypedDict('ModelTiktokmobileCollectionListResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileCollectionListResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileCollectionListResponse = TypedDict('ModelTiktokmobileCollectionListResponse', {
+    'cursor': NotRequired[int],
+    'extra': NotRequired[Any],
+    'has_more': NotRequired[bool],
+    'item_archive_detail_list': NotRequired[list[Any]],
+    'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileCollectionDetailResponseDoc = TypedDict('ModelTiktokmobileCollectionDetailResponseDoc', {
+    'code': NotRequired[int],
+    'data': NotRequired[ModelTiktokmobileCollectionDetailResponse],
+    'msg': NotRequired[str],
+}, total=False)
+
+ModelTiktokmobileCollectionDetailResponse = TypedDict('ModelTiktokmobileCollectionDetailResponse', {
+    'extra': NotRequired[Any],
+    'item_archive': NotRequired[Any],
+    'log_pb': NotRequired[Any],
+    'status_code': NotRequired[int],
+    'status_msg': NotRequired[str],
 }, total=False)
 
 ModelTiktokmobileAnchorListResponseDoc = TypedDict('ModelTiktokmobileAnchorListResponseDoc', {
@@ -1155,6 +1785,34 @@ TiktokMobileAnchorListParams = TypedDict('TiktokMobileAnchorListParams', {
     '_headers': NotRequired[Mapping[str, str]],
 }, total=False)
 
+TiktokMobileCollectionDetailResponse = ModelTiktokmobileCollectionDetailResponseDoc
+TiktokMobileCollectionDetailParams = TypedDict('TiktokMobileCollectionDetailParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'collection_id': Required[str],
+}, total=False)
+
+TiktokMobileCollectionListResponse = ModelTiktokmobileCollectionListResponseDoc
+TiktokMobileCollectionListParams = TypedDict('TiktokMobileCollectionListParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionVideosResponse = ModelTiktokmobileCollectionVideosResponseDoc
+TiktokMobileCollectionVideosParams = TypedDict('TiktokMobileCollectionVideosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'collection_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
 TiktokMobileCommentRepliesResponse = ModelTiktokmobileCommentRepliesResponseDoc
 TiktokMobileCommentRepliesParams = TypedDict('TiktokMobileCommentRepliesParams', {
     '_response_type': NotRequired[ResponseType],
@@ -1183,6 +1841,15 @@ TiktokMobileFeedParams = TypedDict('TiktokMobileFeedParams', {
     '_headers': NotRequired[Mapping[str, str]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedOfflineResponse = ModelTiktokmobileOfflineFeedResponseDoc
+TiktokMobileFeedOfflineParams = TypedDict('TiktokMobileFeedOfflineParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'pull_type': NotRequired[int],
+    'count': NotRequired[int],
 }, total=False)
 
 TiktokMobileFeedPostResponse = ModelTiktokmobileFeedPostResponseDoc
@@ -1235,6 +1902,29 @@ TiktokMobileLiveGiftsParams = TypedDict('TiktokMobileLiveGiftsParams', {
     '_headers': NotRequired[Mapping[str, str]],
 }, total=False)
 
+TiktokMobileLiveHashtagsResponse = ModelTiktokmobileLiveHashtagCatalogResponseDoc
+TiktokMobileLiveHashtagsParams = TypedDict('TiktokMobileLiveHashtagsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+}, total=False)
+
+TiktokMobileLiveRoomResponse = ModelTiktokmobileLiveRoomInfoResponseDoc
+TiktokMobileLiveRoomParams = TypedDict('TiktokMobileLiveRoomParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'room_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomByUserResponse = ModelTiktokmobileLiveRoomInfoResponseDoc
+TiktokMobileLiveRoomByUserParams = TypedDict('TiktokMobileLiveRoomByUserParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+}, total=False)
+
 TiktokMobileLiveSearchResponse = ModelTiktokmobileLiveSearchResponseDoc
 TiktokMobileLiveSearchParams = TypedDict('TiktokMobileLiveSearchParams', {
     '_response_type': NotRequired[ResponseType],
@@ -1242,6 +1932,13 @@ TiktokMobileLiveSearchParams = TypedDict('TiktokMobileLiveSearchParams', {
     '_headers': NotRequired[Mapping[str, str]],
     'keyword': Required[str],
     'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileLiveTabsResponse = ModelTiktokmobileLiveTabsResponseDoc
+TiktokMobileLiveTabsParams = TypedDict('TiktokMobileLiveTabsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
 }, total=False)
 
 TiktokMobileMusicBeatsResponse = ModelTiktokmobileMusicBeatsSongsResponseDoc
@@ -1252,6 +1949,32 @@ TiktokMobileMusicBeatsParams = TypedDict('TiktokMobileMusicBeatsParams', {
     'count': NotRequired[int],
 }, total=False)
 
+TiktokMobileMusicChartResponse = ModelTiktokmobileMusicChartResponseDoc
+TiktokMobileMusicChartParams = TypedDict('TiktokMobileMusicChartParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'chart_region': NotRequired[Literal['AE', 'BR', 'CA', 'DE', 'EG', 'FR', 'JP', 'KR', 'LB', 'MX', 'NG', 'SA', 'TR', 'US', 'ZA']],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicChoicesResponse = ModelTiktokmobileMusicChoicesResponseDoc
+TiktokMobileMusicChoicesParams = TypedDict('TiktokMobileMusicChoicesParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+}, total=False)
+
+TiktokMobileMusicCollectionListResponse = ModelTiktokmobileMusicCollectionListResponseDoc
+TiktokMobileMusicCollectionListParams = TypedDict('TiktokMobileMusicCollectionListParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
 TiktokMobileMusicCollectionsResponse = ModelTiktokmobileMusicCollectionFeedResponseDoc
 TiktokMobileMusicCollectionsParams = TypedDict('TiktokMobileMusicCollectionsParams', {
     '_response_type': NotRequired[ResponseType],
@@ -1259,6 +1982,14 @@ TiktokMobileMusicCollectionsParams = TypedDict('TiktokMobileMusicCollectionsPara
     '_headers': NotRequired[Mapping[str, str]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicDetailResponse = ModelTiktokmobileMusicDetailResponseDoc
+TiktokMobileMusicDetailParams = TypedDict('TiktokMobileMusicDetailParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'music_id': Required[str],
 }, total=False)
 
 TiktokMobileMusicPickResponse = ModelTiktokmobileMusicPickResponseDoc
@@ -1276,6 +2007,7 @@ TiktokMobileMusicPostsParams = TypedDict('TiktokMobileMusicPostsParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
     'music_id': Required[str],
+    'sort': NotRequired[Literal['fresh', 'popular']],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
@@ -1299,6 +2031,106 @@ TiktokMobileMusicTrendingParams = TypedDict('TiktokMobileMusicTrendingParams', {
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokMobileMvVideosResponse = ModelTiktokmobileMvFeedResponseDoc
+TiktokMobileMvVideosParams = TypedDict('TiktokMobileMvVideosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'mv_id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaceDetailResponse = ModelTiktokmobilePlaceDetailResponseDoc
+TiktokMobilePlaceDetailParams = TypedDict('TiktokMobilePlaceDetailParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+    'review_count': NotRequired[int],
+    'review_cursor': NotRequired[int],
+    'merged_count': NotRequired[int],
+    'video_cursor': NotRequired[int],
+    'enter_from': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceInfoResponse = ModelTiktokmobilePlaceInfoResponseDoc
+TiktokMobilePlaceInfoParams = TypedDict('TiktokMobilePlaceInfoParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceMediaResponse = ModelTiktokmobilePlaceMediaResponseDoc
+TiktokMobilePlaceMediaParams = TypedDict('TiktokMobilePlaceMediaParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[str],
+    'size': NotRequired[int],
+    'data_version': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlacePhotosResponse = ModelTiktokmobilePlacePhotosResponseDoc
+TiktokMobilePlacePhotosParams = TypedDict('TiktokMobilePlacePhotosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceReviewsResponse = ModelTiktokmobilePlaceReviewsResponseDoc
+TiktokMobilePlaceReviewsParams = TypedDict('TiktokMobilePlaceReviewsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+    'sort_type': NotRequired[Literal['1', '2']],
+}, total=False)
+
+TiktokMobilePlaceVideosResponse = ModelTiktokmobilePlaceVideosResponseDoc
+TiktokMobilePlaceVideosParams = TypedDict('TiktokMobilePlaceVideosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'poi_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistDetailResponse = ModelTiktokmobilePlaylistDetailResponseDoc
+TiktokMobilePlaylistDetailParams = TypedDict('TiktokMobilePlaylistDetailParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'mix_id': Required[str],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaylistListResponse = ModelTiktokmobilePlaylistListResponseDoc
+TiktokMobilePlaylistListParams = TypedDict('TiktokMobilePlaylistListParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistVideosResponse = ModelTiktokmobilePlaylistVideosResponseDoc
+TiktokMobilePlaylistVideosParams = TypedDict('TiktokMobilePlaylistVideosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'mix_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
 TiktokMobileSearchResponse = ModelTiktokmobileSearchGeneralResponseDoc
 TiktokMobileSearchParams = TypedDict('TiktokMobileSearchParams', {
     '_response_type': NotRequired[ResponseType],
@@ -1307,6 +2139,27 @@ TiktokMobileSearchParams = TypedDict('TiktokMobileSearchParams', {
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchEffectsResponse = ModelTiktokmobileSearchEffectsResponseDoc
+TiktokMobileSearchEffectsParams = TypedDict('TiktokMobileSearchEffectsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchHashtagsResponse = ModelTiktokmobileHashtagSuggestionsResponseDoc
+TiktokMobileSearchHashtagsParams = TypedDict('TiktokMobileSearchHashtagsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
 }, total=False)
 
 TiktokMobileSearchMusicResponse = ModelTiktokmobileSearchMusicResponseDoc
@@ -1317,6 +2170,19 @@ TiktokMobileSearchMusicParams = TypedDict('TiktokMobileSearchMusicParams', {
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchPhotosResponse = ModelTiktokmobileSearchPhotosResponseDoc
+TiktokMobileSearchPhotosParams = TypedDict('TiktokMobileSearchPhotosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[int],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
 }, total=False)
 
 TiktokMobileSearchPlaceResponse = ModelTiktokmobileSearchPlaceResponseDoc
@@ -1335,6 +2201,20 @@ TiktokMobileSearchPreInfoParams = TypedDict('TiktokMobileSearchPreInfoParams', {
     '_headers': NotRequired[Mapping[str, str]],
     'keyword': NotRequired[str],
     'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchStreamResponse = ModelTiktokmobileSearchStreamResponseDoc
+TiktokMobileSearchStreamParams = TypedDict('TiktokMobileSearchStreamParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'search_source': NotRequired[str],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'filter_selected': NotRequired[str],
 }, total=False)
 
 TiktokMobileSearchSugResponse = ModelTiktokmobileSearchSuggestionResponseDoc
@@ -1364,6 +2244,29 @@ TiktokMobileSearchUserParams = TypedDict('TiktokMobileSearchUserParams', {
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokMobileSearchVideosResponse = ModelTiktokmobileSearchVideosResponseDoc
+TiktokMobileSearchVideosParams = TypedDict('TiktokMobileSearchVideosParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileTranslationDescriptionResponse = ModelTiktokmobileTranslationDescriptionResponseDoc
+TiktokMobileTranslationDescriptionParams = TypedDict('TiktokMobileTranslationDescriptionParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'item_id': Required[str],
+    'target_lang': NotRequired[str],
+}, total=False)
+
 TiktokMobileTrendingCategoriesResponse = ModelTiktokmobileCategoryListResponseDoc
 TiktokMobileTrendingCategoriesParams = TypedDict('TiktokMobileTrendingCategoriesParams', {
     '_response_type': NotRequired[ResponseType],
@@ -1380,6 +2283,92 @@ TiktokMobileTrendingEffectsParams = TypedDict('TiktokMobileTrendingEffectsParams
     '_headers': NotRequired[Mapping[str, str]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowersResponse = ModelTiktokmobileUserFollowersResponseDoc
+TiktokMobileUserFollowersParams = TypedDict('TiktokMobileUserFollowersParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowingResponse = ModelTiktokmobileUserFollowingResponseDoc
+TiktokMobileUserFollowingParams = TypedDict('TiktokMobileUserFollowingParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalEffectsResponse = ModelTiktokmobileUserOriginalEffectsResponseDoc
+TiktokMobileUserOriginalEffectsParams = TypedDict('TiktokMobileUserOriginalEffectsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalMusicResponse = ModelTiktokmobileUserOriginalMusicResponseDoc
+TiktokMobileUserOriginalMusicParams = TypedDict('TiktokMobileUserOriginalMusicParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserPostsResponse = ModelTiktokmobileUserPostsResponseDoc
+TiktokMobileUserPostsParams = TypedDict('TiktokMobileUserPostsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'sort_type': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserProfileResponse = ModelTiktokmobileUserProfileResponseDoc
+TiktokMobileUserProfileParams = TypedDict('TiktokMobileUserProfileParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileUserRecommendationsResponse = ModelTiktokmobileUserRecommendationsResponseDoc
+TiktokMobileUserRecommendationsParams = TypedDict('TiktokMobileUserRecommendationsParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileVideoDetailResponse = ModelTiktokmobileVideoDetailResponseDoc
+TiktokMobileVideoDetailParams = TypedDict('TiktokMobileVideoDetailParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'aweme_id': Required[str],
+}, total=False)
+
+TiktokMobileVideoSubtitlesResponse = ModelTiktokmobileVideoSubtitlesResponseDoc
+TiktokMobileVideoSubtitlesParams = TypedDict('TiktokMobileVideoSubtitlesParams', {
+    '_response_type': NotRequired[ResponseType],
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    'video_id': Required[str],
+    'language': Required[str],
 }, total=False)
 
 TiktokPopularTrendCountryIndustryMetaResponse = ModelPopulartrendCountryIndustryMetaResponseDoc
@@ -1608,6 +2597,24 @@ class TiktokGroup:
     @overload
     def mobile_anchor_list(self, **params: Unpack[TiktokMobileAnchorListDefaultParams]) -> TiktokMobileAnchorListResponse: ...
     @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailDefaultParams]) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListDefaultParams]) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosDefaultParams]) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
     def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesTextResponseParams]) -> str: ...
@@ -1625,6 +2632,12 @@ class TiktokGroup:
     def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
     @overload
     def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineTextResponseParams]) -> str: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineDefaultParams]) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     def mobile_feed_post(self, **params: Unpack[TiktokMobileFeedPostStreamParams]) -> BinaryIO: ...
     @overload
@@ -1662,11 +2675,35 @@ class TiktokGroup:
     @overload
     def mobile_live_gifts(self, **params: Unpack[TiktokMobileLiveGiftsDefaultParams]) -> TiktokMobileLiveGiftsResponse: ...
     @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsDefaultParams]) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomDefaultParams]) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserDefaultParams]) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchTextResponseParams]) -> str: ...
     @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchDefaultParams]) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsDefaultParams]) -> TiktokMobileLiveTabsResponse: ...
     @overload
     def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsStreamParams]) -> BinaryIO: ...
     @overload
@@ -1674,11 +2711,35 @@ class TiktokGroup:
     @overload
     def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsDefaultParams]) -> TiktokMobileMusicBeatsResponse: ...
     @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartDefaultParams]) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesDefaultParams]) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListDefaultParams]) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsTextResponseParams]) -> str: ...
     @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsDefaultParams]) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailDefaultParams]) -> TiktokMobileMusicDetailResponse: ...
     @overload
     def mobile_music_pick(self, **params: Unpack[TiktokMobileMusicPickStreamParams]) -> BinaryIO: ...
     @overload
@@ -1704,17 +2765,95 @@ class TiktokGroup:
     @overload
     def mobile_music_trending(self, **params: Unpack[TiktokMobileMusicTrendingDefaultParams]) -> TiktokMobileMusicTrendingResponse: ...
     @overload
-    def mobile_search(self, **params: Unpack[TiktokMobileSearchStreamParams]) -> BinaryIO: ...
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosDefaultParams]) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailDefaultParams]) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoDefaultParams]) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaDefaultParams]) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosDefaultParams]) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsDefaultParams]) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosDefaultParams]) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailDefaultParams]) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListDefaultParams]) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosDefaultParams]) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    def mobile_search(self, **params: Unpack[TiktokMobileSearchResponseStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_search(self, **params: Unpack[TiktokMobileSearchTextResponseParams]) -> str: ...
     @overload
     def mobile_search(self, **params: Unpack[TiktokMobileSearchDefaultParams]) -> TiktokMobileSearchResponse: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsDefaultParams]) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsDefaultParams]) -> TiktokMobileSearchHashtagsResponse: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicTextResponseParams]) -> str: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicDefaultParams]) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosDefaultParams]) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     def mobile_search_place(self, **params: Unpack[TiktokMobileSearchPlaceStreamParams]) -> BinaryIO: ...
     @overload
@@ -1727,6 +2866,12 @@ class TiktokGroup:
     def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoTextResponseParams]) -> str: ...
     @overload
     def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoDefaultParams]) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamDefaultParams]) -> TiktokMobileSearchStreamResponse: ...
     @overload
     def mobile_search_sug(self, **params: Unpack[TiktokMobileSearchSugStreamParams]) -> BinaryIO: ...
     @overload
@@ -1746,6 +2891,18 @@ class TiktokGroup:
     @overload
     def mobile_search_user(self, **params: Unpack[TiktokMobileSearchUserDefaultParams]) -> TiktokMobileSearchUserResponse: ...
     @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosDefaultParams]) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionTextResponseParams]) -> str: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionDefaultParams]) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
     def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesTextResponseParams]) -> str: ...
@@ -1757,6 +2914,60 @@ class TiktokGroup:
     def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsTextResponseParams]) -> str: ...
     @overload
     def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsDefaultParams]) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersDefaultParams]) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingDefaultParams]) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsDefaultParams]) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicDefaultParams]) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsDefaultParams]) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileDefaultParams]) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsDefaultParams]) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailDefaultParams]) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesTextResponseParams]) -> str: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesDefaultParams]) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -1877,31 +3088,68 @@ OperationId = Literal[
     'tiktok-challenge',
     'tiktok-challenge-list',
     'tiktok-mobile-anchor-list',
+    'tiktok-mobile-collection-detail',
+    'tiktok-mobile-collection-list',
+    'tiktok-mobile-collection-videos',
     'tiktok-mobile-comment-replies',
     'tiktok-mobile-comments',
     'tiktok-mobile-feed',
+    'tiktok-mobile-feed-offline',
     'tiktok-mobile-feed-post',
     'tiktok-mobile-hashtag',
     'tiktok-mobile-hashtag-posts',
     'tiktok-mobile-hashtags',
     'tiktok-mobile-live-effects',
     'tiktok-mobile-live-gifts',
+    'tiktok-mobile-live-hashtags',
+    'tiktok-mobile-live-room',
+    'tiktok-mobile-live-room-by-user',
     'tiktok-mobile-live-search',
+    'tiktok-mobile-live-tabs',
     'tiktok-mobile-music-beats',
+    'tiktok-mobile-music-chart',
+    'tiktok-mobile-music-choices',
+    'tiktok-mobile-music-collection-list',
     'tiktok-mobile-music-collections',
+    'tiktok-mobile-music-detail',
     'tiktok-mobile-music-pick',
     'tiktok-mobile-music-posts',
     'tiktok-mobile-music-related',
     'tiktok-mobile-music-trending',
+    'tiktok-mobile-mv-videos',
+    'tiktok-mobile-place-detail',
+    'tiktok-mobile-place-info',
+    'tiktok-mobile-place-media',
+    'tiktok-mobile-place-photos',
+    'tiktok-mobile-place-reviews',
+    'tiktok-mobile-place-videos',
+    'tiktok-mobile-playlist-detail',
+    'tiktok-mobile-playlist-list',
+    'tiktok-mobile-playlist-videos',
     'tiktok-mobile-search',
+    'tiktok-mobile-search-effects',
+    'tiktok-mobile-search-hashtags',
     'tiktok-mobile-search-music',
+    'tiktok-mobile-search-photos',
     'tiktok-mobile-search-place',
     'tiktok-mobile-search-pre-info',
+    'tiktok-mobile-search-stream',
     'tiktok-mobile-search-sug',
     'tiktok-mobile-search-tabs',
     'tiktok-mobile-search-user',
+    'tiktok-mobile-search-videos',
+    'tiktok-mobile-translation-description',
     'tiktok-mobile-trending-categories',
     'tiktok-mobile-trending-effects',
+    'tiktok-mobile-user-followers',
+    'tiktok-mobile-user-following',
+    'tiktok-mobile-user-original-effects',
+    'tiktok-mobile-user-original-music',
+    'tiktok-mobile-user-posts',
+    'tiktok-mobile-user-profile',
+    'tiktok-mobile-user-recommendations',
+    'tiktok-mobile-video-detail',
+    'tiktok-mobile-video-subtitles',
     'tiktok-popular-trend-country-industry-meta',
     'tiktok-post',
     'tiktok-profile-post',
@@ -2127,6 +3375,42 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-collection-detail'],
+        params: TiktokMobileCollectionDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-collection-list'],
+        params: TiktokMobileCollectionListParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-collection-videos'],
+        params: TiktokMobileCollectionVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-comment-replies'],
         params: TiktokMobileCommentRepliesParams,
         *,
@@ -2160,6 +3444,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileFeedResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-feed-offline'],
+        params: TiktokMobileFeedOfflineParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     def operation(
         self,
@@ -2235,6 +3531,42 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-live-hashtags'],
+        params: TiktokMobileLiveHashtagsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-live-room'],
+        params: TiktokMobileLiveRoomParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-live-room-by-user'],
+        params: TiktokMobileLiveRoomByUserParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-live-search'],
         params: TiktokMobileLiveSearchParams,
         *,
@@ -2244,6 +3576,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-live-tabs'],
+        params: TiktokMobileLiveTabsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveTabsResponse: ...
     @overload
     def operation(
         self,
@@ -2259,6 +3603,42 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-music-chart'],
+        params: TiktokMobileMusicChartParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-music-choices'],
+        params: TiktokMobileMusicChoicesParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-music-collection-list'],
+        params: TiktokMobileMusicCollectionListParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-music-collections'],
         params: TiktokMobileMusicCollectionsParams = ...,
         *,
@@ -2268,6 +3648,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-music-detail'],
+        params: TiktokMobileMusicDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicDetailResponse: ...
     @overload
     def operation(
         self,
@@ -2319,6 +3711,126 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-mv-videos'],
+        params: TiktokMobileMvVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-detail'],
+        params: TiktokMobilePlaceDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-info'],
+        params: TiktokMobilePlaceInfoParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-media'],
+        params: TiktokMobilePlaceMediaParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-photos'],
+        params: TiktokMobilePlacePhotosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-reviews'],
+        params: TiktokMobilePlaceReviewsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-place-videos'],
+        params: TiktokMobilePlaceVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-detail'],
+        params: TiktokMobilePlaylistDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-list'],
+        params: TiktokMobilePlaylistListParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-videos'],
+        params: TiktokMobilePlaylistVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-search'],
         params: TiktokMobileSearchParams,
         *,
@@ -2331,6 +3843,30 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-search-effects'],
+        params: TiktokMobileSearchEffectsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-search-hashtags'],
+        params: TiktokMobileSearchHashtagsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchHashtagsResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-search-music'],
         params: TiktokMobileSearchMusicParams,
         *,
@@ -2340,6 +3876,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-search-photos'],
+        params: TiktokMobileSearchPhotosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     def operation(
         self,
@@ -2364,6 +3912,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-search-stream'],
+        params: TiktokMobileSearchStreamParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchStreamResponse: ...
     @overload
     def operation(
         self,
@@ -2403,6 +3963,30 @@ class CrawloraClient:
     @overload
     def operation(
         self,
+        operation_id: Literal['tiktok-mobile-search-videos'],
+        params: TiktokMobileSearchVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-translation-description'],
+        params: TiktokMobileTranslationDescriptionParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
+    def operation(
+        self,
         operation_id: Literal['tiktok-mobile-trending-categories'],
         params: TiktokMobileTrendingCategoriesParams = ...,
         *,
@@ -2424,6 +4008,114 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-followers'],
+        params: TiktokMobileUserFollowersParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-following'],
+        params: TiktokMobileUserFollowingParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-original-effects'],
+        params: TiktokMobileUserOriginalEffectsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-original-music'],
+        params: TiktokMobileUserOriginalMusicParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-posts'],
+        params: TiktokMobileUserPostsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-profile'],
+        params: TiktokMobileUserProfileParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-user-recommendations'],
+        params: TiktokMobileUserRecommendationsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-video-detail'],
+        params: TiktokMobileVideoDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    def operation(
+        self,
+        operation_id: Literal['tiktok-mobile-video-subtitles'],
+        params: TiktokMobileVideoSubtitlesParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     def operation(
         self,
@@ -2775,6 +4467,42 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-collection-detail'],
+        params: TiktokMobileCollectionDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-collection-list'],
+        params: TiktokMobileCollectionListParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-collection-videos'],
+        params: TiktokMobileCollectionVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-comment-replies'],
         params: TiktokMobileCommentRepliesParams,
         *,
@@ -2808,6 +4536,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileFeedResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-feed-offline'],
+        params: TiktokMobileFeedOfflineParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     def request(
         self,
@@ -2883,6 +4623,42 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-live-hashtags'],
+        params: TiktokMobileLiveHashtagsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-live-room'],
+        params: TiktokMobileLiveRoomParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-live-room-by-user'],
+        params: TiktokMobileLiveRoomByUserParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-live-search'],
         params: TiktokMobileLiveSearchParams,
         *,
@@ -2892,6 +4668,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-live-tabs'],
+        params: TiktokMobileLiveTabsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileLiveTabsResponse: ...
     @overload
     def request(
         self,
@@ -2907,6 +4695,42 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-music-chart'],
+        params: TiktokMobileMusicChartParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-music-choices'],
+        params: TiktokMobileMusicChoicesParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-music-collection-list'],
+        params: TiktokMobileMusicCollectionListParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-music-collections'],
         params: TiktokMobileMusicCollectionsParams = ...,
         *,
@@ -2916,6 +4740,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-music-detail'],
+        params: TiktokMobileMusicDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMusicDetailResponse: ...
     @overload
     def request(
         self,
@@ -2967,6 +4803,126 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-mv-videos'],
+        params: TiktokMobileMvVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-detail'],
+        params: TiktokMobilePlaceDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-info'],
+        params: TiktokMobilePlaceInfoParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-media'],
+        params: TiktokMobilePlaceMediaParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-photos'],
+        params: TiktokMobilePlacePhotosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-reviews'],
+        params: TiktokMobilePlaceReviewsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-place-videos'],
+        params: TiktokMobilePlaceVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-detail'],
+        params: TiktokMobilePlaylistDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-list'],
+        params: TiktokMobilePlaylistListParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-playlist-videos'],
+        params: TiktokMobilePlaylistVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-search'],
         params: TiktokMobileSearchParams,
         *,
@@ -2979,6 +4935,30 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-search-effects'],
+        params: TiktokMobileSearchEffectsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-search-hashtags'],
+        params: TiktokMobileSearchHashtagsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchHashtagsResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-search-music'],
         params: TiktokMobileSearchMusicParams,
         *,
@@ -2988,6 +4968,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-search-photos'],
+        params: TiktokMobileSearchPhotosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     def request(
         self,
@@ -3012,6 +5004,18 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-search-stream'],
+        params: TiktokMobileSearchStreamParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchStreamResponse: ...
     @overload
     def request(
         self,
@@ -3051,6 +5055,30 @@ class CrawloraClient:
     @overload
     def request(
         self,
+        operation_id: Literal['tiktok-mobile-search-videos'],
+        params: TiktokMobileSearchVideosParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-translation-description'],
+        params: TiktokMobileTranslationDescriptionParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
+    def request(
+        self,
         operation_id: Literal['tiktok-mobile-trending-categories'],
         params: TiktokMobileTrendingCategoriesParams = ...,
         *,
@@ -3072,6 +5100,114 @@ class CrawloraClient:
         retries: int | None = ...,
         retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
     ) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-followers'],
+        params: TiktokMobileUserFollowersParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-following'],
+        params: TiktokMobileUserFollowingParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-original-effects'],
+        params: TiktokMobileUserOriginalEffectsParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-original-music'],
+        params: TiktokMobileUserOriginalMusicParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-posts'],
+        params: TiktokMobileUserPostsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-profile'],
+        params: TiktokMobileUserProfileParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-user-recommendations'],
+        params: TiktokMobileUserRecommendationsParams = ...,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-video-detail'],
+        params: TiktokMobileVideoDetailParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    def request(
+        self,
+        operation_id: Literal['tiktok-mobile-video-subtitles'],
+        params: TiktokMobileVideoSubtitlesParams,
+        *,
+        response_type: ResponseType = ...,
+        timeout: float | None = ...,
+        headers: Mapping[str, str] | None = ...,
+        retries: int | None = ...,
+        retry_predicate: Callable[[int, BaseException | None], bool] | None = ...,
+    ) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     def request(
         self,
@@ -3388,6 +5524,24 @@ class TikTokClient(CrawloraClient):
     @overload
     def mobile_anchor_list(self, **params: Unpack[TiktokMobileAnchorListDefaultParams]) -> TiktokMobileAnchorListResponse: ...
     @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailDefaultParams]) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListDefaultParams]) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosDefaultParams]) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
     def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesTextResponseParams]) -> str: ...
@@ -3405,6 +5559,12 @@ class TikTokClient(CrawloraClient):
     def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
     @overload
     def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineTextResponseParams]) -> str: ...
+    @overload
+    def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineDefaultParams]) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     def mobile_feed_post(self, **params: Unpack[TiktokMobileFeedPostStreamParams]) -> BinaryIO: ...
     @overload
@@ -3442,11 +5602,35 @@ class TikTokClient(CrawloraClient):
     @overload
     def mobile_live_gifts(self, **params: Unpack[TiktokMobileLiveGiftsDefaultParams]) -> TiktokMobileLiveGiftsResponse: ...
     @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsDefaultParams]) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomDefaultParams]) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserDefaultParams]) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchTextResponseParams]) -> str: ...
     @overload
     def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchDefaultParams]) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsDefaultParams]) -> TiktokMobileLiveTabsResponse: ...
     @overload
     def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsStreamParams]) -> BinaryIO: ...
     @overload
@@ -3454,11 +5638,35 @@ class TikTokClient(CrawloraClient):
     @overload
     def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsDefaultParams]) -> TiktokMobileMusicBeatsResponse: ...
     @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartDefaultParams]) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesDefaultParams]) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListDefaultParams]) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsTextResponseParams]) -> str: ...
     @overload
     def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsDefaultParams]) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailDefaultParams]) -> TiktokMobileMusicDetailResponse: ...
     @overload
     def mobile_music_pick(self, **params: Unpack[TiktokMobileMusicPickStreamParams]) -> BinaryIO: ...
     @overload
@@ -3484,17 +5692,95 @@ class TikTokClient(CrawloraClient):
     @overload
     def mobile_music_trending(self, **params: Unpack[TiktokMobileMusicTrendingDefaultParams]) -> TiktokMobileMusicTrendingResponse: ...
     @overload
-    def mobile_search(self, **params: Unpack[TiktokMobileSearchStreamParams]) -> BinaryIO: ...
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosDefaultParams]) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailDefaultParams]) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoDefaultParams]) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaDefaultParams]) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosDefaultParams]) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsDefaultParams]) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosDefaultParams]) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailDefaultParams]) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListDefaultParams]) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosDefaultParams]) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    def mobile_search(self, **params: Unpack[TiktokMobileSearchResponseStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_search(self, **params: Unpack[TiktokMobileSearchTextResponseParams]) -> str: ...
     @overload
     def mobile_search(self, **params: Unpack[TiktokMobileSearchDefaultParams]) -> TiktokMobileSearchResponse: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsDefaultParams]) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsDefaultParams]) -> TiktokMobileSearchHashtagsResponse: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicTextResponseParams]) -> str: ...
     @overload
     def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicDefaultParams]) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosDefaultParams]) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     def mobile_search_place(self, **params: Unpack[TiktokMobileSearchPlaceStreamParams]) -> BinaryIO: ...
     @overload
@@ -3507,6 +5793,12 @@ class TikTokClient(CrawloraClient):
     def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoTextResponseParams]) -> str: ...
     @overload
     def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoDefaultParams]) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamDefaultParams]) -> TiktokMobileSearchStreamResponse: ...
     @overload
     def mobile_search_sug(self, **params: Unpack[TiktokMobileSearchSugStreamParams]) -> BinaryIO: ...
     @overload
@@ -3526,6 +5818,18 @@ class TikTokClient(CrawloraClient):
     @overload
     def mobile_search_user(self, **params: Unpack[TiktokMobileSearchUserDefaultParams]) -> TiktokMobileSearchUserResponse: ...
     @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosTextResponseParams]) -> str: ...
+    @overload
+    def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosDefaultParams]) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionTextResponseParams]) -> str: ...
+    @overload
+    def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionDefaultParams]) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
     def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesStreamParams]) -> BinaryIO: ...
     @overload
     def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesTextResponseParams]) -> str: ...
@@ -3537,6 +5841,60 @@ class TikTokClient(CrawloraClient):
     def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsTextResponseParams]) -> str: ...
     @overload
     def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsDefaultParams]) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersDefaultParams]) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingDefaultParams]) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsDefaultParams]) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicDefaultParams]) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsDefaultParams]) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileDefaultParams]) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsTextResponseParams]) -> str: ...
+    @overload
+    def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsDefaultParams]) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailTextResponseParams]) -> str: ...
+    @overload
+    def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailDefaultParams]) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesStreamParams]) -> BinaryIO: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesTextResponseParams]) -> str: ...
+    @overload
+    def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesDefaultParams]) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -3710,6 +6068,24 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def mobile_anchor_list(self, **params: Unpack[TiktokMobileAnchorListDefaultParams]) -> TiktokMobileAnchorListResponse: ...
     @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailDefaultParams]) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListDefaultParams]) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosDefaultParams]) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
     async def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesTextResponseParams]) -> str: ...
@@ -3727,6 +6103,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     async def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
     @overload
     async def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineDefaultParams]) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     async def mobile_feed_post(self, **params: Unpack[TiktokMobileFeedPostStreamParams]) -> BinaryIO: ...
     @overload
@@ -3764,11 +6146,35 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def mobile_live_gifts(self, **params: Unpack[TiktokMobileLiveGiftsDefaultParams]) -> TiktokMobileLiveGiftsResponse: ...
     @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsDefaultParams]) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomDefaultParams]) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserDefaultParams]) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchTextResponseParams]) -> str: ...
     @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchDefaultParams]) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsDefaultParams]) -> TiktokMobileLiveTabsResponse: ...
     @overload
     async def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsStreamParams]) -> BinaryIO: ...
     @overload
@@ -3776,11 +6182,35 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsDefaultParams]) -> TiktokMobileMusicBeatsResponse: ...
     @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartDefaultParams]) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesDefaultParams]) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListDefaultParams]) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsTextResponseParams]) -> str: ...
     @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsDefaultParams]) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailDefaultParams]) -> TiktokMobileMusicDetailResponse: ...
     @overload
     async def mobile_music_pick(self, **params: Unpack[TiktokMobileMusicPickStreamParams]) -> BinaryIO: ...
     @overload
@@ -3806,17 +6236,95 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def mobile_music_trending(self, **params: Unpack[TiktokMobileMusicTrendingDefaultParams]) -> TiktokMobileMusicTrendingResponse: ...
     @overload
-    async def mobile_search(self, **params: Unpack[TiktokMobileSearchStreamParams]) -> BinaryIO: ...
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosDefaultParams]) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailDefaultParams]) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoDefaultParams]) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaDefaultParams]) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosDefaultParams]) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsDefaultParams]) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosDefaultParams]) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailDefaultParams]) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListDefaultParams]) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosDefaultParams]) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    async def mobile_search(self, **params: Unpack[TiktokMobileSearchResponseStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_search(self, **params: Unpack[TiktokMobileSearchTextResponseParams]) -> str: ...
     @overload
     async def mobile_search(self, **params: Unpack[TiktokMobileSearchDefaultParams]) -> TiktokMobileSearchResponse: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsDefaultParams]) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsDefaultParams]) -> TiktokMobileSearchHashtagsResponse: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicTextResponseParams]) -> str: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicDefaultParams]) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosDefaultParams]) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     async def mobile_search_place(self, **params: Unpack[TiktokMobileSearchPlaceStreamParams]) -> BinaryIO: ...
     @overload
@@ -3829,6 +6337,12 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     async def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoTextResponseParams]) -> str: ...
     @overload
     async def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoDefaultParams]) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamDefaultParams]) -> TiktokMobileSearchStreamResponse: ...
     @overload
     async def mobile_search_sug(self, **params: Unpack[TiktokMobileSearchSugStreamParams]) -> BinaryIO: ...
     @overload
@@ -3848,6 +6362,18 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     @overload
     async def mobile_search_user(self, **params: Unpack[TiktokMobileSearchUserDefaultParams]) -> TiktokMobileSearchUserResponse: ...
     @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosDefaultParams]) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionDefaultParams]) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
     async def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesTextResponseParams]) -> str: ...
@@ -3859,6 +6385,60 @@ class AsyncTikTokClient(AsyncCrawloraClient):
     async def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsTextResponseParams]) -> str: ...
     @overload
     async def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsDefaultParams]) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersDefaultParams]) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingDefaultParams]) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsDefaultParams]) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicDefaultParams]) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsDefaultParams]) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileDefaultParams]) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsDefaultParams]) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailDefaultParams]) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesDefaultParams]) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     async def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -4030,6 +6610,24 @@ class _AsyncTiktokGroup:
     @overload
     async def mobile_anchor_list(self, **params: Unpack[TiktokMobileAnchorListDefaultParams]) -> TiktokMobileAnchorListResponse: ...
     @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_detail(self, **params: Unpack[TiktokMobileCollectionDetailDefaultParams]) -> TiktokMobileCollectionDetailResponse: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_list(self, **params: Unpack[TiktokMobileCollectionListDefaultParams]) -> TiktokMobileCollectionListResponse: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_collection_videos(self, **params: Unpack[TiktokMobileCollectionVideosDefaultParams]) -> TiktokMobileCollectionVideosResponse: ...
+    @overload
     async def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_comment_replies(self, **params: Unpack[TiktokMobileCommentRepliesTextResponseParams]) -> str: ...
@@ -4047,6 +6645,12 @@ class _AsyncTiktokGroup:
     async def mobile_feed(self, **params: Unpack[TiktokMobileFeedTextResponseParams]) -> str: ...
     @overload
     async def mobile_feed(self, **params: Unpack[TiktokMobileFeedDefaultParams]) -> TiktokMobileFeedResponse: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_feed_offline(self, **params: Unpack[TiktokMobileFeedOfflineDefaultParams]) -> TiktokMobileFeedOfflineResponse: ...
     @overload
     async def mobile_feed_post(self, **params: Unpack[TiktokMobileFeedPostStreamParams]) -> BinaryIO: ...
     @overload
@@ -4084,11 +6688,35 @@ class _AsyncTiktokGroup:
     @overload
     async def mobile_live_gifts(self, **params: Unpack[TiktokMobileLiveGiftsDefaultParams]) -> TiktokMobileLiveGiftsResponse: ...
     @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_hashtags(self, **params: Unpack[TiktokMobileLiveHashtagsDefaultParams]) -> TiktokMobileLiveHashtagsResponse: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_room(self, **params: Unpack[TiktokMobileLiveRoomDefaultParams]) -> TiktokMobileLiveRoomResponse: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_room_by_user(self, **params: Unpack[TiktokMobileLiveRoomByUserDefaultParams]) -> TiktokMobileLiveRoomByUserResponse: ...
+    @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchTextResponseParams]) -> str: ...
     @overload
     async def mobile_live_search(self, **params: Unpack[TiktokMobileLiveSearchDefaultParams]) -> TiktokMobileLiveSearchResponse: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_live_tabs(self, **params: Unpack[TiktokMobileLiveTabsDefaultParams]) -> TiktokMobileLiveTabsResponse: ...
     @overload
     async def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsStreamParams]) -> BinaryIO: ...
     @overload
@@ -4096,11 +6724,35 @@ class _AsyncTiktokGroup:
     @overload
     async def mobile_music_beats(self, **params: Unpack[TiktokMobileMusicBeatsDefaultParams]) -> TiktokMobileMusicBeatsResponse: ...
     @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_chart(self, **params: Unpack[TiktokMobileMusicChartDefaultParams]) -> TiktokMobileMusicChartResponse: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_choices(self, **params: Unpack[TiktokMobileMusicChoicesDefaultParams]) -> TiktokMobileMusicChoicesResponse: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_collection_list(self, **params: Unpack[TiktokMobileMusicCollectionListDefaultParams]) -> TiktokMobileMusicCollectionListResponse: ...
+    @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsTextResponseParams]) -> str: ...
     @overload
     async def mobile_music_collections(self, **params: Unpack[TiktokMobileMusicCollectionsDefaultParams]) -> TiktokMobileMusicCollectionsResponse: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_music_detail(self, **params: Unpack[TiktokMobileMusicDetailDefaultParams]) -> TiktokMobileMusicDetailResponse: ...
     @overload
     async def mobile_music_pick(self, **params: Unpack[TiktokMobileMusicPickStreamParams]) -> BinaryIO: ...
     @overload
@@ -4126,17 +6778,95 @@ class _AsyncTiktokGroup:
     @overload
     async def mobile_music_trending(self, **params: Unpack[TiktokMobileMusicTrendingDefaultParams]) -> TiktokMobileMusicTrendingResponse: ...
     @overload
-    async def mobile_search(self, **params: Unpack[TiktokMobileSearchStreamParams]) -> BinaryIO: ...
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_mv_videos(self, **params: Unpack[TiktokMobileMvVideosDefaultParams]) -> TiktokMobileMvVideosResponse: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_detail(self, **params: Unpack[TiktokMobilePlaceDetailDefaultParams]) -> TiktokMobilePlaceDetailResponse: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_info(self, **params: Unpack[TiktokMobilePlaceInfoDefaultParams]) -> TiktokMobilePlaceInfoResponse: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_media(self, **params: Unpack[TiktokMobilePlaceMediaDefaultParams]) -> TiktokMobilePlaceMediaResponse: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_photos(self, **params: Unpack[TiktokMobilePlacePhotosDefaultParams]) -> TiktokMobilePlacePhotosResponse: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_reviews(self, **params: Unpack[TiktokMobilePlaceReviewsDefaultParams]) -> TiktokMobilePlaceReviewsResponse: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_place_videos(self, **params: Unpack[TiktokMobilePlaceVideosDefaultParams]) -> TiktokMobilePlaceVideosResponse: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_detail(self, **params: Unpack[TiktokMobilePlaylistDetailDefaultParams]) -> TiktokMobilePlaylistDetailResponse: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_list(self, **params: Unpack[TiktokMobilePlaylistListDefaultParams]) -> TiktokMobilePlaylistListResponse: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_playlist_videos(self, **params: Unpack[TiktokMobilePlaylistVideosDefaultParams]) -> TiktokMobilePlaylistVideosResponse: ...
+    @overload
+    async def mobile_search(self, **params: Unpack[TiktokMobileSearchResponseStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_search(self, **params: Unpack[TiktokMobileSearchTextResponseParams]) -> str: ...
     @overload
     async def mobile_search(self, **params: Unpack[TiktokMobileSearchDefaultParams]) -> TiktokMobileSearchResponse: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_effects(self, **params: Unpack[TiktokMobileSearchEffectsDefaultParams]) -> TiktokMobileSearchEffectsResponse: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_hashtags(self, **params: Unpack[TiktokMobileSearchHashtagsDefaultParams]) -> TiktokMobileSearchHashtagsResponse: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicTextResponseParams]) -> str: ...
     @overload
     async def mobile_search_music(self, **params: Unpack[TiktokMobileSearchMusicDefaultParams]) -> TiktokMobileSearchMusicResponse: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_photos(self, **params: Unpack[TiktokMobileSearchPhotosDefaultParams]) -> TiktokMobileSearchPhotosResponse: ...
     @overload
     async def mobile_search_place(self, **params: Unpack[TiktokMobileSearchPlaceStreamParams]) -> BinaryIO: ...
     @overload
@@ -4149,6 +6879,12 @@ class _AsyncTiktokGroup:
     async def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoTextResponseParams]) -> str: ...
     @overload
     async def mobile_search_pre_info(self, **params: Unpack[TiktokMobileSearchPreInfoDefaultParams]) -> TiktokMobileSearchPreInfoResponse: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_stream(self, **params: Unpack[TiktokMobileSearchStreamDefaultParams]) -> TiktokMobileSearchStreamResponse: ...
     @overload
     async def mobile_search_sug(self, **params: Unpack[TiktokMobileSearchSugStreamParams]) -> BinaryIO: ...
     @overload
@@ -4168,6 +6904,18 @@ class _AsyncTiktokGroup:
     @overload
     async def mobile_search_user(self, **params: Unpack[TiktokMobileSearchUserDefaultParams]) -> TiktokMobileSearchUserResponse: ...
     @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_search_videos(self, **params: Unpack[TiktokMobileSearchVideosDefaultParams]) -> TiktokMobileSearchVideosResponse: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_translation_description(self, **params: Unpack[TiktokMobileTranslationDescriptionDefaultParams]) -> TiktokMobileTranslationDescriptionResponse: ...
+    @overload
     async def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesStreamParams]) -> BinaryIO: ...
     @overload
     async def mobile_trending_categories(self, **params: Unpack[TiktokMobileTrendingCategoriesTextResponseParams]) -> str: ...
@@ -4179,6 +6927,60 @@ class _AsyncTiktokGroup:
     async def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsTextResponseParams]) -> str: ...
     @overload
     async def mobile_trending_effects(self, **params: Unpack[TiktokMobileTrendingEffectsDefaultParams]) -> TiktokMobileTrendingEffectsResponse: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_followers(self, **params: Unpack[TiktokMobileUserFollowersDefaultParams]) -> TiktokMobileUserFollowersResponse: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_following(self, **params: Unpack[TiktokMobileUserFollowingDefaultParams]) -> TiktokMobileUserFollowingResponse: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_original_effects(self, **params: Unpack[TiktokMobileUserOriginalEffectsDefaultParams]) -> TiktokMobileUserOriginalEffectsResponse: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_original_music(self, **params: Unpack[TiktokMobileUserOriginalMusicDefaultParams]) -> TiktokMobileUserOriginalMusicResponse: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_posts(self, **params: Unpack[TiktokMobileUserPostsDefaultParams]) -> TiktokMobileUserPostsResponse: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_profile(self, **params: Unpack[TiktokMobileUserProfileDefaultParams]) -> TiktokMobileUserProfileResponse: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_user_recommendations(self, **params: Unpack[TiktokMobileUserRecommendationsDefaultParams]) -> TiktokMobileUserRecommendationsResponse: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_video_detail(self, **params: Unpack[TiktokMobileVideoDetailDefaultParams]) -> TiktokMobileVideoDetailResponse: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesStreamParams]) -> BinaryIO: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesTextResponseParams]) -> str: ...
+    @overload
+    async def mobile_video_subtitles(self, **params: Unpack[TiktokMobileVideoSubtitlesDefaultParams]) -> TiktokMobileVideoSubtitlesResponse: ...
     @overload
     async def popular_trend_country_industry_meta(self, **params: Unpack[TiktokPopularTrendCountryIndustryMetaStreamParams]) -> BinaryIO: ...
     @overload
@@ -4516,6 +7318,81 @@ TiktokMobileAnchorListStreamParams = TypedDict('TiktokMobileAnchorListStreamPara
     '_response_type': Required[Literal["stream"]],
 }, total=False)
 
+TiktokMobileCollectionDetailDefaultParams = TypedDict('TiktokMobileCollectionDetailDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'collection_id': Required[str],
+}, total=False)
+
+TiktokMobileCollectionDetailTextResponseParams = TypedDict('TiktokMobileCollectionDetailTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'collection_id': Required[str],
+}, total=False)
+
+TiktokMobileCollectionDetailStreamParams = TypedDict('TiktokMobileCollectionDetailStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'collection_id': Required[str],
+}, total=False)
+
+TiktokMobileCollectionListDefaultParams = TypedDict('TiktokMobileCollectionListDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionListTextResponseParams = TypedDict('TiktokMobileCollectionListTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionListStreamParams = TypedDict('TiktokMobileCollectionListStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionVideosDefaultParams = TypedDict('TiktokMobileCollectionVideosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'collection_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionVideosTextResponseParams = TypedDict('TiktokMobileCollectionVideosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'collection_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileCollectionVideosStreamParams = TypedDict('TiktokMobileCollectionVideosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'collection_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
 TiktokMobileCommentRepliesDefaultParams = TypedDict('TiktokMobileCommentRepliesDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
@@ -4595,6 +7472,30 @@ TiktokMobileFeedStreamParams = TypedDict('TiktokMobileFeedStreamParams', {
     '_response_type': Required[Literal["stream"]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedOfflineDefaultParams = TypedDict('TiktokMobileFeedOfflineDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'pull_type': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedOfflineTextResponseParams = TypedDict('TiktokMobileFeedOfflineTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'pull_type': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileFeedOfflineStreamParams = TypedDict('TiktokMobileFeedOfflineStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'pull_type': NotRequired[int],
+    'count': NotRequired[int],
 }, total=False)
 
 TiktokMobileFeedPostDefaultParams = TypedDict('TiktokMobileFeedPostDefaultParams', {
@@ -4729,6 +7630,66 @@ TiktokMobileLiveGiftsStreamParams = TypedDict('TiktokMobileLiveGiftsStreamParams
     '_response_type': Required[Literal["stream"]],
 }, total=False)
 
+TiktokMobileLiveHashtagsDefaultParams = TypedDict('TiktokMobileLiveHashtagsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+}, total=False)
+
+TiktokMobileLiveHashtagsTextResponseParams = TypedDict('TiktokMobileLiveHashtagsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+}, total=False)
+
+TiktokMobileLiveHashtagsStreamParams = TypedDict('TiktokMobileLiveHashtagsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+}, total=False)
+
+TiktokMobileLiveRoomDefaultParams = TypedDict('TiktokMobileLiveRoomDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'room_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomTextResponseParams = TypedDict('TiktokMobileLiveRoomTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'room_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomStreamParams = TypedDict('TiktokMobileLiveRoomStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'room_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomByUserDefaultParams = TypedDict('TiktokMobileLiveRoomByUserDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomByUserTextResponseParams = TypedDict('TiktokMobileLiveRoomByUserTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+}, total=False)
+
+TiktokMobileLiveRoomByUserStreamParams = TypedDict('TiktokMobileLiveRoomByUserStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+}, total=False)
+
 TiktokMobileLiveSearchDefaultParams = TypedDict('TiktokMobileLiveSearchDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
@@ -4753,6 +7714,24 @@ TiktokMobileLiveSearchStreamParams = TypedDict('TiktokMobileLiveSearchStreamPara
     'count': NotRequired[int],
 }, total=False)
 
+TiktokMobileLiveTabsDefaultParams = TypedDict('TiktokMobileLiveTabsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+}, total=False)
+
+TiktokMobileLiveTabsTextResponseParams = TypedDict('TiktokMobileLiveTabsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+}, total=False)
+
+TiktokMobileLiveTabsStreamParams = TypedDict('TiktokMobileLiveTabsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+}, total=False)
+
 TiktokMobileMusicBeatsDefaultParams = TypedDict('TiktokMobileMusicBeatsDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
@@ -4772,6 +7751,75 @@ TiktokMobileMusicBeatsStreamParams = TypedDict('TiktokMobileMusicBeatsStreamPara
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["stream"]],
     'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicChartDefaultParams = TypedDict('TiktokMobileMusicChartDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'chart_region': NotRequired[Literal['AE', 'BR', 'CA', 'DE', 'EG', 'FR', 'JP', 'KR', 'LB', 'MX', 'NG', 'SA', 'TR', 'US', 'ZA']],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicChartTextResponseParams = TypedDict('TiktokMobileMusicChartTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'chart_region': NotRequired[Literal['AE', 'BR', 'CA', 'DE', 'EG', 'FR', 'JP', 'KR', 'LB', 'MX', 'NG', 'SA', 'TR', 'US', 'ZA']],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicChartStreamParams = TypedDict('TiktokMobileMusicChartStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'chart_region': NotRequired[Literal['AE', 'BR', 'CA', 'DE', 'EG', 'FR', 'JP', 'KR', 'LB', 'MX', 'NG', 'SA', 'TR', 'US', 'ZA']],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicChoicesDefaultParams = TypedDict('TiktokMobileMusicChoicesDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+}, total=False)
+
+TiktokMobileMusicChoicesTextResponseParams = TypedDict('TiktokMobileMusicChoicesTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+}, total=False)
+
+TiktokMobileMusicChoicesStreamParams = TypedDict('TiktokMobileMusicChoicesStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+}, total=False)
+
+TiktokMobileMusicCollectionListDefaultParams = TypedDict('TiktokMobileMusicCollectionListDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicCollectionListTextResponseParams = TypedDict('TiktokMobileMusicCollectionListTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicCollectionListStreamParams = TypedDict('TiktokMobileMusicCollectionListStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
 }, total=False)
 
 TiktokMobileMusicCollectionsDefaultParams = TypedDict('TiktokMobileMusicCollectionsDefaultParams', {
@@ -4796,6 +7844,27 @@ TiktokMobileMusicCollectionsStreamParams = TypedDict('TiktokMobileMusicCollectio
     '_response_type': Required[Literal["stream"]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMusicDetailDefaultParams = TypedDict('TiktokMobileMusicDetailDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'music_id': Required[str],
+}, total=False)
+
+TiktokMobileMusicDetailTextResponseParams = TypedDict('TiktokMobileMusicDetailTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'music_id': Required[str],
+}, total=False)
+
+TiktokMobileMusicDetailStreamParams = TypedDict('TiktokMobileMusicDetailStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'music_id': Required[str],
 }, total=False)
 
 TiktokMobileMusicPickDefaultParams = TypedDict('TiktokMobileMusicPickDefaultParams', {
@@ -4827,6 +7896,7 @@ TiktokMobileMusicPostsDefaultParams = TypedDict('TiktokMobileMusicPostsDefaultPa
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': NotRequired[Literal["auto", "json"]],
     'music_id': Required[str],
+    'sort': NotRequired[Literal['fresh', 'popular']],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
@@ -4836,6 +7906,7 @@ TiktokMobileMusicPostsTextResponseParams = TypedDict('TiktokMobileMusicPostsText
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["text"]],
     'music_id': Required[str],
+    'sort': NotRequired[Literal['fresh', 'popular']],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
@@ -4845,6 +7916,7 @@ TiktokMobileMusicPostsStreamParams = TypedDict('TiktokMobileMusicPostsStreamPara
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["stream"]],
     'music_id': Required[str],
+    'sort': NotRequired[Literal['fresh', 'popular']],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
 }, total=False)
@@ -4900,6 +7972,276 @@ TiktokMobileMusicTrendingStreamParams = TypedDict('TiktokMobileMusicTrendingStre
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokMobileMvVideosDefaultParams = TypedDict('TiktokMobileMvVideosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'mv_id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMvVideosTextResponseParams = TypedDict('TiktokMobileMvVideosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'mv_id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileMvVideosStreamParams = TypedDict('TiktokMobileMvVideosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'mv_id': Required[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaceDetailDefaultParams = TypedDict('TiktokMobilePlaceDetailDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+    'review_count': NotRequired[int],
+    'review_cursor': NotRequired[int],
+    'merged_count': NotRequired[int],
+    'video_cursor': NotRequired[int],
+    'enter_from': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceDetailTextResponseParams = TypedDict('TiktokMobilePlaceDetailTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+    'review_count': NotRequired[int],
+    'review_cursor': NotRequired[int],
+    'merged_count': NotRequired[int],
+    'video_cursor': NotRequired[int],
+    'enter_from': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceDetailStreamParams = TypedDict('TiktokMobilePlaceDetailStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+    'review_count': NotRequired[int],
+    'review_cursor': NotRequired[int],
+    'merged_count': NotRequired[int],
+    'video_cursor': NotRequired[int],
+    'enter_from': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceInfoDefaultParams = TypedDict('TiktokMobilePlaceInfoDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceInfoTextResponseParams = TypedDict('TiktokMobilePlaceInfoTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceInfoStreamParams = TypedDict('TiktokMobilePlaceInfoStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceMediaDefaultParams = TypedDict('TiktokMobilePlaceMediaDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[str],
+    'size': NotRequired[int],
+    'data_version': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceMediaTextResponseParams = TypedDict('TiktokMobilePlaceMediaTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[str],
+    'size': NotRequired[int],
+    'data_version': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaceMediaStreamParams = TypedDict('TiktokMobilePlaceMediaStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[str],
+    'size': NotRequired[int],
+    'data_version': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlacePhotosDefaultParams = TypedDict('TiktokMobilePlacePhotosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlacePhotosTextResponseParams = TypedDict('TiktokMobilePlacePhotosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlacePhotosStreamParams = TypedDict('TiktokMobilePlacePhotosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+}, total=False)
+
+TiktokMobilePlaceReviewsDefaultParams = TypedDict('TiktokMobilePlaceReviewsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+    'sort_type': NotRequired[Literal['1', '2']],
+}, total=False)
+
+TiktokMobilePlaceReviewsTextResponseParams = TypedDict('TiktokMobilePlaceReviewsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+    'sort_type': NotRequired[Literal['1', '2']],
+}, total=False)
+
+TiktokMobilePlaceReviewsStreamParams = TypedDict('TiktokMobilePlaceReviewsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+    'sort_type': NotRequired[Literal['1', '2']],
+}, total=False)
+
+TiktokMobilePlaceVideosDefaultParams = TypedDict('TiktokMobilePlaceVideosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'poi_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaceVideosTextResponseParams = TypedDict('TiktokMobilePlaceVideosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'poi_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaceVideosStreamParams = TypedDict('TiktokMobilePlaceVideosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'poi_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistDetailDefaultParams = TypedDict('TiktokMobilePlaylistDetailDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'mix_id': Required[str],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaylistDetailTextResponseParams = TypedDict('TiktokMobilePlaylistDetailTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'mix_id': Required[str],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaylistDetailStreamParams = TypedDict('TiktokMobilePlaylistDetailStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'mix_id': Required[str],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobilePlaylistListDefaultParams = TypedDict('TiktokMobilePlaylistListDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistListTextResponseParams = TypedDict('TiktokMobilePlaylistListTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistListStreamParams = TypedDict('TiktokMobilePlaylistListStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistVideosDefaultParams = TypedDict('TiktokMobilePlaylistVideosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'mix_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistVideosTextResponseParams = TypedDict('TiktokMobilePlaylistVideosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'mix_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobilePlaylistVideosStreamParams = TypedDict('TiktokMobilePlaylistVideosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'mix_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
 TiktokMobileSearchDefaultParams = TypedDict('TiktokMobileSearchDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
@@ -4907,6 +8249,7 @@ TiktokMobileSearchDefaultParams = TypedDict('TiktokMobileSearchDefaultParams', {
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+    'search_id': NotRequired[str],
 }, total=False)
 
 TiktokMobileSearchTextResponseParams = TypedDict('TiktokMobileSearchTextResponseParams', {
@@ -4916,15 +8259,71 @@ TiktokMobileSearchTextResponseParams = TypedDict('TiktokMobileSearchTextResponse
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+    'search_id': NotRequired[str],
 }, total=False)
 
-TiktokMobileSearchStreamParams = TypedDict('TiktokMobileSearchStreamParams', {
+TiktokMobileSearchResponseStreamParams = TypedDict('TiktokMobileSearchResponseStreamParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
     '_response_type': Required[Literal["stream"]],
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchEffectsDefaultParams = TypedDict('TiktokMobileSearchEffectsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchEffectsTextResponseParams = TypedDict('TiktokMobileSearchEffectsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchEffectsStreamParams = TypedDict('TiktokMobileSearchEffectsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchHashtagsDefaultParams = TypedDict('TiktokMobileSearchHashtagsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchHashtagsTextResponseParams = TypedDict('TiktokMobileSearchHashtagsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchHashtagsStreamParams = TypedDict('TiktokMobileSearchHashtagsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
 }, total=False)
 
 TiktokMobileSearchMusicDefaultParams = TypedDict('TiktokMobileSearchMusicDefaultParams', {
@@ -4952,6 +8351,42 @@ TiktokMobileSearchMusicStreamParams = TypedDict('TiktokMobileSearchMusicStreamPa
     'keyword': Required[str],
     'count': NotRequired[int],
     'offset': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchPhotosDefaultParams = TypedDict('TiktokMobileSearchPhotosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[int],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchPhotosTextResponseParams = TypedDict('TiktokMobileSearchPhotosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[int],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchPhotosStreamParams = TypedDict('TiktokMobileSearchPhotosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[int],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
 }, total=False)
 
 TiktokMobileSearchPlaceDefaultParams = TypedDict('TiktokMobileSearchPlaceDefaultParams', {
@@ -5000,6 +8435,45 @@ TiktokMobileSearchPreInfoStreamParams = TypedDict('TiktokMobileSearchPreInfoStre
     '_response_type': Required[Literal["stream"]],
     'keyword': NotRequired[str],
     'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileSearchStreamDefaultParams = TypedDict('TiktokMobileSearchStreamDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'search_source': NotRequired[str],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'filter_selected': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchStreamTextResponseParams = TypedDict('TiktokMobileSearchStreamTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'search_source': NotRequired[str],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'filter_selected': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchStreamStreamParams = TypedDict('TiktokMobileSearchStreamStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'search_source': NotRequired[str],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'filter_selected': NotRequired[str],
 }, total=False)
 
 TiktokMobileSearchSugDefaultParams = TypedDict('TiktokMobileSearchSugDefaultParams', {
@@ -5074,6 +8548,69 @@ TiktokMobileSearchUserStreamParams = TypedDict('TiktokMobileSearchUserStreamPara
     'cursor': NotRequired[int],
 }, total=False)
 
+TiktokMobileSearchVideosDefaultParams = TypedDict('TiktokMobileSearchVideosDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchVideosTextResponseParams = TypedDict('TiktokMobileSearchVideosTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileSearchVideosStreamParams = TypedDict('TiktokMobileSearchVideosStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'keyword': Required[str],
+    'count': NotRequired[int],
+    'offset': NotRequired[int],
+    'sort_type': NotRequired[Literal['0', '1', '3']],
+    'publish_time': NotRequired[int],
+    'search_source': NotRequired[str],
+    'search_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileTranslationDescriptionDefaultParams = TypedDict('TiktokMobileTranslationDescriptionDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'item_id': Required[str],
+    'target_lang': NotRequired[str],
+}, total=False)
+
+TiktokMobileTranslationDescriptionTextResponseParams = TypedDict('TiktokMobileTranslationDescriptionTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'item_id': Required[str],
+    'target_lang': NotRequired[str],
+}, total=False)
+
+TiktokMobileTranslationDescriptionStreamParams = TypedDict('TiktokMobileTranslationDescriptionStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'item_id': Required[str],
+    'target_lang': NotRequired[str],
+}, total=False)
+
 TiktokMobileTrendingCategoriesDefaultParams = TypedDict('TiktokMobileTrendingCategoriesDefaultParams', {
     '_timeout': NotRequired[float],
     '_headers': NotRequired[Mapping[str, str]],
@@ -5120,6 +8657,237 @@ TiktokMobileTrendingEffectsStreamParams = TypedDict('TiktokMobileTrendingEffects
     '_response_type': Required[Literal["stream"]],
     'count': NotRequired[int],
     'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowersDefaultParams = TypedDict('TiktokMobileUserFollowersDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowersTextResponseParams = TypedDict('TiktokMobileUserFollowersTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowersStreamParams = TypedDict('TiktokMobileUserFollowersStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowingDefaultParams = TypedDict('TiktokMobileUserFollowingDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowingTextResponseParams = TypedDict('TiktokMobileUserFollowingTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserFollowingStreamParams = TypedDict('TiktokMobileUserFollowingStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalEffectsDefaultParams = TypedDict('TiktokMobileUserOriginalEffectsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalEffectsTextResponseParams = TypedDict('TiktokMobileUserOriginalEffectsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalEffectsStreamParams = TypedDict('TiktokMobileUserOriginalEffectsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalMusicDefaultParams = TypedDict('TiktokMobileUserOriginalMusicDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalMusicTextResponseParams = TypedDict('TiktokMobileUserOriginalMusicTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserOriginalMusicStreamParams = TypedDict('TiktokMobileUserOriginalMusicStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': Required[str],
+    'cursor': NotRequired[int],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserPostsDefaultParams = TypedDict('TiktokMobileUserPostsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'sort_type': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserPostsTextResponseParams = TypedDict('TiktokMobileUserPostsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'sort_type': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserPostsStreamParams = TypedDict('TiktokMobileUserPostsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+    'count': NotRequired[int],
+    'cursor': NotRequired[int],
+    'sort_type': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserProfileDefaultParams = TypedDict('TiktokMobileUserProfileDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileUserProfileTextResponseParams = TypedDict('TiktokMobileUserProfileTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileUserProfileStreamParams = TypedDict('TiktokMobileUserProfileStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'user_id': NotRequired[str],
+    'sec_user_id': NotRequired[str],
+}, total=False)
+
+TiktokMobileUserRecommendationsDefaultParams = TypedDict('TiktokMobileUserRecommendationsDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserRecommendationsTextResponseParams = TypedDict('TiktokMobileUserRecommendationsTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileUserRecommendationsStreamParams = TypedDict('TiktokMobileUserRecommendationsStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'count': NotRequired[int],
+}, total=False)
+
+TiktokMobileVideoDetailDefaultParams = TypedDict('TiktokMobileVideoDetailDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'aweme_id': Required[str],
+}, total=False)
+
+TiktokMobileVideoDetailTextResponseParams = TypedDict('TiktokMobileVideoDetailTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'aweme_id': Required[str],
+}, total=False)
+
+TiktokMobileVideoDetailStreamParams = TypedDict('TiktokMobileVideoDetailStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'aweme_id': Required[str],
+}, total=False)
+
+TiktokMobileVideoSubtitlesDefaultParams = TypedDict('TiktokMobileVideoSubtitlesDefaultParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': NotRequired[Literal["auto", "json"]],
+    'video_id': Required[str],
+    'language': Required[str],
+}, total=False)
+
+TiktokMobileVideoSubtitlesTextResponseParams = TypedDict('TiktokMobileVideoSubtitlesTextResponseParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["text"]],
+    'video_id': Required[str],
+    'language': Required[str],
+}, total=False)
+
+TiktokMobileVideoSubtitlesStreamParams = TypedDict('TiktokMobileVideoSubtitlesStreamParams', {
+    '_timeout': NotRequired[float],
+    '_headers': NotRequired[Mapping[str, str]],
+    '_response_type': Required[Literal["stream"]],
+    'video_id': Required[str],
+    'language': Required[str],
 }, total=False)
 
 TiktokPopularTrendCountryIndustryMetaDefaultParams = TypedDict('TiktokPopularTrendCountryIndustryMetaDefaultParams', {

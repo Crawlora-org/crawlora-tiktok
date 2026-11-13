@@ -288,6 +288,112 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-mobile-collection-detail": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-collection-detail",
+    "method": "GET",
+    "path": "/tiktok/mobile/collection/detail",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "collection_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-collection-list": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-collection-list",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/collection/list",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-collection-videos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-collection-videos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/collection/videos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "collection_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-mobile-comment-replies": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -401,6 +507,36 @@ export const operations = {
       {
         "in": "query",
         "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-feed-offline": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-feed-offline",
+    "method": "GET",
+    "path": "/tiktok/mobile/feed/offline",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "pull_type",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
         "type": "integer"
       }
     ],
@@ -580,6 +716,77 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-mobile-live-hashtags": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-live-hashtags",
+    "method": "GET",
+    "path": "/tiktok/mobile/live/hashtags",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-live-room": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-live-room",
+    "method": "GET",
+    "path": "/tiktok/mobile/live/room",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "room_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-live-room-by-user": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-live-room-by-user",
+    "method": "GET",
+    "path": "/tiktok/mobile/live/room-by-user",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-mobile-live-search": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -611,6 +818,25 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-mobile-live-tabs": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-live-tabs",
+    "method": "GET",
+    "path": "/tiktok/mobile/live/tabs",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-mobile-music-beats": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -629,6 +855,115 @@ export const operations = {
       {
         "in": "query",
         "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-music-chart": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-music-chart",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/music/chart",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "enum": [
+          "AE",
+          "BR",
+          "CA",
+          "DE",
+          "EG",
+          "FR",
+          "JP",
+          "KR",
+          "LB",
+          "MX",
+          "NG",
+          "SA",
+          "TR",
+          "US",
+          "ZA"
+        ],
+        "in": "query",
+        "name": "chart_region",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-music-choices": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-music-choices",
+    "method": "GET",
+    "path": "/tiktok/mobile/music/choices",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-music-collection-list": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-music-collection-list",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/music/collection-list",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
         "type": "integer"
       }
     ],
@@ -664,6 +999,32 @@ export const operations = {
         "in": "query",
         "name": "cursor",
         "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-music-detail": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-music-detail",
+    "method": "GET",
+    "path": "/tiktok/mobile/music/detail",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "music_id",
+        "required": true,
+        "type": "string"
       }
     ],
     "security": [
@@ -727,6 +1088,15 @@ export const operations = {
         "in": "query",
         "name": "music_id",
         "required": true,
+        "type": "string"
+      },
+      {
+        "enum": [
+          "fresh",
+          "popular"
+        ],
+        "in": "query",
+        "name": "sort",
         "type": "string"
       },
       {
@@ -818,6 +1188,393 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-mobile-mv-videos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-mv-videos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/mv/videos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "mv_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-detail": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-detail",
+    "method": "GET",
+    "path": "/tiktok/mobile/place/detail",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "review_count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "review_cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "merged_count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "video_cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "enter_from",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-info": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-info",
+    "method": "GET",
+    "path": "/tiktok/mobile/place/info",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-media": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-media",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/place/media",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "size",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "data_version",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-photos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-photos",
+    "method": "GET",
+    "path": "/tiktok/mobile/place/photos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-reviews": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-reviews",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/place/reviews",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "enum": [
+          "1",
+          "2"
+        ],
+        "in": "query",
+        "name": "sort_type",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-place-videos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-place-videos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/place/videos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "poi_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-playlist-detail": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-playlist-detail",
+    "method": "GET",
+    "path": "/tiktok/mobile/playlist/detail",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "mix_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "sec_user_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-playlist-list": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-playlist-list",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/playlist/list",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "sec_user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-playlist-videos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-playlist-videos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/playlist/videos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "mix_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-mobile-search": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -848,6 +1605,87 @@ export const operations = {
       {
         "in": "query",
         "name": "offset",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "search_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-search-effects": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-search-effects",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/search/effects",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "keyword",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "search_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-search-hashtags": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-search-hashtags",
+    "method": "GET",
+    "path": "/tiktok/mobile/search/hashtags",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "keyword",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
         "type": "integer"
       }
     ],
@@ -886,6 +1724,58 @@ export const operations = {
         "in": "query",
         "name": "offset",
         "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-search-photos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-search-photos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/search/photos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "keyword",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "offset",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "sort_type",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "publish_time",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "search_source",
+        "type": "string"
       }
     ],
     "security": [
@@ -947,6 +1837,68 @@ export const operations = {
         "in": "query",
         "name": "count",
         "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-search-stream": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-search-stream",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/search/stream",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "keyword",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "offset",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "search_source",
+        "type": "string"
+      },
+      {
+        "enum": [
+          "0",
+          "1",
+          "3"
+        ],
+        "in": "query",
+        "name": "sort_type",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "publish_time",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "filter_selected",
+        "type": "string"
       }
     ],
     "security": [
@@ -1050,6 +2002,99 @@ export const operations = {
       "ApiKeyAuth"
     ]
   },
+  "tiktok-mobile-search-videos": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-search-videos",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/search/videos",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "keyword",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "offset",
+        "type": "integer"
+      },
+      {
+        "enum": [
+          "0",
+          "1",
+          "3"
+        ],
+        "in": "query",
+        "name": "sort_type",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "publish_time",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "search_source",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "search_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-translation-description": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-translation-description",
+    "method": "GET",
+    "path": "/tiktok/mobile/translation/description",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "item_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "target_lang",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
   "tiktok-mobile-trending-categories": {
     "bodyParam": null,
     "bodyRequired": false,
@@ -1112,6 +2157,328 @@ export const operations = {
         "in": "query",
         "name": "cursor",
         "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-followers": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-followers",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/user/followers",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-following": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-following",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/user/following",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-original-effects": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-original-effects",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/user/original-effects",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-original-music": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-original-music",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/user/original-music",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-posts": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "cursorParams": [
+      "cursor"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-posts",
+    "method": "GET",
+    "paginatable": true,
+    "path": "/tiktok/mobile/user/posts",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "sec_user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "cursor",
+        "type": "integer"
+      },
+      {
+        "in": "query",
+        "name": "sort_type",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-profile": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-profile",
+    "method": "GET",
+    "path": "/tiktok/mobile/user/profile",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "sec_user_id",
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-user-recommendations": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-user-recommendations",
+    "method": "GET",
+    "path": "/tiktok/mobile/user/recommendations",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "count",
+        "type": "integer"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-video-detail": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-video-detail",
+    "method": "GET",
+    "path": "/tiktok/mobile/video/detail",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "aweme_id",
+        "required": true,
+        "type": "string"
+      }
+    ],
+    "security": [
+      "ApiKeyAuth"
+    ]
+  },
+  "tiktok-mobile-video-subtitles": {
+    "bodyParam": null,
+    "bodyRequired": false,
+    "consumes": [
+      "application/json"
+    ],
+    "formParams": [],
+    "id": "tiktok-mobile-video-subtitles",
+    "method": "GET",
+    "path": "/tiktok/mobile/video/subtitles",
+    "pathParams": [],
+    "produces": [
+      "application/json"
+    ],
+    "queryParams": [
+      {
+        "in": "query",
+        "name": "video_id",
+        "required": true,
+        "type": "string"
+      },
+      {
+        "in": "query",
+        "name": "language",
+        "required": true,
+        "type": "string"
       }
     ],
     "security": [
@@ -1779,31 +3146,68 @@ export const groups = {
     "creativeCenterVideos": "tiktok-creative-center-videos",
     "explore": "tiktok-explore",
     "mobileAnchorList": "tiktok-mobile-anchor-list",
+    "mobileCollectionDetail": "tiktok-mobile-collection-detail",
+    "mobileCollectionList": "tiktok-mobile-collection-list",
+    "mobileCollectionVideos": "tiktok-mobile-collection-videos",
     "mobileCommentReplies": "tiktok-mobile-comment-replies",
     "mobileComments": "tiktok-mobile-comments",
     "mobileFeed": "tiktok-mobile-feed",
+    "mobileFeedOffline": "tiktok-mobile-feed-offline",
     "mobileFeedPost": "tiktok-mobile-feed-post",
     "mobileHashtag": "tiktok-mobile-hashtag",
     "mobileHashtagPosts": "tiktok-mobile-hashtag-posts",
     "mobileHashtags": "tiktok-mobile-hashtags",
     "mobileLiveEffects": "tiktok-mobile-live-effects",
     "mobileLiveGifts": "tiktok-mobile-live-gifts",
+    "mobileLiveHashtags": "tiktok-mobile-live-hashtags",
+    "mobileLiveRoom": "tiktok-mobile-live-room",
+    "mobileLiveRoomByUser": "tiktok-mobile-live-room-by-user",
     "mobileLiveSearch": "tiktok-mobile-live-search",
+    "mobileLiveTabs": "tiktok-mobile-live-tabs",
     "mobileMusicBeats": "tiktok-mobile-music-beats",
+    "mobileMusicChart": "tiktok-mobile-music-chart",
+    "mobileMusicChoices": "tiktok-mobile-music-choices",
+    "mobileMusicCollectionList": "tiktok-mobile-music-collection-list",
     "mobileMusicCollections": "tiktok-mobile-music-collections",
+    "mobileMusicDetail": "tiktok-mobile-music-detail",
     "mobileMusicPick": "tiktok-mobile-music-pick",
     "mobileMusicPosts": "tiktok-mobile-music-posts",
     "mobileMusicRelated": "tiktok-mobile-music-related",
     "mobileMusicTrending": "tiktok-mobile-music-trending",
+    "mobileMvVideos": "tiktok-mobile-mv-videos",
+    "mobilePlaceDetail": "tiktok-mobile-place-detail",
+    "mobilePlaceInfo": "tiktok-mobile-place-info",
+    "mobilePlaceMedia": "tiktok-mobile-place-media",
+    "mobilePlacePhotos": "tiktok-mobile-place-photos",
+    "mobilePlaceReviews": "tiktok-mobile-place-reviews",
+    "mobilePlaceVideos": "tiktok-mobile-place-videos",
+    "mobilePlaylistDetail": "tiktok-mobile-playlist-detail",
+    "mobilePlaylistList": "tiktok-mobile-playlist-list",
+    "mobilePlaylistVideos": "tiktok-mobile-playlist-videos",
     "mobileSearch": "tiktok-mobile-search",
+    "mobileSearchEffects": "tiktok-mobile-search-effects",
+    "mobileSearchHashtags": "tiktok-mobile-search-hashtags",
     "mobileSearchMusic": "tiktok-mobile-search-music",
+    "mobileSearchPhotos": "tiktok-mobile-search-photos",
     "mobileSearchPlace": "tiktok-mobile-search-place",
     "mobileSearchPreInfo": "tiktok-mobile-search-pre-info",
+    "mobileSearchStream": "tiktok-mobile-search-stream",
     "mobileSearchSug": "tiktok-mobile-search-sug",
     "mobileSearchTabs": "tiktok-mobile-search-tabs",
     "mobileSearchUser": "tiktok-mobile-search-user",
+    "mobileSearchVideos": "tiktok-mobile-search-videos",
+    "mobileTranslationDescription": "tiktok-mobile-translation-description",
     "mobileTrendingCategories": "tiktok-mobile-trending-categories",
     "mobileTrendingEffects": "tiktok-mobile-trending-effects",
+    "mobileUserFollowers": "tiktok-mobile-user-followers",
+    "mobileUserFollowing": "tiktok-mobile-user-following",
+    "mobileUserOriginalEffects": "tiktok-mobile-user-original-effects",
+    "mobileUserOriginalMusic": "tiktok-mobile-user-original-music",
+    "mobileUserPosts": "tiktok-mobile-user-posts",
+    "mobileUserProfile": "tiktok-mobile-user-profile",
+    "mobileUserRecommendations": "tiktok-mobile-user-recommendations",
+    "mobileVideoDetail": "tiktok-mobile-video-detail",
+    "mobileVideoSubtitles": "tiktok-mobile-video-subtitles",
     "popularTrendCountryIndustryMeta": "tiktok-popular-trend-country-industry-meta",
     "post": "tiktok-post",
     "profile": "tiktok-profile",
@@ -1826,7 +3230,7 @@ export const groups = {
   }
 };
 
-export const operationCount = 53;
+export const operationCount = 90;
 
 export const OperationIds = Object.freeze({
   "TiktokCategory": "tiktok-category",
@@ -1838,31 +3242,68 @@ export const OperationIds = Object.freeze({
   "TiktokCreativeCenterVideos": "tiktok-creative-center-videos",
   "TiktokExplore": "tiktok-explore",
   "TiktokMobileAnchorList": "tiktok-mobile-anchor-list",
+  "TiktokMobileCollectionDetail": "tiktok-mobile-collection-detail",
+  "TiktokMobileCollectionList": "tiktok-mobile-collection-list",
+  "TiktokMobileCollectionVideos": "tiktok-mobile-collection-videos",
   "TiktokMobileCommentReplies": "tiktok-mobile-comment-replies",
   "TiktokMobileComments": "tiktok-mobile-comments",
   "TiktokMobileFeed": "tiktok-mobile-feed",
+  "TiktokMobileFeedOffline": "tiktok-mobile-feed-offline",
   "TiktokMobileFeedPost": "tiktok-mobile-feed-post",
   "TiktokMobileHashtag": "tiktok-mobile-hashtag",
   "TiktokMobileHashtagPosts": "tiktok-mobile-hashtag-posts",
   "TiktokMobileHashtags": "tiktok-mobile-hashtags",
   "TiktokMobileLiveEffects": "tiktok-mobile-live-effects",
   "TiktokMobileLiveGifts": "tiktok-mobile-live-gifts",
+  "TiktokMobileLiveHashtags": "tiktok-mobile-live-hashtags",
+  "TiktokMobileLiveRoom": "tiktok-mobile-live-room",
+  "TiktokMobileLiveRoomByUser": "tiktok-mobile-live-room-by-user",
   "TiktokMobileLiveSearch": "tiktok-mobile-live-search",
+  "TiktokMobileLiveTabs": "tiktok-mobile-live-tabs",
   "TiktokMobileMusicBeats": "tiktok-mobile-music-beats",
+  "TiktokMobileMusicChart": "tiktok-mobile-music-chart",
+  "TiktokMobileMusicChoices": "tiktok-mobile-music-choices",
+  "TiktokMobileMusicCollectionList": "tiktok-mobile-music-collection-list",
   "TiktokMobileMusicCollections": "tiktok-mobile-music-collections",
+  "TiktokMobileMusicDetail": "tiktok-mobile-music-detail",
   "TiktokMobileMusicPick": "tiktok-mobile-music-pick",
   "TiktokMobileMusicPosts": "tiktok-mobile-music-posts",
   "TiktokMobileMusicRelated": "tiktok-mobile-music-related",
   "TiktokMobileMusicTrending": "tiktok-mobile-music-trending",
+  "TiktokMobileMvVideos": "tiktok-mobile-mv-videos",
+  "TiktokMobilePlaceDetail": "tiktok-mobile-place-detail",
+  "TiktokMobilePlaceInfo": "tiktok-mobile-place-info",
+  "TiktokMobilePlaceMedia": "tiktok-mobile-place-media",
+  "TiktokMobilePlacePhotos": "tiktok-mobile-place-photos",
+  "TiktokMobilePlaceReviews": "tiktok-mobile-place-reviews",
+  "TiktokMobilePlaceVideos": "tiktok-mobile-place-videos",
+  "TiktokMobilePlaylistDetail": "tiktok-mobile-playlist-detail",
+  "TiktokMobilePlaylistList": "tiktok-mobile-playlist-list",
+  "TiktokMobilePlaylistVideos": "tiktok-mobile-playlist-videos",
   "TiktokMobileSearch": "tiktok-mobile-search",
+  "TiktokMobileSearchEffects": "tiktok-mobile-search-effects",
+  "TiktokMobileSearchHashtags": "tiktok-mobile-search-hashtags",
   "TiktokMobileSearchMusic": "tiktok-mobile-search-music",
+  "TiktokMobileSearchPhotos": "tiktok-mobile-search-photos",
   "TiktokMobileSearchPlace": "tiktok-mobile-search-place",
   "TiktokMobileSearchPreInfo": "tiktok-mobile-search-pre-info",
+  "TiktokMobileSearchStream": "tiktok-mobile-search-stream",
   "TiktokMobileSearchSug": "tiktok-mobile-search-sug",
   "TiktokMobileSearchTabs": "tiktok-mobile-search-tabs",
   "TiktokMobileSearchUser": "tiktok-mobile-search-user",
+  "TiktokMobileSearchVideos": "tiktok-mobile-search-videos",
+  "TiktokMobileTranslationDescription": "tiktok-mobile-translation-description",
   "TiktokMobileTrendingCategories": "tiktok-mobile-trending-categories",
   "TiktokMobileTrendingEffects": "tiktok-mobile-trending-effects",
+  "TiktokMobileUserFollowers": "tiktok-mobile-user-followers",
+  "TiktokMobileUserFollowing": "tiktok-mobile-user-following",
+  "TiktokMobileUserOriginalEffects": "tiktok-mobile-user-original-effects",
+  "TiktokMobileUserOriginalMusic": "tiktok-mobile-user-original-music",
+  "TiktokMobileUserPosts": "tiktok-mobile-user-posts",
+  "TiktokMobileUserProfile": "tiktok-mobile-user-profile",
+  "TiktokMobileUserRecommendations": "tiktok-mobile-user-recommendations",
+  "TiktokMobileVideoDetail": "tiktok-mobile-video-detail",
+  "TiktokMobileVideoSubtitles": "tiktok-mobile-video-subtitles",
   "TiktokPopularTrendCountryIndustryMeta": "tiktok-popular-trend-country-industry-meta",
   "TiktokPost": "tiktok-post",
   "TiktokProfile": "tiktok-profile",

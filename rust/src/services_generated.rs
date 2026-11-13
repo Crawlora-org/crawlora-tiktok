@@ -99,6 +99,32 @@ pub struct TiktokMobileAnchorListParams {
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileCollectionDetailParams {
+    #[serde(rename = "collection_id", skip_serializing_if = "Option::is_none")]
+    pub collection_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileCollectionListParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileCollectionVideosParams {
+    #[serde(rename = "collection_id", skip_serializing_if = "Option::is_none")]
+    pub collection_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct TiktokMobileCommentRepliesParams {
     #[serde(rename = "aweme_id", skip_serializing_if = "Option::is_none")]
     pub aweme_id: Option<String>,
@@ -126,6 +152,14 @@ pub struct TiktokMobileFeedParams {
     pub count: Option<i64>,
     #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
     pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileFeedOfflineParams {
+    #[serde(rename = "pull_type", skip_serializing_if = "Option::is_none")]
+    pub pull_type: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -175,11 +209,35 @@ pub struct TiktokMobileLiveGiftsParams {
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileLiveHashtagsParams {
+    #[serde(skip)]
+    _empty: Option<()>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileLiveRoomParams {
+    #[serde(rename = "room_id", skip_serializing_if = "Option::is_none")]
+    pub room_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileLiveRoomByUserParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct TiktokMobileLiveSearchParams {
     #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
     pub keyword: Option<String>,
     #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
     pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileLiveTabsParams {
+    #[serde(skip)]
+    _empty: Option<()>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -189,11 +247,41 @@ pub struct TiktokMobileMusicBeatsParams {
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileMusicChartParams {
+    #[serde(rename = "chart_region", skip_serializing_if = "Option::is_none")]
+    pub chart_region: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileMusicChoicesParams {
+    #[serde(skip)]
+    _empty: Option<()>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileMusicCollectionListParams {
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct TiktokMobileMusicCollectionsParams {
     #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
     pub count: Option<i64>,
     #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
     pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileMusicDetailParams {
+    #[serde(rename = "music_id", skip_serializing_if = "Option::is_none")]
+    pub music_id: Option<String>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -208,6 +296,8 @@ pub struct TiktokMobileMusicPickParams {
 pub struct TiktokMobileMusicPostsParams {
     #[serde(rename = "music_id", skip_serializing_if = "Option::is_none")]
     pub music_id: Option<String>,
+    #[serde(rename = "sort", skip_serializing_if = "Option::is_none")]
+    pub sort: Option<String>,
     #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
     pub count: Option<i64>,
     #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
@@ -233,6 +323,106 @@ pub struct TiktokMobileMusicTrendingParams {
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileMvVideosParams {
+    #[serde(rename = "mv_id", skip_serializing_if = "Option::is_none")]
+    pub mv_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaceDetailParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+    #[serde(rename = "review_count", skip_serializing_if = "Option::is_none")]
+    pub review_count: Option<i64>,
+    #[serde(rename = "review_cursor", skip_serializing_if = "Option::is_none")]
+    pub review_cursor: Option<i64>,
+    #[serde(rename = "merged_count", skip_serializing_if = "Option::is_none")]
+    pub merged_count: Option<i64>,
+    #[serde(rename = "video_cursor", skip_serializing_if = "Option::is_none")]
+    pub video_cursor: Option<i64>,
+    #[serde(rename = "enter_from", skip_serializing_if = "Option::is_none")]
+    pub enter_from: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaceInfoParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaceMediaParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<String>,
+    #[serde(rename = "size", skip_serializing_if = "Option::is_none")]
+    pub size: Option<i64>,
+    #[serde(rename = "data_version", skip_serializing_if = "Option::is_none")]
+    pub data_version: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlacePhotosParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaceReviewsParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "sort_type", skip_serializing_if = "Option::is_none")]
+    pub sort_type: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaceVideosParams {
+    #[serde(rename = "poi_id", skip_serializing_if = "Option::is_none")]
+    pub poi_id: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaylistDetailParams {
+    #[serde(rename = "mix_id", skip_serializing_if = "Option::is_none")]
+    pub mix_id: Option<String>,
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "sec_user_id", skip_serializing_if = "Option::is_none")]
+    pub sec_user_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaylistListParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "sec_user_id", skip_serializing_if = "Option::is_none")]
+    pub sec_user_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobilePlaylistVideosParams {
+    #[serde(rename = "mix_id", skip_serializing_if = "Option::is_none")]
+    pub mix_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct TiktokMobileSearchParams {
     #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
     pub keyword: Option<String>,
@@ -240,6 +430,28 @@ pub struct TiktokMobileSearchParams {
     pub count: Option<i64>,
     #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
     pub offset: Option<i64>,
+    #[serde(rename = "search_id", skip_serializing_if = "Option::is_none")]
+    pub search_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileSearchEffectsParams {
+    #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
+    pub keyword: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "search_id", skip_serializing_if = "Option::is_none")]
+    pub search_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileSearchHashtagsParams {
+    #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
+    pub keyword: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -250,6 +462,22 @@ pub struct TiktokMobileSearchMusicParams {
     pub count: Option<i64>,
     #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
     pub offset: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileSearchPhotosParams {
+    #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
+    pub keyword: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
+    pub offset: Option<i64>,
+    #[serde(rename = "sort_type", skip_serializing_if = "Option::is_none")]
+    pub sort_type: Option<i64>,
+    #[serde(rename = "publish_time", skip_serializing_if = "Option::is_none")]
+    pub publish_time: Option<i64>,
+    #[serde(rename = "search_source", skip_serializing_if = "Option::is_none")]
+    pub search_source: Option<String>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -266,6 +494,24 @@ pub struct TiktokMobileSearchPreInfoParams {
     pub keyword: Option<String>,
     #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
     pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileSearchStreamParams {
+    #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
+    pub keyword: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
+    pub offset: Option<i64>,
+    #[serde(rename = "search_source", skip_serializing_if = "Option::is_none")]
+    pub search_source: Option<String>,
+    #[serde(rename = "sort_type", skip_serializing_if = "Option::is_none")]
+    pub sort_type: Option<String>,
+    #[serde(rename = "publish_time", skip_serializing_if = "Option::is_none")]
+    pub publish_time: Option<i64>,
+    #[serde(rename = "filter_selected", skip_serializing_if = "Option::is_none")]
+    pub filter_selected: Option<String>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -293,6 +539,32 @@ pub struct TiktokMobileSearchUserParams {
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileSearchVideosParams {
+    #[serde(rename = "keyword", skip_serializing_if = "Option::is_none")]
+    pub keyword: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "offset", skip_serializing_if = "Option::is_none")]
+    pub offset: Option<i64>,
+    #[serde(rename = "sort_type", skip_serializing_if = "Option::is_none")]
+    pub sort_type: Option<String>,
+    #[serde(rename = "publish_time", skip_serializing_if = "Option::is_none")]
+    pub publish_time: Option<i64>,
+    #[serde(rename = "search_source", skip_serializing_if = "Option::is_none")]
+    pub search_source: Option<String>,
+    #[serde(rename = "search_id", skip_serializing_if = "Option::is_none")]
+    pub search_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileTranslationDescriptionParams {
+    #[serde(rename = "item_id", skip_serializing_if = "Option::is_none")]
+    pub item_id: Option<String>,
+    #[serde(rename = "target_lang", skip_serializing_if = "Option::is_none")]
+    pub target_lang: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
 pub struct TiktokMobileTrendingCategoriesParams {
     #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
     pub count: Option<i64>,
@@ -306,6 +578,88 @@ pub struct TiktokMobileTrendingEffectsParams {
     pub count: Option<i64>,
     #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
     pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserFollowersParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserFollowingParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserOriginalEffectsParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserOriginalMusicParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserPostsParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "sec_user_id", skip_serializing_if = "Option::is_none")]
+    pub sec_user_id: Option<String>,
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+    #[serde(rename = "cursor", skip_serializing_if = "Option::is_none")]
+    pub cursor: Option<i64>,
+    #[serde(rename = "sort_type", skip_serializing_if = "Option::is_none")]
+    pub sort_type: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserProfileParams {
+    #[serde(rename = "user_id", skip_serializing_if = "Option::is_none")]
+    pub user_id: Option<String>,
+    #[serde(rename = "sec_user_id", skip_serializing_if = "Option::is_none")]
+    pub sec_user_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileUserRecommendationsParams {
+    #[serde(rename = "count", skip_serializing_if = "Option::is_none")]
+    pub count: Option<i64>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileVideoDetailParams {
+    #[serde(rename = "aweme_id", skip_serializing_if = "Option::is_none")]
+    pub aweme_id: Option<String>,
+}
+
+#[derive(Debug, Clone, Default, serde::Serialize)]
+pub struct TiktokMobileVideoSubtitlesParams {
+    #[serde(rename = "video_id", skip_serializing_if = "Option::is_none")]
+    pub video_id: Option<String>,
+    #[serde(rename = "language", skip_serializing_if = "Option::is_none")]
+    pub language: Option<String>,
 }
 
 #[derive(Debug, Clone, Default, serde::Serialize)]
@@ -573,6 +927,45 @@ impl TiktokApi {
             .await
     }
 
+    pub async fn mobile_collection_detail(
+        &self,
+        params: TiktokMobileCollectionDetailParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-collection-detail",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_collection_list(
+        &self,
+        params: TiktokMobileCollectionListParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-collection-list",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_collection_videos(
+        &self,
+        params: TiktokMobileCollectionVideosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-collection-videos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
     pub async fn mobile_comment_replies(
         &self,
         params: TiktokMobileCommentRepliesParams,
@@ -598,6 +991,19 @@ impl TiktokApi {
     pub async fn mobile_feed(&self, params: TiktokMobileFeedParams) -> Result<ApiResponse, Error> {
         self.inner
             .call("tiktok-mobile-feed", &params, RequestOptions::default())
+            .await
+    }
+
+    pub async fn mobile_feed_offline(
+        &self,
+        params: TiktokMobileFeedOfflineParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-feed-offline",
+                &params,
+                RequestOptions::default(),
+            )
             .await
     }
 
@@ -671,6 +1077,45 @@ impl TiktokApi {
             .await
     }
 
+    pub async fn mobile_live_hashtags(
+        &self,
+        params: TiktokMobileLiveHashtagsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-live-hashtags",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_live_room(
+        &self,
+        params: TiktokMobileLiveRoomParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-live-room",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_live_room_by_user(
+        &self,
+        params: TiktokMobileLiveRoomByUserParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-live-room-by-user",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
     pub async fn mobile_live_search(
         &self,
         params: TiktokMobileLiveSearchParams,
@@ -678,6 +1123,19 @@ impl TiktokApi {
         self.inner
             .call(
                 "tiktok-mobile-live-search",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_live_tabs(
+        &self,
+        params: TiktokMobileLiveTabsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-live-tabs",
                 &params,
                 RequestOptions::default(),
             )
@@ -697,6 +1155,45 @@ impl TiktokApi {
             .await
     }
 
+    pub async fn mobile_music_chart(
+        &self,
+        params: TiktokMobileMusicChartParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-music-chart",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_music_choices(
+        &self,
+        params: TiktokMobileMusicChoicesParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-music-choices",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_music_collection_list(
+        &self,
+        params: TiktokMobileMusicCollectionListParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-music-collection-list",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
     pub async fn mobile_music_collections(
         &self,
         params: TiktokMobileMusicCollectionsParams,
@@ -704,6 +1201,19 @@ impl TiktokApi {
         self.inner
             .call(
                 "tiktok-mobile-music-collections",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_music_detail(
+        &self,
+        params: TiktokMobileMusicDetailParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-music-detail",
                 &params,
                 RequestOptions::default(),
             )
@@ -762,12 +1272,168 @@ impl TiktokApi {
             .await
     }
 
+    pub async fn mobile_mv_videos(
+        &self,
+        params: TiktokMobileMvVideosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-mv-videos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_detail(
+        &self,
+        params: TiktokMobilePlaceDetailParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-detail",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_info(
+        &self,
+        params: TiktokMobilePlaceInfoParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-info",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_media(
+        &self,
+        params: TiktokMobilePlaceMediaParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-media",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_photos(
+        &self,
+        params: TiktokMobilePlacePhotosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-photos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_reviews(
+        &self,
+        params: TiktokMobilePlaceReviewsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-reviews",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_place_videos(
+        &self,
+        params: TiktokMobilePlaceVideosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-place-videos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_playlist_detail(
+        &self,
+        params: TiktokMobilePlaylistDetailParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-playlist-detail",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_playlist_list(
+        &self,
+        params: TiktokMobilePlaylistListParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-playlist-list",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_playlist_videos(
+        &self,
+        params: TiktokMobilePlaylistVideosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-playlist-videos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
     pub async fn mobile_search(
         &self,
         params: TiktokMobileSearchParams,
     ) -> Result<ApiResponse, Error> {
         self.inner
             .call("tiktok-mobile-search", &params, RequestOptions::default())
+            .await
+    }
+
+    pub async fn mobile_search_effects(
+        &self,
+        params: TiktokMobileSearchEffectsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-search-effects",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_search_hashtags(
+        &self,
+        params: TiktokMobileSearchHashtagsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-search-hashtags",
+                &params,
+                RequestOptions::default(),
+            )
             .await
     }
 
@@ -778,6 +1444,19 @@ impl TiktokApi {
         self.inner
             .call(
                 "tiktok-mobile-search-music",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_search_photos(
+        &self,
+        params: TiktokMobileSearchPhotosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-search-photos",
                 &params,
                 RequestOptions::default(),
             )
@@ -804,6 +1483,19 @@ impl TiktokApi {
         self.inner
             .call(
                 "tiktok-mobile-search-pre-info",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_search_stream(
+        &self,
+        params: TiktokMobileSearchStreamParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-search-stream",
                 &params,
                 RequestOptions::default(),
             )
@@ -849,6 +1541,32 @@ impl TiktokApi {
             .await
     }
 
+    pub async fn mobile_search_videos(
+        &self,
+        params: TiktokMobileSearchVideosParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-search-videos",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_translation_description(
+        &self,
+        params: TiktokMobileTranslationDescriptionParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-translation-description",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
     pub async fn mobile_trending_categories(
         &self,
         params: TiktokMobileTrendingCategoriesParams,
@@ -869,6 +1587,123 @@ impl TiktokApi {
         self.inner
             .call(
                 "tiktok-mobile-trending-effects",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_followers(
+        &self,
+        params: TiktokMobileUserFollowersParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-followers",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_following(
+        &self,
+        params: TiktokMobileUserFollowingParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-following",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_original_effects(
+        &self,
+        params: TiktokMobileUserOriginalEffectsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-original-effects",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_original_music(
+        &self,
+        params: TiktokMobileUserOriginalMusicParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-original-music",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_posts(
+        &self,
+        params: TiktokMobileUserPostsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-posts",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_profile(
+        &self,
+        params: TiktokMobileUserProfileParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-profile",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_user_recommendations(
+        &self,
+        params: TiktokMobileUserRecommendationsParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-user-recommendations",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_video_detail(
+        &self,
+        params: TiktokMobileVideoDetailParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-video-detail",
+                &params,
+                RequestOptions::default(),
+            )
+            .await
+    }
+
+    pub async fn mobile_video_subtitles(
+        &self,
+        params: TiktokMobileVideoSubtitlesParams,
+    ) -> Result<ApiResponse, Error> {
+        self.inner
+            .call(
+                "tiktok-mobile-video-subtitles",
                 &params,
                 RequestOptions::default(),
             )

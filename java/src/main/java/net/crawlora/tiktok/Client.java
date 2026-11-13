@@ -22,7 +22,7 @@ import java.util.TreeSet;
 /** Client for the TikTok endpoints hosted by Crawlora. */
 public final class Client implements AutoCloseable {
     public static final String DEFAULT_BASE_URL = "https://api.crawlora.net/api/v1";
-    public static final int OPERATION_COUNT = 53;
+    public static final int OPERATION_COUNT = 90;
     public static final List<String> OPERATION_IDS = List.of(
             "tiktok-category",
             "tiktok-challenge",
@@ -33,31 +33,68 @@ public final class Client implements AutoCloseable {
             "tiktok-creative-center-videos",
             "tiktok-explore",
             "tiktok-mobile-anchor-list",
+            "tiktok-mobile-collection-detail",
+            "tiktok-mobile-collection-list",
+            "tiktok-mobile-collection-videos",
             "tiktok-mobile-comment-replies",
             "tiktok-mobile-comments",
             "tiktok-mobile-feed",
+            "tiktok-mobile-feed-offline",
             "tiktok-mobile-feed-post",
             "tiktok-mobile-hashtag",
             "tiktok-mobile-hashtag-posts",
             "tiktok-mobile-hashtags",
             "tiktok-mobile-live-effects",
             "tiktok-mobile-live-gifts",
+            "tiktok-mobile-live-hashtags",
+            "tiktok-mobile-live-room",
+            "tiktok-mobile-live-room-by-user",
             "tiktok-mobile-live-search",
+            "tiktok-mobile-live-tabs",
             "tiktok-mobile-music-beats",
+            "tiktok-mobile-music-chart",
+            "tiktok-mobile-music-choices",
+            "tiktok-mobile-music-collection-list",
             "tiktok-mobile-music-collections",
+            "tiktok-mobile-music-detail",
             "tiktok-mobile-music-pick",
             "tiktok-mobile-music-posts",
             "tiktok-mobile-music-related",
             "tiktok-mobile-music-trending",
+            "tiktok-mobile-mv-videos",
+            "tiktok-mobile-place-detail",
+            "tiktok-mobile-place-info",
+            "tiktok-mobile-place-media",
+            "tiktok-mobile-place-photos",
+            "tiktok-mobile-place-reviews",
+            "tiktok-mobile-place-videos",
+            "tiktok-mobile-playlist-detail",
+            "tiktok-mobile-playlist-list",
+            "tiktok-mobile-playlist-videos",
             "tiktok-mobile-search",
+            "tiktok-mobile-search-effects",
+            "tiktok-mobile-search-hashtags",
             "tiktok-mobile-search-music",
+            "tiktok-mobile-search-photos",
             "tiktok-mobile-search-place",
             "tiktok-mobile-search-pre-info",
+            "tiktok-mobile-search-stream",
             "tiktok-mobile-search-sug",
             "tiktok-mobile-search-tabs",
             "tiktok-mobile-search-user",
+            "tiktok-mobile-search-videos",
+            "tiktok-mobile-translation-description",
             "tiktok-mobile-trending-categories",
             "tiktok-mobile-trending-effects",
+            "tiktok-mobile-user-followers",
+            "tiktok-mobile-user-following",
+            "tiktok-mobile-user-original-effects",
+            "tiktok-mobile-user-original-music",
+            "tiktok-mobile-user-posts",
+            "tiktok-mobile-user-profile",
+            "tiktok-mobile-user-recommendations",
+            "tiktok-mobile-video-detail",
+            "tiktok-mobile-video-subtitles",
             "tiktok-popular-trend-country-industry-meta",
             "tiktok-post",
             "tiktok-profile",
@@ -92,31 +129,68 @@ public final class Client implements AutoCloseable {
         operations.put("tiktok-challenge", new Operation("tiktok-challenge", "GET", "/tiktok/hashtag/{name}", Map.ofEntries(Map.entry("name", new Param("name", "path", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-challenge-list", new Operation("tiktok-challenge-list", "GET", "/tiktok/hashtags", Map.ofEntries(Map.entry("id", new Param("id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-anchor-list", new Operation("tiktok-mobile-anchor-list", "GET", "/tiktok/mobile/anchor/list", Map.of(), List.of("application/json")));
+        operations.put("tiktok-mobile-collection-detail", new Operation("tiktok-mobile-collection-detail", "GET", "/tiktok/mobile/collection/detail", Map.ofEntries(Map.entry("collection_id", new Param("collection_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-collection-list", new Operation("tiktok-mobile-collection-list", "GET", "/tiktok/mobile/collection/list", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-collection-videos", new Operation("tiktok-mobile-collection-videos", "GET", "/tiktok/mobile/collection/videos", Map.ofEntries(Map.entry("collection_id", new Param("collection_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-comment-replies", new Operation("tiktok-mobile-comment-replies", "GET", "/tiktok/mobile/comment/replies", Map.ofEntries(Map.entry("aweme_id", new Param("aweme_id", "query", true, "string", List.of(), "csv")), Map.entry("comment_id", new Param("comment_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-comments", new Operation("tiktok-mobile-comments", "GET", "/tiktok/mobile/comments", Map.ofEntries(Map.entry("aweme_id", new Param("aweme_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-feed", new Operation("tiktok-mobile-feed", "GET", "/tiktok/mobile/feed", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-feed-offline", new Operation("tiktok-mobile-feed-offline", "GET", "/tiktok/mobile/feed/offline", Map.ofEntries(Map.entry("pull_type", new Param("pull_type", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-feed-post", new Operation("tiktok-mobile-feed-post", "GET", "/tiktok/mobile/feed/post", Map.of(), List.of("application/json")));
         operations.put("tiktok-mobile-hashtag", new Operation("tiktok-mobile-hashtag", "GET", "/tiktok/mobile/hashtag", Map.ofEntries(Map.entry("name", new Param("name", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-hashtag-posts", new Operation("tiktok-mobile-hashtag-posts", "GET", "/tiktok/mobile/hashtag/posts", Map.ofEntries(Map.entry("name", new Param("name", "query", true, "string", List.of(), "csv")), Map.entry("sort", new Param("sort", "query", false, "string", List.of("fresh", "popular"), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-hashtags", new Operation("tiktok-mobile-hashtags", "GET", "/tiktok/mobile/hashtags", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-live-effects", new Operation("tiktok-mobile-live-effects", "GET", "/tiktok/mobile/live/effects", Map.of(), List.of("application/json")));
         operations.put("tiktok-mobile-live-gifts", new Operation("tiktok-mobile-live-gifts", "GET", "/tiktok/mobile/live/gifts", Map.of(), List.of("application/json")));
+        operations.put("tiktok-mobile-live-hashtags", new Operation("tiktok-mobile-live-hashtags", "GET", "/tiktok/mobile/live/hashtags", Map.of(), List.of("application/json")));
+        operations.put("tiktok-mobile-live-room", new Operation("tiktok-mobile-live-room", "GET", "/tiktok/mobile/live/room", Map.ofEntries(Map.entry("room_id", new Param("room_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-live-room-by-user", new Operation("tiktok-mobile-live-room-by-user", "GET", "/tiktok/mobile/live/room-by-user", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-live-search", new Operation("tiktok-mobile-live-search", "GET", "/tiktok/mobile/live/search", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-live-tabs", new Operation("tiktok-mobile-live-tabs", "GET", "/tiktok/mobile/live/tabs", Map.of(), List.of("application/json")));
         operations.put("tiktok-mobile-music-beats", new Operation("tiktok-mobile-music-beats", "GET", "/tiktok/mobile/music/beats", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-music-chart", new Operation("tiktok-mobile-music-chart", "GET", "/tiktok/mobile/music/chart", Map.ofEntries(Map.entry("chart_region", new Param("chart_region", "query", false, "string", List.of("AE", "BR", "CA", "DE", "EG", "FR", "JP", "KR", "LB", "MX", "NG", "SA", "TR", "US", "ZA"), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-music-choices", new Operation("tiktok-mobile-music-choices", "GET", "/tiktok/mobile/music/choices", Map.of(), List.of("application/json")));
+        operations.put("tiktok-mobile-music-collection-list", new Operation("tiktok-mobile-music-collection-list", "GET", "/tiktok/mobile/music/collection-list", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-music-collections", new Operation("tiktok-mobile-music-collections", "GET", "/tiktok/mobile/music/collections", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-music-detail", new Operation("tiktok-mobile-music-detail", "GET", "/tiktok/mobile/music/detail", Map.ofEntries(Map.entry("music_id", new Param("music_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-music-pick", new Operation("tiktok-mobile-music-pick", "GET", "/tiktok/mobile/music/pick", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
-        operations.put("tiktok-mobile-music-posts", new Operation("tiktok-mobile-music-posts", "GET", "/tiktok/mobile/music/posts", Map.ofEntries(Map.entry("music_id", new Param("music_id", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-music-posts", new Operation("tiktok-mobile-music-posts", "GET", "/tiktok/mobile/music/posts", Map.ofEntries(Map.entry("music_id", new Param("music_id", "query", true, "string", List.of(), "csv")), Map.entry("sort", new Param("sort", "query", false, "string", List.of("fresh", "popular"), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-music-related", new Operation("tiktok-mobile-music-related", "GET", "/tiktok/mobile/music/related", Map.ofEntries(Map.entry("aweme_id", new Param("aweme_id", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-music-trending", new Operation("tiktok-mobile-music-trending", "GET", "/tiktok/mobile/music/trending", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
-        operations.put("tiktok-mobile-search", new Operation("tiktok-mobile-search", "GET", "/tiktok/mobile/search", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-mv-videos", new Operation("tiktok-mobile-mv-videos", "GET", "/tiktok/mobile/mv/videos", Map.ofEntries(Map.entry("mv_id", new Param("mv_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-detail", new Operation("tiktok-mobile-place-detail", "GET", "/tiktok/mobile/place/detail", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv")), Map.entry("review_count", new Param("review_count", "query", false, "integer", List.of(), "csv")), Map.entry("review_cursor", new Param("review_cursor", "query", false, "integer", List.of(), "csv")), Map.entry("merged_count", new Param("merged_count", "query", false, "integer", List.of(), "csv")), Map.entry("video_cursor", new Param("video_cursor", "query", false, "integer", List.of(), "csv")), Map.entry("enter_from", new Param("enter_from", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-info", new Operation("tiktok-mobile-place-info", "GET", "/tiktok/mobile/place/info", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-media", new Operation("tiktok-mobile-place-media", "GET", "/tiktok/mobile/place/media", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "string", List.of(), "csv")), Map.entry("size", new Param("size", "query", false, "integer", List.of(), "csv")), Map.entry("data_version", new Param("data_version", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-photos", new Operation("tiktok-mobile-place-photos", "GET", "/tiktok/mobile/place/photos", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-reviews", new Operation("tiktok-mobile-place-reviews", "GET", "/tiktok/mobile/place/reviews", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of("1", "2"), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-place-videos", new Operation("tiktok-mobile-place-videos", "GET", "/tiktok/mobile/place/videos", Map.ofEntries(Map.entry("poi_id", new Param("poi_id", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-playlist-detail", new Operation("tiktok-mobile-playlist-detail", "GET", "/tiktok/mobile/playlist/detail", Map.ofEntries(Map.entry("mix_id", new Param("mix_id", "query", true, "string", List.of(), "csv")), Map.entry("user_id", new Param("user_id", "query", false, "string", List.of(), "csv")), Map.entry("sec_user_id", new Param("sec_user_id", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-playlist-list", new Operation("tiktok-mobile-playlist-list", "GET", "/tiktok/mobile/playlist/list", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", false, "string", List.of(), "csv")), Map.entry("sec_user_id", new Param("sec_user_id", "query", false, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-playlist-videos", new Operation("tiktok-mobile-playlist-videos", "GET", "/tiktok/mobile/playlist/videos", Map.ofEntries(Map.entry("mix_id", new Param("mix_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search", new Operation("tiktok-mobile-search", "GET", "/tiktok/mobile/search", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv")), Map.entry("search_id", new Param("search_id", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search-effects", new Operation("tiktok-mobile-search-effects", "GET", "/tiktok/mobile/search/effects", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("search_id", new Param("search_id", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search-hashtags", new Operation("tiktok-mobile-search-hashtags", "GET", "/tiktok/mobile/search/hashtags", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-music", new Operation("tiktok-mobile-search-music", "GET", "/tiktok/mobile/search/music", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search-photos", new Operation("tiktok-mobile-search-photos", "GET", "/tiktok/mobile/search/photos", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of(), "csv")), Map.entry("publish_time", new Param("publish_time", "query", false, "integer", List.of(), "csv")), Map.entry("search_source", new Param("search_source", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-place", new Operation("tiktok-mobile-search-place", "GET", "/tiktok/mobile/search/place", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-pre-info", new Operation("tiktok-mobile-search-pre-info", "GET", "/tiktok/mobile/search/pre-info", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", false, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search-stream", new Operation("tiktok-mobile-search-stream", "GET", "/tiktok/mobile/search/stream", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv")), Map.entry("search_source", new Param("search_source", "query", false, "string", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of("0", "1", "3"), "csv")), Map.entry("publish_time", new Param("publish_time", "query", false, "integer", List.of(), "csv")), Map.entry("filter_selected", new Param("filter_selected", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-sug", new Operation("tiktok-mobile-search-sug", "GET", "/tiktok/mobile/search/sug", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-tabs", new Operation("tiktok-mobile-search-tabs", "GET", "/tiktok/mobile/search/tabs", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-search-user", new Operation("tiktok-mobile-search-user", "GET", "/tiktok/mobile/search/user", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-search-videos", new Operation("tiktok-mobile-search-videos", "GET", "/tiktok/mobile/search/videos", Map.ofEntries(Map.entry("keyword", new Param("keyword", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("offset", new Param("offset", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of("0", "1", "3"), "csv")), Map.entry("publish_time", new Param("publish_time", "query", false, "integer", List.of(), "csv")), Map.entry("search_source", new Param("search_source", "query", false, "string", List.of(), "csv")), Map.entry("search_id", new Param("search_id", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-translation-description", new Operation("tiktok-mobile-translation-description", "GET", "/tiktok/mobile/translation/description", Map.ofEntries(Map.entry("item_id", new Param("item_id", "query", true, "string", List.of(), "csv")), Map.entry("target_lang", new Param("target_lang", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-trending-categories", new Operation("tiktok-mobile-trending-categories", "GET", "/tiktok/mobile/trending/categories", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-mobile-trending-effects", new Operation("tiktok-mobile-trending-effects", "GET", "/tiktok/mobile/trending/effects", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-followers", new Operation("tiktok-mobile-user-followers", "GET", "/tiktok/mobile/user/followers", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-following", new Operation("tiktok-mobile-user-following", "GET", "/tiktok/mobile/user/following", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-original-effects", new Operation("tiktok-mobile-user-original-effects", "GET", "/tiktok/mobile/user/original-effects", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-original-music", new Operation("tiktok-mobile-user-original-music", "GET", "/tiktok/mobile/user/original-music", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-posts", new Operation("tiktok-mobile-user-posts", "GET", "/tiktok/mobile/user/posts", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", false, "string", List.of(), "csv")), Map.entry("sec_user_id", new Param("sec_user_id", "query", false, "string", List.of(), "csv")), Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-profile", new Operation("tiktok-mobile-user-profile", "GET", "/tiktok/mobile/user/profile", Map.ofEntries(Map.entry("user_id", new Param("user_id", "query", false, "string", List.of(), "csv")), Map.entry("sec_user_id", new Param("sec_user_id", "query", false, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-user-recommendations", new Operation("tiktok-mobile-user-recommendations", "GET", "/tiktok/mobile/user/recommendations", Map.ofEntries(Map.entry("count", new Param("count", "query", false, "integer", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-video-detail", new Operation("tiktok-mobile-video-detail", "GET", "/tiktok/mobile/video/detail", Map.ofEntries(Map.entry("aweme_id", new Param("aweme_id", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
+        operations.put("tiktok-mobile-video-subtitles", new Operation("tiktok-mobile-video-subtitles", "GET", "/tiktok/mobile/video/subtitles", Map.ofEntries(Map.entry("video_id", new Param("video_id", "query", true, "string", List.of(), "csv")), Map.entry("language", new Param("language", "query", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-popular-trend-country-industry-meta", new Operation("tiktok-popular-trend-country-industry-meta", "GET", "/tiktok/popular-trend/country-industry-meta", Map.of(), List.of("application/json")));
         operations.put("tiktok-post", new Operation("tiktok-post", "GET", "/tiktok/post/{id}", Map.ofEntries(Map.entry("id", new Param("id", "path", true, "string", List.of(), "csv"))), List.of("application/json")));
         operations.put("tiktok-profile-post", new Operation("tiktok-profile-post", "GET", "/tiktok/posts", Map.ofEntries(Map.entry("secUid", new Param("secUid", "query", true, "string", List.of(), "csv")), Map.entry("cursor", new Param("cursor", "query", false, "integer", List.of(), "csv")), Map.entry("sort_type", new Param("sort_type", "query", false, "integer", List.of("0", "1", "2"), "csv"))), List.of("application/json")));
@@ -251,31 +325,68 @@ public final class Client implements AutoCloseable {
     public Object challenge(Map<String, ?> params) { return request("tiktok-challenge", params); }
     public Object challengeList(Map<String, ?> params) { return request("tiktok-challenge-list", params); }
     public Object mobileAnchorList(Map<String, ?> params) { return request("tiktok-mobile-anchor-list", params); }
+    public Object mobileCollectionDetail(Map<String, ?> params) { return request("tiktok-mobile-collection-detail", params); }
+    public Object mobileCollectionList(Map<String, ?> params) { return request("tiktok-mobile-collection-list", params); }
+    public Object mobileCollectionVideos(Map<String, ?> params) { return request("tiktok-mobile-collection-videos", params); }
     public Object mobileCommentReplies(Map<String, ?> params) { return request("tiktok-mobile-comment-replies", params); }
     public Object mobileComments(Map<String, ?> params) { return request("tiktok-mobile-comments", params); }
     public Object mobileFeed(Map<String, ?> params) { return request("tiktok-mobile-feed", params); }
+    public Object mobileFeedOffline(Map<String, ?> params) { return request("tiktok-mobile-feed-offline", params); }
     public Object mobileFeedPost(Map<String, ?> params) { return request("tiktok-mobile-feed-post", params); }
     public Object mobileHashtag(Map<String, ?> params) { return request("tiktok-mobile-hashtag", params); }
     public Object mobileHashtagPosts(Map<String, ?> params) { return request("tiktok-mobile-hashtag-posts", params); }
     public Object mobileHashtags(Map<String, ?> params) { return request("tiktok-mobile-hashtags", params); }
     public Object mobileLiveEffects(Map<String, ?> params) { return request("tiktok-mobile-live-effects", params); }
     public Object mobileLiveGifts(Map<String, ?> params) { return request("tiktok-mobile-live-gifts", params); }
+    public Object mobileLiveHashtags(Map<String, ?> params) { return request("tiktok-mobile-live-hashtags", params); }
+    public Object mobileLiveRoom(Map<String, ?> params) { return request("tiktok-mobile-live-room", params); }
+    public Object mobileLiveRoomByUser(Map<String, ?> params) { return request("tiktok-mobile-live-room-by-user", params); }
     public Object mobileLiveSearch(Map<String, ?> params) { return request("tiktok-mobile-live-search", params); }
+    public Object mobileLiveTabs(Map<String, ?> params) { return request("tiktok-mobile-live-tabs", params); }
     public Object mobileMusicBeats(Map<String, ?> params) { return request("tiktok-mobile-music-beats", params); }
+    public Object mobileMusicChart(Map<String, ?> params) { return request("tiktok-mobile-music-chart", params); }
+    public Object mobileMusicChoices(Map<String, ?> params) { return request("tiktok-mobile-music-choices", params); }
+    public Object mobileMusicCollectionList(Map<String, ?> params) { return request("tiktok-mobile-music-collection-list", params); }
     public Object mobileMusicCollections(Map<String, ?> params) { return request("tiktok-mobile-music-collections", params); }
+    public Object mobileMusicDetail(Map<String, ?> params) { return request("tiktok-mobile-music-detail", params); }
     public Object mobileMusicPick(Map<String, ?> params) { return request("tiktok-mobile-music-pick", params); }
     public Object mobileMusicPosts(Map<String, ?> params) { return request("tiktok-mobile-music-posts", params); }
     public Object mobileMusicRelated(Map<String, ?> params) { return request("tiktok-mobile-music-related", params); }
     public Object mobileMusicTrending(Map<String, ?> params) { return request("tiktok-mobile-music-trending", params); }
+    public Object mobileMvVideos(Map<String, ?> params) { return request("tiktok-mobile-mv-videos", params); }
+    public Object mobilePlaceDetail(Map<String, ?> params) { return request("tiktok-mobile-place-detail", params); }
+    public Object mobilePlaceInfo(Map<String, ?> params) { return request("tiktok-mobile-place-info", params); }
+    public Object mobilePlaceMedia(Map<String, ?> params) { return request("tiktok-mobile-place-media", params); }
+    public Object mobilePlacePhotos(Map<String, ?> params) { return request("tiktok-mobile-place-photos", params); }
+    public Object mobilePlaceReviews(Map<String, ?> params) { return request("tiktok-mobile-place-reviews", params); }
+    public Object mobilePlaceVideos(Map<String, ?> params) { return request("tiktok-mobile-place-videos", params); }
+    public Object mobilePlaylistDetail(Map<String, ?> params) { return request("tiktok-mobile-playlist-detail", params); }
+    public Object mobilePlaylistList(Map<String, ?> params) { return request("tiktok-mobile-playlist-list", params); }
+    public Object mobilePlaylistVideos(Map<String, ?> params) { return request("tiktok-mobile-playlist-videos", params); }
     public Object mobileSearch(Map<String, ?> params) { return request("tiktok-mobile-search", params); }
+    public Object mobileSearchEffects(Map<String, ?> params) { return request("tiktok-mobile-search-effects", params); }
+    public Object mobileSearchHashtags(Map<String, ?> params) { return request("tiktok-mobile-search-hashtags", params); }
     public Object mobileSearchMusic(Map<String, ?> params) { return request("tiktok-mobile-search-music", params); }
+    public Object mobileSearchPhotos(Map<String, ?> params) { return request("tiktok-mobile-search-photos", params); }
     public Object mobileSearchPlace(Map<String, ?> params) { return request("tiktok-mobile-search-place", params); }
     public Object mobileSearchPreInfo(Map<String, ?> params) { return request("tiktok-mobile-search-pre-info", params); }
+    public Object mobileSearchStream(Map<String, ?> params) { return request("tiktok-mobile-search-stream", params); }
     public Object mobileSearchSug(Map<String, ?> params) { return request("tiktok-mobile-search-sug", params); }
     public Object mobileSearchTabs(Map<String, ?> params) { return request("tiktok-mobile-search-tabs", params); }
     public Object mobileSearchUser(Map<String, ?> params) { return request("tiktok-mobile-search-user", params); }
+    public Object mobileSearchVideos(Map<String, ?> params) { return request("tiktok-mobile-search-videos", params); }
+    public Object mobileTranslationDescription(Map<String, ?> params) { return request("tiktok-mobile-translation-description", params); }
     public Object mobileTrendingCategories(Map<String, ?> params) { return request("tiktok-mobile-trending-categories", params); }
     public Object mobileTrendingEffects(Map<String, ?> params) { return request("tiktok-mobile-trending-effects", params); }
+    public Object mobileUserFollowers(Map<String, ?> params) { return request("tiktok-mobile-user-followers", params); }
+    public Object mobileUserFollowing(Map<String, ?> params) { return request("tiktok-mobile-user-following", params); }
+    public Object mobileUserOriginalEffects(Map<String, ?> params) { return request("tiktok-mobile-user-original-effects", params); }
+    public Object mobileUserOriginalMusic(Map<String, ?> params) { return request("tiktok-mobile-user-original-music", params); }
+    public Object mobileUserPosts(Map<String, ?> params) { return request("tiktok-mobile-user-posts", params); }
+    public Object mobileUserProfile(Map<String, ?> params) { return request("tiktok-mobile-user-profile", params); }
+    public Object mobileUserRecommendations(Map<String, ?> params) { return request("tiktok-mobile-user-recommendations", params); }
+    public Object mobileVideoDetail(Map<String, ?> params) { return request("tiktok-mobile-video-detail", params); }
+    public Object mobileVideoSubtitles(Map<String, ?> params) { return request("tiktok-mobile-video-subtitles", params); }
     public Object popularTrendCountryIndustryMeta(Map<String, ?> params) { return request("tiktok-popular-trend-country-industry-meta", params); }
     public Object post(Map<String, ?> params) { return request("tiktok-post", params); }
     public Object profilePost(Map<String, ?> params) { return request("tiktok-profile-post", params); }
